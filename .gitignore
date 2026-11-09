@@ -61,3 +61,4 @@ build/
 
 # Bot profiler output (npm run profile)
 profile-out/
+testing/results*.jsonl

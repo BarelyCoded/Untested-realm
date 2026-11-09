@@ -19,6 +19,8 @@
     "fetch:images": "python scripts/fetch_images.py",
     "botmatch": "tsx scripts/botmatch.ts",
     "arena": "tsx scripts/bot_arena.ts",
+    "deckmatch": "tsx scripts/deckmatch.ts",
+    "deckcheck": "tsx scripts/deckcheck.ts",
     "census": "tsx scripts/census.ts",
     "fuzz": "tsx scripts/fuzz_scripts.ts && tsx scripts/fuzz_cast.ts && tsx scripts/fuzz_combat.ts && tsx scripts/fuzz_raw.ts",
     "fuzz:raw": "tsx scripts/fuzz_raw.ts",
