@@ -76,6 +76,7 @@ export function botAction(state: GameState, me: PlayerId, banned?: Set<string>):
   // optimising it. `state.activePlayer !== me` is exactly that case (botNeedsToAct has
   // already confirmed we're the one to act).
   if (state.activePlayer !== me) return sabotageMain(state, state.activePlayer, me)
+  fetchFollowUp = null // no prompt pending: any collection cast has finished resolving
   return mainPhase(state, state.activePlayer, banned)
 }
 
@@ -356,6 +357,8 @@ function answerPrompt(state: GameState, me: PlayerId, prompt: any): Action {
   const answer = (choice: any): Action => ({ t: 'prompt', promptId: prompt.id, choice })
   const trapAnswer = trapPromptAnswer(state, me, prompt)
   if (trapAnswer) return trapAnswer
+  const fetchAnswer = collectionFetchAnswer(state, me, prompt)
+  if (fetchAnswer) return fetchAnswer
 
   switch (prompt.kind) {
     case 'drawDeck': {
@@ -1501,6 +1504,14 @@ function tryActivateAbilities(state: GameState, me: PlayerId): Action | null {
         if (trapSpringGain(state, me, spring) >= TRAP_SPRING_MIN_GAIN) return spring
         continue
       }
+      // Toolbox / Silver Bullet: spend it only when a collection card clearly pays off right now
+      if ((src.name === 'Toolbox' && ability.key === 'rummage') || (src.name === 'Silver Bullet' && ability.key === 'fire')) {
+        const fetch: Action = { t: 'activate', sourceId: src.id, ability: ability.key, targets: [] }
+        const mySites = Object.values(state.sites).filter((s) => s.controller === me && !s.isRubble).length
+        const need = mySites >= FETCH_FLOOD_SITES ? FETCH_FLOOD_MIN_GAIN : FETCH_MIN_GAIN
+        if (collectionFetchGain(state, me, fetch) >= need) return fetch
+        continue
+      }
 
       const action = buildAbilityAction(state, me, src.id, ability, src.anchor, enemyAvatar)
       // only use it if it actually changes the game state — an accepted-but-no-op
@@ -1644,9 +1655,9 @@ function promptChoices(prompt: any): any[] {
 
 /** play out `state`'s pending prompts, trying each of MY choices (foe prompts get the safe answer),
  *  and return the best reachable trapBoardValue — or, with `pick`, the first choice that reaches it */
-function bestPromptLine(state: GameState, me: PlayerId, depth = 0): { value: number; choice?: any } {
+function bestPromptLine(state: GameState, me: PlayerId, depth = 0, valuer: (s: GameState, p: PlayerId) => number = trapBoardValue): { value: number; choice?: any } {
   const prompt = state.prompts[0]
-  if (!prompt || depth > 4) return { value: trapBoardValue(state, me) }
+  if (!prompt || depth > 4) return { value: valuer(state, me) }
   const step = (s: GameState, a: Action): GameState | null => {
     try {
       const c = cloneState(s)
@@ -1656,14 +1667,130 @@ function bestPromptLine(state: GameState, me: PlayerId, depth = 0): { value: num
   const choices = prompt.player === me ? promptChoices(prompt) : []
   let best: { value: number; choice?: any } | null = null
   for (const choice of choices) {
+    if (inFetchPlayout && --fetchBudget < 0) break // a fetch play-out is capped: keep the best line found so far
     const next = step(state, { t: 'prompt', promptId: prompt.id, choice })
     if (!next) continue
-    const v = bestPromptLine(next, me, depth + 1).value
+    const v = bestPromptLine(next, me, depth + 1, valuer).value
     if (!best || v > best.value) best = { value: v, choice }
   }
   if (best) return best
   const next = step(state, safePromptAnswer(state, prompt))
-  return next ? { value: bestPromptLine(next, me, depth + 1).value } : { value: trapBoardValue(state, me) }
+  return next ? { value: bestPromptLine(next, me, depth + 1, valuer).value } : { value: valuer(state, me) }
+}
+
+// ---------- collection fetches (Toolbox / Silver Bullet) ----------
+// "Sacrifice → cast a spell from your collection" is a wish: the artifact is only worth spending
+// when one of the collection's cards does real work on THIS board. So play each offered card out
+// on a clone (its own target / square prompts included, every choice tried) and score the result.
+
+/** what an artifact in play is worth to its controller, for fetch decisions */
+function artifactWorth(name: string): number {
+  if (name === 'Ring of Morrigan') return 8
+  if (name === 'Just a Rock') return 0
+  const cost = getCard(name)?.cost ?? 0
+  return Math.min(5, 1 + cost)
+}
+
+/** board value for collection-fetch decisions: trapBoardValue plus the artifacts each side holds */
+function fetchBoardValue(state: GameState, me: PlayerId): number {
+  let v = trapBoardValue(state, me)
+  for (const a of Object.values(state.artifacts)) {
+    const c = artifactController(state, a)
+    if (c === me) v += artifactWorth(a.name)
+    else if (c === enemyOf(me)) v -= artifactWorth(a.name)
+  }
+  return v
+}
+
+/** a fetch must beat a plain 3-power body (worth 6) to be worth the artifact… */
+const FETCH_MIN_GAIN = 7
+/** …unless I'm flooding (this many sites), when any real gain will do */
+const FETCH_FLOOD_SITES = 7
+const FETCH_FLOOD_MIN_GAIN = 4
+
+/** with the "which card from your collection?" prompt open: the offered name whose play-out scores best */
+function bestFetchName(state: GameState, me: PlayerId): { name: string; value: number } | null {
+  const prompt = state.prompts[0]
+  if (!prompt || prompt.kind !== 'nameCard' || !prompt.data?.fromCollection || prompt.player !== me) return null
+  let best: { name: string; value: number } | null = null
+  for (const name of (prompt.data.names ?? []) as string[]) {
+    let clone: GameState
+    try {
+      clone = cloneState(state)
+      if (!applyAction(clone, me, { t: 'prompt', promptId: prompt.id, choice: name }).ok) continue
+    } catch { continue }
+    const value = fetchPlayout(clone, me).value
+    if (!best || value > best.value) best = { name, value }
+  }
+  return best
+}
+
+/** true while a fetch play-out is running: the prompt answers INSIDE it must come from the plain
+ *  heuristics (re-entering the play-out from its own fallback answer would never terminate) */
+let inFetchPlayout = false
+/** choices a fetch decision may still try (reset per decision) — bounds the worst case on a busy board */
+let fetchBudget = 0
+const FETCH_BUDGET = 400
+
+/** play a collection cast's prompts out (three choices deep) and score the board it leaves */
+function fetchPlayout(state: GameState, me: PlayerId): { value: number; choice?: any } {
+  if (inFetchPlayout) return { value: fetchBoardValue(state, me) }
+  inFetchPlayout = true
+  try { return bestPromptLine(state, me, 2, fetchBoardValue) } finally { inFetchPlayout = false }
+}
+
+/** how much the best collection card would win if I activated this fetch ability now (-Infinity: none) */
+function collectionFetchGain(state: GameState, me: PlayerId, fetch: Action): number {
+  // mainPhase re-asks on every decision of a turn: reuse the answer while the board is unchanged
+  const sig = fetchSignature(state, me, fetch)
+  if (fetchGainMemo?.sig === sig) return fetchGainMemo.gain
+  const gain = computeFetchGain(state, me, fetch)
+  fetchGainMemo = { sig, gain }
+  return gain
+}
+
+let fetchGainMemo: { sig: string; gain: number } | null = null
+
+function fetchSignature(state: GameState, me: PlayerId, fetch: Action): string {
+  const units = Object.values(state.units).map((u) => `${u.id},${u.x},${u.y},${u.region},${u.damage},${u.tapped ? 1 : 0},${u.controller}`).join(';')
+  const arts = Object.values(state.artifacts).map((a) => `${a.id},${a.carriedBy ?? ''}`).join(';')
+  return `${JSON.stringify(fetch)}|${me}|${state.turn}|${state.players[me].mana}|${Object.keys(state.sites).length}|${units}|${arts}`
+}
+
+function computeFetchGain(state: GameState, me: PlayerId, fetch: Action): number {
+  fetchBudget = FETCH_BUDGET
+  let clone: GameState
+  try {
+    clone = cloneState(state)
+    if (!applyAction(clone, me, fetch).ok) return -Infinity
+  } catch { return -Infinity }
+  // the artifact is spent by the fetch (it is still in play while the name prompt is open): measure
+  // from the board WITHOUT it, so the gain is the fetched card's alone
+  const spent = fetch.t === 'activate' ? state.artifacts[fetch.sourceId]?.name : undefined
+  const base = fetchBoardValue(clone, me) - (spent ? artifactWorth(spent) : 0)
+  const best = bestFetchName(clone, me)
+  return best ? best.value - base : -Infinity
+}
+
+/** the seat + turn whose collection cast is mid-resolution: its target / square prompts are answered by
+ *  play-out too (so Just a Rock lands on the enemy's ring, not a random unit). Cleared by the next
+ *  main-phase decision. */
+let fetchFollowUp: { me: PlayerId; turn: number } | null = null
+
+function collectionFetchAnswer(state: GameState, me: PlayerId, prompt: any): Action | null {
+  if (prompt.player !== me || inFetchPlayout) return null
+  fetchBudget = FETCH_BUDGET
+  if (prompt.kind === 'nameCard' && prompt.data?.fromCollection) {
+    const best = bestFetchName(state, me)
+    if (!best) return null
+    fetchFollowUp = { me, turn: state.turn }
+    return { t: 'prompt', promptId: prompt.id, choice: best.name }
+  }
+  if (fetchFollowUp && fetchFollowUp.me === me && fetchFollowUp.turn === state.turn) {
+    const { choice } = fetchPlayout(state, me)
+    return choice === undefined ? null : { t: 'prompt', promptId: prompt.id, choice }
+  }
+  return null
 }
 
 /** how much board value springing this trap wins, its choices played well */

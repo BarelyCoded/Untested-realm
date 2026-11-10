@@ -23,7 +23,7 @@ for (let i = 0; i < N; i++) {
   const seed = (BASE + i * 7919) >>> 0
   const g: GameState = createGame(pair, ['P0', 'P1'], seed, first)
   const fb = [0, 0]; const casts: Record<string, number>[] = [{}, {}]; const coll: Record<string, number>[] = [{}, {}]; const acts: Record<string, number>[] = [{}, {}]
-  let lastTurn = -1, turnActs = 0, capHits = 0; const t0 = Date.now(); let crashed = ''
+  let lastTurn = -1, turnActs = 0, capHits = 0, maxDecisionMs = 0; const t0 = Date.now(); let crashed = ''; const fbLog: string[] = []
   try {
     while (g.phase !== 'over' && g.turn <= MAXTURN) {
       if (g.turn !== lastTurn) { lastTurn = g.turn; turnActs = 0 }
@@ -31,13 +31,16 @@ for (let i = 0; i < N; i++) {
       if (seat === null) { if (!applyAction(g, g.activePlayer, { t: 'endTurn' }).ok) break; continue }
       if (++turnActs > ACT_CAP) { capHits++; applyAction(g, seat, { t: 'endTurn' }); turnActs = 0; continue }
       let action: Action
-      try { action = botAction(g, seat) } catch { fb[seat]++; action = { t: 'endTurn' } }
+      const d0 = Date.now()
+      try { action = botAction(g, seat) } catch (e: any) { fb[seat]++; fbLog.push('threw: ' + String(e?.message ?? e).slice(0, 120)); action = { t: 'endTurn' } }
+      maxDecisionMs = Math.max(maxDecisionMs, Date.now() - d0)
       if (action.t === 'castSpell') { const nm = g.cards[action.cardId]?.name; if (nm) inc(casts[seat], nm) }
       if (action.t === 'activate') inc(acts[seat], srcName(g, action.sourceId) + ':' + action.ability)
       if (action.t === 'prompt' && typeof action.choice === 'string' && g.prompts[0]?.kind === 'nameCard' && (g.prompts[0] as any).data?.fromCollection) inc(coll[seat], action.choice)
       const res = applyAction(g, seat, action)
       if (!res.ok) {
         fb[seat]++
+        fbLog.push(`${action.t}${action.t === 'activate' ? ':' + srcName(g, action.sourceId) + ':' + action.ability : ''}${action.t === 'prompt' ? ':' + g.prompts[0]?.kind + ':' + JSON.stringify(action.choice)?.slice(0, 60) : ''} → ${String((res as any).error).slice(0, 100)}`)
         const f: Action = g.prompts[0]?.player === seat ? { t: 'prompt', promptId: g.prompts[0].id, choice: null } : g.phase === 'mulligan' ? { t: 'keepHand' } : { t: 'endTurn' }
         if (!applyAction(g, seat, f).ok) { applyAction(g, seat, { t: 'concede' }); break }
       }
@@ -46,7 +49,7 @@ for (let i = 0; i < N; i++) {
   const w = g.phase === 'over' ? g.winner : null
   const life = (p: PlayerId) => { try { return avatarOf(g, p).life ?? 0 } catch { return null } }
   const rec = { A, B, i, seed, aSeat, aFirst: first === aSeat, result: crashed ? 'crash' : w === null || w === undefined ? 'draw' : w === aSeat ? 'A' : 'B', turns: g.turn,
-    lifeA: life(aSeat), lifeB: life((1 - aSeat) as PlayerId), fbA: fb[aSeat], fbB: fb[1 - aSeat], capHits, secs: +((Date.now() - t0) / 1000).toFixed(1),
+    lifeA: life(aSeat), lifeB: life((1 - aSeat) as PlayerId), fbA: fb[aSeat], fbB: fb[1 - aSeat], capHits, maxDecisionMs, fbLog: fbLog.slice(0, 5), secs: +((Date.now() - t0) / 1000).toFixed(1),
     collA: coll[aSeat], collB: coll[1 - aSeat], actsA: acts[aSeat], actsB: acts[1 - aSeat], castsA: casts[aSeat], castsB: casts[1 - aSeat], crashed }
   appendFileSync(out, JSON.stringify(rec) + '\n')
 }
