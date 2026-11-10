@@ -390,6 +390,39 @@ function spellcasterMinions(state: GameState, me: PlayerId): string[] {
   return Object.values(state.units).filter((u) => u.controller === me && !u.isAvatar && !u.carriedBy && effKeywords(state, u).spellcaster).map((u) => u.id)
 }
 
+/** the choice payloads worth trying for an open prompt (see promptChoices) — for bots that play a
+ *  single decision out on a clone instead of running the full search */
+export function promptChoicesFor(prompt: any, state: GameState): any[] {
+  return promptChoices(prompt, state)
+}
+
+/** every way `me` could cast the Magic card `cardId` right now: each legal caster (the avatar, plus
+ *  Spellcaster minions when where it is cast from matters) x each target combination x each projectile
+ *  direction. Unchecked beyond canCast — the caller trial-applies them. Capped at `cap` actions. */
+export function magicCastActions(state: GameState, me: PlayerId, cardId: string, cap = 48): Action[] {
+  const card = state.cards[cardId]
+  if (!card) return []
+  const def = getCard(card.name)
+  if (def.type !== 'Magic') return []
+  const avatarId = state.players[me].avatarUnitId
+  const script = getScript(def.name)
+  const casters: string[] = []
+  if (canCast(state, me, cardId, avatarId).ok) casters.push(avatarId)
+  if (casterPositionMatters(def.name) || !casters.length) {
+    for (const id of spellcasterMinions(state, me)) if (canCast(state, me, cardId, id).ok) casters.push(id)
+  }
+  const dirs: (string | undefined)[] = script?.shootsProjectile ? ['n', 's', 'e', 'w'] : [undefined]
+  const out: Action[] = []
+  for (const casterId of casters) {
+    const combos = script?.targets?.length ? castTargetCombos(state, me, script, state.units[casterId], def.name) : [[]]
+    for (const targets of combos) for (const dir of dirs) {
+      if (out.length >= cap) return out
+      out.push(dir ? { t: 'castSpell', cardId, casterId, targets, extra: { direction: dir } } as Action : { t: 'castSpell', cardId, casterId, targets })
+    }
+  }
+  return out
+}
+
 /** Just the legal actions (no resulting states) — thin wrapper over expandActions. */
 export function legalActions(state: GameState, player: PlayerId): Action[] {
   return expandActions(state, player).map((e) => e.action)

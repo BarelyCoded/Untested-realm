@@ -56,6 +56,10 @@ import {
   type TargetPick,
   type TargetRef,
   type AbilityDef,
+  evaluate,
+  grantedAbilities,
+  magicCastActions,
+  promptChoicesFor,
 } from '@sorcery/shared'
 
 export function botNeedsToAct(state: GameState, me: PlayerId): boolean {
@@ -69,7 +73,7 @@ export function botNeedsToAct(state: GameState, me: PlayerId): boolean {
 
 export function botAction(state: GameState, me: PlayerId, banned?: Set<string>): Action {
   const prompt = state.prompts[0]
-  if (prompt && actingSeatFor(state, prompt.player) === me) return safePromptAnswer(state, prompt)
+  if (prompt && actingSeatFor(state, prompt.player) === me) return unloopedPromptAnswer(state, prompt)
   if (state.phase === 'mulligan') return mulliganChoice(state, me)
   // Courtesan Thaïs: when the active player's turn is being PILOTED by us (their turn,
   // our seat decides), we're playing the OPPONENT's turn — sabotage it instead of
@@ -77,7 +81,25 @@ export function botAction(state: GameState, me: PlayerId, banned?: Set<string>):
   // already confirmed we're the one to act).
   if (state.activePlayer !== me) return sabotageMain(state, state.activePlayer, me)
   fetchFollowUp = null // no prompt pending: any collection cast has finished resolving
+  considerFollowUp = null
   return mainPhase(state, state.activePlayer, banned)
+}
+
+/** the same question answered the same way over and over (an effect that re-asks itself — an Evil Twin
+ *  copying a Selfsame Simulacrum mirrors itself without end): after a few rounds, decline instead */
+let promptEcho: { sig: string; count: number } | null = null
+const PROMPT_ECHO_LIMIT = 3
+function unloopedPromptAnswer(state: GameState, prompt: any): Action {
+  const answer = safePromptAnswer(state, prompt)
+  const sig = `${state.turn}|${prompt.player}|${prompt.kind}|${prompt.cont ?? ''}|${prompt.title ?? ''}|${JSON.stringify((answer as any).choice)}`
+  promptEcho = promptEcho?.sig === sig ? { sig, count: promptEcho.count + 1 } : { sig, count: 1 }
+  if (promptEcho.count <= PROMPT_ECHO_LIMIT) return answer
+  for (const choice of [[], null, false]) {
+    const decline: Action = { t: 'prompt', promptId: prompt.id, choice }
+    if (JSON.stringify(choice) === JSON.stringify((answer as any).choice)) continue
+    try { if (applyAction(cloneState(state), prompt.player, decline).ok) return decline } catch { /* try the next */ }
+  }
+  return answer
 }
 
 /** stable key for an action, used by the driver's anti-loop ward + mainPhase's `banned` filter. */
@@ -359,6 +381,8 @@ function answerPrompt(state: GameState, me: PlayerId, prompt: any): Action {
   if (trapAnswer) return trapAnswer
   const fetchAnswer = collectionFetchAnswer(state, me, prompt)
   if (fetchAnswer) return fetchAnswer
+  const consideredAnswer = considerPromptAnswer(state, me, prompt)
+  if (consideredAnswer) return consideredAnswer
 
   switch (prompt.kind) {
     case 'drawDeck': {
@@ -688,9 +712,15 @@ function mainPhase(state: GameState, me: PlayerId, banned?: Set<string>): Action
         const play: Action = { t: 'avatarSite', mode: 'play', cardId: siteCards[0], x: best.x, y: best.y }
         if (ok(play)) return play
       }
-    } else if (p.atlas.length > 0 && wantMoreSites(state, me, inHand, hasAnyCastable(state, me, inHand))) {
-      const draw: Action = { t: 'avatarSite', mode: 'draw' }
-      if (ok(draw)) return draw
+    } else {
+      // no site to play: an avatar's own tap ability that builds the board (Geomancer turning Rubble
+      // into a site) beats drawing one
+      const tapPlay = consideredAbility(state, me, CONSIDER_AVATAR_TAP_MIN_GAIN, true, ok)
+      if (tapPlay) return tapPlay
+      if (p.atlas.length > 0 && wantMoreSites(state, me, inHand, hasAnyCastable(state, me, inHand))) {
+        const draw: Action = { t: 'avatarSite', mode: 'draw' }
+        if (ok(draw)) return draw
+      }
     }
   }
 
@@ -699,11 +729,15 @@ function mainPhase(state: GameState, me: PlayerId, banned?: Set<string>): Action
   //    legal caster (avatar → Spellcaster minion → expansion caster).
   const castCandidates = collectCastable(state, me)
   const byCost = (a: CastCand, b: CastCand) => (b.def.cost ?? 0) - (a.def.cost ?? 0)
-  const order = [
-    ...castCandidates.filter((c) => c.def.type === 'Minion').sort(byCost),
-    ...castCandidates.filter((c) => c.def.type !== 'Minion').sort(byCost),
-  ]
-  for (const cand of order) {
+  for (const cand of castCandidates.filter((c) => c.def.type === 'Minion').sort(byCost)) {
+    const action = tryCast(state, me, cand)
+    if (ok(action) && isLegal(state, me, action)) return action
+  }
+  // magics: every way of casting each one is played out on a copy of the game and scored; the best
+  // is cast when it clearly pays. The older single-guess heuristic below stays as the fallback.
+  const magic = consideredMagic(state, me, CONSIDER_MIN_GAIN, ok)
+  if (magic) return magic
+  for (const cand of castCandidates.filter((c) => c.def.type !== 'Minion').sort(byCost)) {
     const action = tryCast(state, me, cand)
     if (ok(action) && isLegal(state, me, action)) return action
   }
@@ -711,6 +745,8 @@ function mainPhase(state: GameState, me: PlayerId, banned?: Set<string>): Action
   // 3. activated abilities — units / sites / artifacts with a clearly-good use.
   const ab = tryActivateAbilities(state, me)
   if (ok(ab) && isLegal(state, me, ab)) return ab
+  const ability = consideredAbility(state, me, CONSIDER_MIN_GAIN, false, ok)
+  if (ability) return ability
 
   // 4. fight — each ready unit (units + avatar aggression with a safety valve).
   for (const u of Object.values(state.units)) {
@@ -732,6 +768,11 @@ function mainPhase(state: GameState, me: PlayerId, banned?: Set<string>): Action
       }
     }
   }
+
+  // 5b. mana left over is lost at end of turn: cast any magic that at least pays for itself
+  //     (a spell that replaces itself with a draw, a heal, a site fetch)
+  const spare = consideredMagic(state, me, CONSIDER_SPARE_MIN_GAIN, ok)
+  if (spare) return spare
 
   // 6. NEVER end the turn with an untapped avatar (owner rule): an unspent avatar
   //    tap is a wasted resource — dump it into "tap: draw a site" before passing.
@@ -1791,6 +1832,207 @@ function collectionFetchAnswer(state: GameState, me: PlayerId, prompt: any): Act
     return choice === undefined ? null : { t: 'prompt', promptId: prompt.id, choice }
   }
   return null
+}
+
+// ---------- considered plays ----------
+// The ladder above guesses one target per spell and only casts what a fixed checklist calls useful, so
+// movement spells, card draw, healing and most avatar abilities were never played. A considered play
+// tries the real thing instead: each way of casting a magic (or using an ability) is applied to a copy
+// of the game, its prompts are played out, and the position it leaves is scored with the shared
+// evaluator. The best one is taken when it beats doing nothing by a clear margin.
+
+export interface BotProfile {
+  /** play magics and abilities by playing them out on a copy of the game (false = the plain ladder) */
+  considered: boolean
+}
+const botProfiles: [BotProfile, BotProfile] = [{ considered: true }, { considered: true }]
+/** per-seat switches, so a test can pit one way of playing against another */
+export function setBotProfile(seat: PlayerId, profile: Partial<BotProfile>): void {
+  Object.assign(botProfiles[seat], profile)
+}
+
+/** a play must gain this much (10 = one point of avatar life) to be made mid-turn… */
+const CONSIDER_MIN_GAIN = 10
+/** …but once everything else is done, spare mana goes on any play that does not lose value */
+const CONSIDER_SPARE_MIN_GAIN = 0
+/** an avatar's tap ability must beat drawing a site by this much to replace it */
+const CONSIDER_AVATAR_TAP_MIN_GAIN = 15
+/** positions one decision may try (keeps a busy board to a fraction of a second) */
+const CONSIDER_BUDGET = 160
+/** ways of casting one card that are tried */
+const CONSIDER_CASTS_PER_CARD = 24
+/** what wearing a mask is worth to an Imposter (the evaluator cannot see it) */
+const MASK_WORTH = 30
+const MASK_PREFERENCE: Record<string, number> = { Interrogator: 6, Ironclad: 5, Sorcerer: 4, Necromancer: 4, Archimago: 3, Deathspeaker: 2 }
+
+let considerBudget = 0
+let inConsider = false
+/** the seat + turn whose considered play is still resolving: its follow-up prompts are answered by
+ *  the same play-out, so the cast lands the way it was scored. Cleared by the next main-phase decision. */
+let considerFollowUp: { me: PlayerId; turn: number } | null = null
+
+/** the shared evaluator, plus the few things it does not count that these plays produce */
+function considerValue(state: GameState, me: PlayerId): number {
+  let v = evaluate(state, me)
+  const p = state.players[me]
+  const mySites = Object.values(state.sites).filter((s) => s.controller === me && !s.isRubble).length
+  if (mySites < 6) {
+    const held = p.hand.filter((id) => getCard(state.cards[id].name).type === 'Site').length
+    v += 6 * Math.min(2, held) // a site in hand is the next land drop
+  }
+  const mask: string | undefined = state.flow?.imposterMask?.[me]
+  if (mask) v += MASK_WORTH + (MASK_PREFERENCE[mask] ?? 0)
+  return v
+}
+
+/** play out the pending prompts — each of MY choices tried, the other seat answering as it normally
+ *  would — and return the best position reachable, with the first choice that leads to it */
+function considerLine(state: GameState, me: PlayerId, depth = 0): { value: number; choice?: any } {
+  const prompt = state.prompts[0]
+  if (!prompt || depth > 6 || state.phase === 'over') return { value: considerValue(state, me) }
+  const step = (a: Action): GameState | null => {
+    try {
+      const c = cloneState(state)
+      return applyAction(c, prompt.player, a).ok ? c : null
+    } catch { return null }
+  }
+  let best: { value: number; choice?: any } | null = null
+  if (prompt.player === me) {
+    for (const choice of promptChoicesFor(prompt, state)) {
+      if (--considerBudget < 0) break
+      const next = step({ t: 'prompt', promptId: prompt.id, choice })
+      if (!next) continue
+      const v = considerLine(next, me, depth + 1).value
+      if (!best || v > best.value) best = { value: v, choice }
+    }
+  }
+  if (best) return best
+  const next = step(safePromptAnswer(state, prompt))
+  return next ? { value: considerLine(next, me, depth + 1).value } : { value: considerValue(state, me) }
+}
+
+/** run a play-out with the play-out-only prompt heuristics switched on (no nested play-outs) */
+function consider<T>(f: () => T): T {
+  const was = [inConsider, inFetchPlayout]
+  inConsider = true; inFetchPlayout = true
+  try { return f() } finally { inConsider = was[0]; inFetchPlayout = was[1] }
+}
+
+/** how much better the position is after `action` (its prompts played out) than it is now */
+function considerGain(state: GameState, me: PlayerId, action: Action, base: number): number {
+  let clone: GameState
+  try {
+    clone = cloneState(state)
+    if (!applyAction(clone, me, action).ok) return -Infinity
+  } catch { return -Infinity }
+  return considerLine(clone, me).value - base
+}
+
+type Considered = { action: Action; gain: number }
+let consideredMemo: { sig: string; magics: Considered[] } | null = null
+
+function considerSignature(state: GameState, me: PlayerId): string {
+  const p = state.players[me]
+  const units = Object.values(state.units).map((u) => `${u.id},${u.x},${u.y},${u.region},${u.damage},${u.tapped ? 1 : 0},${u.controller}`).join(';')
+  const arts = Object.values(state.artifacts).map((a) => `${a.id},${a.carriedBy ?? ''}`).join(';')
+  return `${me}|${state.turn}|${p.mana}|${p.hand.join(',')}|${p.cemetery.length}|${Object.keys(state.sites).length}|${Object.keys(state.auras).length}|${units}|${arts}`
+}
+
+/** every magic in hand, each way it can be cast, scored — best first (worked out once per position) */
+function consideredMagics(state: GameState, me: PlayerId): Considered[] {
+  const sig = considerSignature(state, me)
+  if (consideredMemo?.sig === sig) return consideredMemo.magics
+  const p = state.players[me]
+  const out: Considered[] = []
+  const seen = new Set<string>()
+  consider(() => {
+    const base = considerValue(state, me)
+    considerBudget = CONSIDER_BUDGET
+    for (const id of p.hand) {
+      const name = state.cards[id]?.name
+      if (!name || seen.has(name) || getCard(name).type !== 'Magic') continue
+      seen.add(name)
+      if (name === 'Chaos Twister') continue // a dexterity card: nothing to aim
+      let best: Considered | null = null
+      for (const action of magicCastActions(state, me, id, CONSIDER_CASTS_PER_CARD)) {
+        if (--considerBudget < 0) break
+        const gain = considerGain(state, me, action, base)
+        if (!best || gain > best.gain) best = { action, gain }
+      }
+      if (best && best.gain > -Infinity) out.push(best)
+    }
+  })
+  out.sort((a, b) => b.gain - a.gain)
+  consideredMemo = { sig, magics: out }
+  return out
+}
+
+/** the best magic to cast now, if one gains at least `minGain` */
+function consideredMagic(state: GameState, me: PlayerId, minGain: number, ok: (a: Action | null) => a is Action): Action | null {
+  if (!botProfiles[me].considered || inConsider) return null
+  for (const c of consideredMagics(state, me)) {
+    if (c.gain < minGain) break
+    if (ok(c.action) && isLegal(state, me, c.action)) {
+      considerFollowUp = { me, turn: state.turn }
+      return c.action
+    }
+  }
+  return null
+}
+
+/** an activated ability the ladder passes over (it only knows a few by their wording), used when
+ *  playing it out shows a clear gain. Abilities that tap a minion are left to the ladder — the
+ *  evaluator cannot see the attack given up — and an avatar's tap ability is only tried on request. */
+function consideredAbility(state: GameState, me: PlayerId, minGain: number, avatarTap: boolean, ok: (a: Action | null) => a is Action): Action | null {
+  if (!botProfiles[me].considered || inConsider) return null
+  const p = state.players[me]
+  const avatar = avatarOf(state, me)
+  const sources: { id: string; name: string }[] = [
+    ...Object.values(state.units).filter((u) => u.controller === me).map((u) => ({ id: u.id, name: u.name })),
+    ...Object.values(state.sites).filter((s) => s.controller === me && !s.isRubble).map((s) => ({ id: s.id, name: s.name })),
+    ...Object.values(state.artifacts).filter((a) => artifactController(state, a) === me).map((a) => ({ id: a.id, name: a.name })),
+  ]
+  const actions: Action[] = []
+  for (const src of sources) {
+    const unit = state.units[src.id]
+    const abilities: AbilityDef[] = [...(getScript(src.name)?.abilities ?? []), ...(unit ? grantedAbilities(state, unit) : [])]
+    for (const ability of abilities) {
+      if (ability.key === 'ranged' || ability.key === 'trap:spring') continue
+      if ((src.name === 'Toolbox' && ability.key === 'rummage') || (src.name === 'Silver Bullet' && ability.key === 'fire')) continue
+      const cost: any = ability.cost ?? {}
+      if (cost.life || cost.sacrificeSelf || cost.discardSpell) continue
+      if (!!cost.tap !== avatarTap || (avatarTap && src.id !== avatar.id)) continue
+      if ((cost.mana ?? 0) > p.mana) continue
+      if (canActivate(state, me, src.id, ability.key) !== null) continue
+      actions.push({ t: 'activate', sourceId: src.id, ability: ability.key, targets: [] })
+    }
+  }
+  if (!actions.length) return null
+  let best: Considered | null = null
+  consider(() => {
+    const base = considerValue(state, me)
+    considerBudget = CONSIDER_BUDGET
+    for (const action of actions) {
+      if (--considerBudget < 0) break
+      if (!ok(action)) continue
+      const gain = considerGain(state, me, action, base)
+      if (!best || gain > best.gain) best = { action, gain }
+    }
+  })
+  const pick = best as Considered | null
+  if (!pick || pick.gain < minGain || !isLegal(state, me, pick.action)) return null
+  considerFollowUp = { me, turn: state.turn }
+  return pick.action
+}
+
+/** a prompt raised by my considered play (which target, which square, which card): answer it the
+ *  way the play-out scored best */
+function considerPromptAnswer(state: GameState, me: PlayerId, prompt: any): Action | null {
+  if (inConsider || prompt.player !== me || !botProfiles[me].considered) return null
+  if (!considerFollowUp || considerFollowUp.me !== me || considerFollowUp.turn !== state.turn) return null
+  considerBudget = CONSIDER_BUDGET
+  const { choice } = consider(() => considerLine(state, me))
+  return choice === undefined ? null : { t: 'prompt', promptId: prompt.id, choice }
 }
 
 /** how much board value springing this trap wins, its choices played well */

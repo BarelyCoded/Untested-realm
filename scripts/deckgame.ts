@@ -1,7 +1,7 @@
 // One bot-vs-bot game between two decks, shared by deckmatch.ts and fieldtest.ts.
 // Both seats are played by the procedural bot. Returns a plain record of what happened.
 import { createGame, applyAction, avatarOf, getCard, type GameState, type PlayerId, type Action, type DeckList } from '../packages/shared/src'
-import { botAction, botNeedsToAct } from '../packages/client/src/bot'
+import { botAction, botNeedsToAct, setBotProfile } from '../packages/client/src/bot'
 
 export const MAXTURN = 80   // a game still running after this turn is recorded as a draw
 export const ACT_CAP = 400  // per-turn action limit → forced end of turn (stall guard)
@@ -16,6 +16,14 @@ export interface GameRecord {
   stuckA: Record<string, number>; stuckB: Record<string, number>
 }
 
+/** which bot pilots each deck: 'considered' (default) plays magics and abilities out before choosing,
+ *  'ladder' is the plain heuristic ladder. Set with BOT_A / BOT_B in the environment. */
+export interface BotChoice { A: 'considered' | 'ladder'; B: 'considered' | 'ladder' }
+export function botsFromEnv(): BotChoice {
+  const pick = (v?: string) => (v === 'ladder' ? 'ladder' : 'considered')
+  return { A: pick(process.env.BOT_A), B: pick(process.env.BOT_B) }
+}
+
 const inc = (m: Record<string, number>, k: string) => { m[k] = (m[k] ?? 0) + 1 }
 const srcName = (g: GameState, id: string): string => {
   const o: any = (g as any).units?.[id] ?? (g as any).artifacts?.[id] ?? (g as any).sites?.[id]
@@ -23,8 +31,10 @@ const srcName = (g: GameState, id: string): string => {
 }
 
 /** game `i` of deck A vs deck B: A alternates seats, and who goes first alternates independently. */
-export function playDeckGame(A: string, B: string, deckA: DeckList, deckB: DeckList, i: number, baseSeed: number): GameRecord {
+export function playDeckGame(A: string, B: string, deckA: DeckList, deckB: DeckList, i: number, baseSeed: number, bots: BotChoice = botsFromEnv()): GameRecord {
   const aSeat = (i % 2) as PlayerId
+  setBotProfile(aSeat, { considered: bots.A !== 'ladder' })
+  setBotProfile((1 - aSeat) as PlayerId, { considered: bots.B !== 'ladder' })
   const first = (Math.floor(i / 2) % 2) as PlayerId
   const pair: [DeckList, DeckList] = aSeat === 0 ? [deckA, deckB] : [deckB, deckA]
   const seed = (baseSeed + i * 7919) >>> 0
@@ -36,7 +46,13 @@ export function playDeckGame(A: string, B: string, deckA: DeckList, deckB: DeckL
       if (g.turn !== lastTurn) { lastTurn = g.turn; turnActs = 0 }
       const seat: PlayerId | null = botNeedsToAct(g, 0) ? 0 : botNeedsToAct(g, 1) ? 1 : null
       if (seat === null) { if (!applyAction(g, g.activePlayer, { t: 'endTurn' }).ok) break; continue }
-      if (++turnActs > ACT_CAP) { capHits++; applyAction(g, seat, { t: 'endTurn' }); turnActs = 0; continue }
+      if (++turnActs > ACT_CAP) {
+        capHits++; turnActs = 0
+        // stalled: end the turn, or decline the prompt that keeps coming back; if neither is accepted the game is abandoned (a draw)
+        const out: Action = g.prompts[0] ? { t: 'prompt', promptId: g.prompts[0].id, choice: null } : { t: 'endTurn' }
+        if (!applyAction(g, g.prompts[0] ? g.prompts[0].player : seat, out).ok && capHits > 20) break
+        continue
+      }
       let action: Action
       const d0 = Date.now()
       try { action = botAction(g, seat) } catch (e: any) { fb[seat]++; fbLog.push('threw: ' + String(e?.message ?? e).slice(0, 120)); action = { t: 'endTurn' } }
