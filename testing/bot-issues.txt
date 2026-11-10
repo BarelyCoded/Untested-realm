@@ -1,0 +1,42 @@
+# Bot play issues
+
+Running list of ways the test bot misplays, so results can be read with the right caution and fixes
+can be picked in order. Source for each round is noted.
+
+## Round 2 — field screen with the "considered plays" bot (3,300 games, 10 Nov 2026)
+
+Health: 5 crashes/timeouts, 9 rejected actions in 8 games, 71 draws at the 80-turn limit (2.2%),
+no turn hit the per-turn action cap. Slowest decision per game: median 53 ms, 95th percentile 293 ms,
+worst 5.8 s. First player won 51.3% of decided games.
+
+### Affects results
+
+| # | Issue | Evidence | Decks affected |
+|---|---|---|---|
+| 1 | Dragonlord never uses its dragon ability (`invoke`) | 0 uses in 120 deck-games | Air / Earth Dragonlord |
+| 2 | Savior rarely wards | 0.15 uses per game | all five Savior lists (ranked 35th-53rd) |
+| 3 | Rejected end-of-turn when a minion is compelled to attack; the harness then concedes the game | 5 games (Skeleton x2, Sacred Stag, Lugbog Cat, Aino) | any deck with compelled attackers |
+| 4 | Spells cast without enough mana | 4 rejections ("Not enough mana") | unknown; cost changes mid-turn suspected |
+| 5 | Reaction spells are never cast (they are played on the opponent's turn) | Dodge Roll 0 casts in 120 deck-games; also Vanishment, Occult Ritual | Water lists running Dodge Roll |
+| 6 | Site and utility spells still sit in hand | casts per game: Tithe 0.09, Dispel 0.09, Browse 0.14, Swap 0.15, Pollimorph 0.25, Poison Nova 0.28, Divine Healing 0.36 | Earth control lists most |
+| 7 | Chaos Twister is never cast (dexterity card, deliberately skipped) | 0 casts | Air lists, Water Necromancer |
+| 8 | Imposter picks masks from a fixed preference order | 1.2 masks per game, lists rank 26th-43rd | all Imposter lists |
+| 9 | Pathfinder and Archimago score far below their tournament results | Fire Pathfinder 31%, Archimago 38% vs the field | suggests weak piloting of site sequencing and control play |
+| 10 | Combat tricks are cast at end of turn for the card, not timed to win a fight | Gift of the Wolf / Serpent casts happen after attacks | aggro lists |
+| 11 | Abilities that tap a minion still use the old wording-based rules | not measured | varies |
+
+### Stability
+
+| # | Issue | Evidence |
+|---|---|---|
+| 12 | Stack overflow | 1 game: WATER_PATHFINDER v EARTH_ARCHIMAGO, game 7, seed base 20261109 |
+| 13 | Games abandoned after 3 minutes | 4 games, all at turn 64-76 against a Necromancer (very large boards) |
+| 14 | Slow decisions on large boards | 3 games with a decision over 3 s (worst 5.8 s) |
+
+## Round 1 — fixed
+
+- Non-damage magics never cast (Grapple Shot, Whirling Blades, Swap, Riptide, Geyser, Displace, Blink,
+  Common Sense, Landmass, Earthquake, Gift of the Serpent) — fixed by playing casts out on a copy.
+- Archimago, Geomancer and Imposter never used their avatar abilities — fixed the same way.
+- Endless self-repeating prompt (Evil Twin copying Selfsame Simulacrum) — declined after three repeats.
+- Toolbox / Silver Bullet never used — fixed earlier with collection play-outs.
