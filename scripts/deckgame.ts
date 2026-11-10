@@ -4,6 +4,7 @@ import { createGame, applyAction, avatarOf, getCard, type GameState, type Player
 import { botAction, botNeedsToAct, setBotProfile } from '../packages/client/src/bot'
 
 export const MAXTURN = 80   // a game still running after this turn is recorded as a draw
+export const MAX_GAME_MS = 180_000 // a game running longer than this is abandoned and recorded as a crash
 export const ACT_CAP = 400  // per-turn action limit → forced end of turn (stall guard)
 
 export interface GameRecord {
@@ -43,6 +44,7 @@ export function playDeckGame(A: string, B: string, deckA: DeckList, deckB: DeckL
   let lastTurn = -1, turnActs = 0, capHits = 0, maxDecisionMs = 0; const t0 = Date.now(); let crashed = ''; const fbLog: string[] = []
   try {
     while (g.phase !== 'over' && g.turn <= MAXTURN) {
+      if (Date.now() - t0 > MAX_GAME_MS) { crashed = 'timeout: game exceeded ' + MAX_GAME_MS / 1000 + 's at turn ' + g.turn; break }
       if (g.turn !== lastTurn) { lastTurn = g.turn; turnActs = 0 }
       const seat: PlayerId | null = botNeedsToAct(g, 0) ? 0 : botNeedsToAct(g, 1) ? 1 : null
       if (seat === null) { if (!applyAction(g, g.activePlayer, { t: 'endTurn' }).ok) break; continue }
