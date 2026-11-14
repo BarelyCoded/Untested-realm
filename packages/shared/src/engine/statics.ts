@@ -1,9 +1,9 @@
 // Effective (computed) characteristics of units: keywords and power can be
 // granted by printed text, modifiers, carried artifacts, and scripted statics.
 
-import { getCard, findCard, getKeywords, type ParsedKeywords } from '../cards/db'
+import { getCard, findCard, getKeywords, scriptedNames, type ParsedKeywords } from '../cards/db'
 import { applyGrant, grantsFlag, isStatusMarker, keywordKeyOf, removeKeyword, type KeywordGrant, type KeywordKey, type ModifierKeyword } from './keywords'
-import { getScript, type AbilityDef } from '../cards/scripts/registry'
+import { getScript, type AbilityDef, type ProtectedFrom } from '../cards/scripts/registry'
 import type { GameState, UnitState, Region, PlayerId, AuraState, SiteState, ArtifactState, Thresholds } from './types'
 import { siteAt, siteFlooded, isWaterSite, nearbySquaresW, adjacentSquaresW, orthAdjacentWrapped, occupiedSquares, sitesOf, setGridDisabledCheck, setGridRegionCheck, setGridSiteSilencedCheck } from './grid'
 
@@ -293,8 +293,11 @@ export function siteSilenced(state: GameState, site: { x: number; y: number }): 
   try {
   // a DISABLED site has no abilities (Codex) — the same as a silenced one for everything that asks
   if (here && siteDisabled(state, here)) return true
-  for (const ss of (state.flow?.siteSilences ?? []) as { siteId: string }[]) {
-    const src = state.sites[ss.siteId]
+  for (const ss of (state.flow?.siteSilences ?? []) as { siteId?: string; sites?: string[] }[]) {
+    // a fixed list of sites, taken when the effect resolved (Full-tilt Goliaths' snow: FAQ "nearby sites
+    // only, at the moment the genesis resolves")
+    if (ss.sites) { if (here && ss.sites.includes(here.id)) return true; continue }
+    const src = ss.siteId ? state.sites[ss.siteId] : undefined
     if (src && nearbySquaresW(state, src.x, src.y).some((q) => q.x === site.x && q.y === site.y)) return true
   }
   for (const src of Object.values(state.sites)) {
@@ -344,7 +347,41 @@ export function protectedFromSites(state: GameState, unit: UnitState): boolean {
   // (a silenced bearer keeps it: silence only strips printed abilities)
   if (unit.carrying.some((id) => { const a = state.artifacts[id]; return !!a && !!artScript(state, a)?.bearerIgnoresSites }) && !(state.units[unit.id] && isDisabled(state, unit))) return true
   if (!!getScript(unit.name)?.ignoresSites && !abilitiesOff(state, unit)) return true
-  return false
+  return protectionsOf(state, unit).includes('sites')
+}
+
+// names of the scripts that lend protection, so protectionsOf can skip the board scan when none is in play
+let protectorNames: Set<string> | null = null
+let protectorNamesOf = -1 // scriptedNames.size the set was built for (a script registered later rebuilds it)
+/** "Protected from X" lent to `unit` by other cards right now (Codex, Protected from X):
+ *   - a unit with grantsProtection (Highgate Guide: nearby allies, from sites)
+ *   - Humming Hummocks' Genesis (flow.hummocks): until its controller's next turn, their units nearby the
+ *     Hummocks are "Protected from all but units" — an ongoing effect centred on the site (FAQ), so it
+ *     ends early if the Hummocks leaves the realm or is silenced
+ *  Of "all but units" the engine models sites and magic, the two that act on units. */
+export function protectionsOf(state: GameState, unit: UnitState): ProtectedFrom[] {
+  const out = new Set<ProtectedFrom>()
+  for (const h of (state.flow?.hummocks ?? []) as { siteId: string; player: PlayerId }[]) {
+    const site = state.sites[h.siteId]
+    if (!site || site.isRubble || unit.controller !== h.player || unit.region === 'void') continue
+    if (!nearbySquaresW(state, site.x, site.y).some((q) => q.x === unit.x && q.y === unit.y)) continue
+    if (siteSilenced(state, site)) continue
+    out.add('sites'); out.add('magic')
+  }
+  if (!protectorNames || protectorNamesOf !== scriptedNames.size) {
+    protectorNames = new Set()
+    protectorNamesOf = scriptedNames.size
+    for (const name of scriptedNames) if (getScript(name)?.grantsProtection) protectorNames.add(name)
+  }
+  if (protectorNames.size) {
+    for (const src of Object.values(state.units)) {
+      if (src.id === unit.id || !protectorNames.has(src.name)) continue
+      const grant = getScript(src.name)?.grantsProtection
+      if (!grant || abilitiesOff(state, src)) continue
+      for (const p of grant(state, src.id, unit)) out.add(p)
+    }
+  }
+  return [...out]
 }
 
 /** artifacts hushed by an aura lose their text (Acid Rain) */
@@ -740,6 +777,9 @@ export function directlyDisabled(state: GameState, unit: UnitState): boolean {
   }
   if (unit.disabled) return true
   if (unit.modifiers.some((m) => m.kind === 'keyword' && m.keyword === 'disabled')) return !unit.isAvatar
+  // frozen by a Hibernal Legion: "disabled until the Legion leaves the realm" — an effect it applied, so it
+  // holds even while the Legion itself is disabled or silenced, and ends the moment the Legion is gone
+  if (!unit.isAvatar && ((state.flow?.hibernal ?? []) as { legionId: string; units: string[] }[]).some((h) => h.units.includes(unit.id) && !!state.units[h.legionId])) return true
   // shackled by a carried artifact (Iron Shackles)
   for (const artId of unit.carrying) {
     const art = state.artifacts[artId]
@@ -959,7 +999,19 @@ export function isDisabled(state: GameState, unit: UnitState): boolean {
   const terrain = terrainAt(state, unit.x, unit.y)
   if (kw.waterbound && terrain !== 'water') return true
   if (kw.landbound && terrain !== 'land') return true
+  // Outerbound (Codex): "disabled while not occupying at least one location on the outside of the realm,
+  // meaning a location in a square that has fewer than four other adjacent squares"
+  if (kw.outerbound && orthAdjacentWrapped(state, unit.x, unit.y).length >= 4) return true
   return false
+}
+
+/** Is this minion held by Permafrost ("Disable effects on minions here are permanent, but are removed if
+ *  they leave")? While it is, a disable on it doesn't run out or get knocked off (the start-of-turn expiry in
+ *  turn.ts, a sleeper woken by damage); Permafrost's own script lifts them when the minion leaves. */
+export function permafrostHolds(state: GameState, unit: UnitState): boolean {
+  if (unit.isAvatar || unit.region === 'void') return false
+  const site = siteAt(state, unit.x, unit.y)
+  return !!site && !site.isRubble && site.name === 'Permafrost' && !siteSilenced(state, site)
 }
 
 /** Has this unit lost its OWN abilities? Rulebook: a disabled minion "has no abilities" — passive, static,
@@ -983,6 +1035,8 @@ export function canTapForCost(state: GameState, unit: UnitState): boolean {
  *  artifact atop it (Blightstone), or — a Court — while an Overflowing Court has disabled the OTHER Courts. */
 export function siteDisabled(state: GameState, site: { id?: string; name?: string; x: number; y: number }): boolean {
   if (siteDisabledByArtifact(state, site)) return true
+  // frozen by a Hibernal Legion, until that Legion leaves the realm
+  if (site.id && ((state.flow?.hibernal ?? []) as { legionId: string; sites: string[] }[]).some((h) => h.sites.includes(site.id!) && !!state.units[h.legionId])) return true
   if (!site.name || !/\bCourt\b/.test(site.name)) return false
   return ((state.flow?.courtDisables ?? []) as { sourceId: string }[]).some((d) => d.sourceId !== site.id)
 }
