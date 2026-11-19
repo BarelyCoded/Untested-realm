@@ -1,11 +1,701 @@
 {
- "savedAt": "2026-11-19T16:37:00.356Z",
+ "savedAt": "2026-11-19T16:37:02.027Z",
  "codeCommit": "5e879c6",
  "finished": true,
  "winner": "You",
  "turns": 19,
  "botDifficulty": "claude",
  "flags": [],
+ "report": {
+  "version": 1,
+  "botSeat": 1,
+  "winner": 0,
+  "turns": 19,
+  "firstPlayer": 0,
+  "rows": [
+   {
+    "turn": 1,
+    "player": 0,
+    "sites": [
+     1,
+     0
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     6
+    ],
+    "units": [
+     0,
+     0
+    ],
+    "power": [
+     0,
+     0
+    ],
+    "score": -285
+   },
+   {
+    "turn": 2,
+    "player": 1,
+    "sites": [
+     1,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     6
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -133
+   },
+   {
+    "turn": 3,
+    "player": 0,
+    "sites": [
+     2,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     6
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -189
+   },
+   {
+    "turn": 4,
+    "player": 1,
+    "sites": [
+     2,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     6
+    ],
+    "units": [
+     0,
+     3
+    ],
+    "power": [
+     0,
+     3
+    ],
+    "score": -87
+   },
+   {
+    "turn": 5,
+    "player": 0,
+    "sites": [
+     3,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     6
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     3,
+     3
+    ],
+    "score": -174
+   },
+   {
+    "turn": 6,
+    "player": 1,
+    "sites": [
+     3,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     6
+    ],
+    "units": [
+     1,
+     5
+    ],
+    "power": [
+     3,
+     5
+    ],
+    "score": -85
+   },
+   {
+    "turn": 7,
+    "player": 0,
+    "sites": [
+     4,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     3,
+     6
+    ],
+    "units": [
+     2,
+     5
+    ],
+    "power": [
+     7,
+     5
+    ],
+    "score": -165
+   },
+   {
+    "turn": 8,
+    "player": 1,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     3,
+     5
+    ],
+    "units": [
+     2,
+     6
+    ],
+    "power": [
+     7,
+     8
+    ],
+    "score": -37
+   },
+   {
+    "turn": 9,
+    "player": 0,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     20,
+     16
+    ],
+    "hand": [
+     3,
+     5
+    ],
+    "units": [
+     3,
+     4
+    ],
+    "power": [
+     10,
+     6
+    ],
+    "score": -253
+   },
+   {
+    "turn": 10,
+    "player": 1,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     19,
+     16
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     3,
+     7
+    ],
+    "power": [
+     10,
+     11
+    ],
+    "score": -104
+   },
+   {
+    "turn": 11,
+    "player": 0,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     19,
+     13
+    ],
+    "hand": [
+     4,
+     4
+    ],
+    "units": [
+     3,
+     3
+    ],
+    "power": [
+     10,
+     3
+    ],
+    "score": -317
+   },
+   {
+    "turn": 12,
+    "player": 1,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     19,
+     13
+    ],
+    "hand": [
+     4,
+     4
+    ],
+    "units": [
+     3,
+     5
+    ],
+    "power": [
+     10,
+     7
+    ],
+    "score": -420
+   },
+   {
+    "turn": 13,
+    "player": 0,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     19,
+     9
+    ],
+    "hand": [
+     2,
+     4
+    ],
+    "units": [
+     5,
+     3
+    ],
+    "power": [
+     14,
+     3
+    ],
+    "score": -489
+   },
+   {
+    "turn": 14,
+    "player": 1,
+    "sites": [
+     5,
+     6
+    ],
+    "life": [
+     19,
+     9
+    ],
+    "hand": [
+     2,
+     2
+    ],
+    "units": [
+     5,
+     5
+    ],
+    "power": [
+     14,
+     7
+    ],
+    "score": -459
+   },
+   {
+    "turn": 15,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     19,
+     7
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     6,
+     2
+    ],
+    "power": [
+     20,
+     3
+    ],
+    "score": -613
+   },
+   {
+    "turn": 16,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     17,
+     7
+    ],
+    "hand": [
+     1,
+     1
+    ],
+    "units": [
+     5,
+     3
+    ],
+    "power": [
+     17,
+     5
+    ],
+    "score": -598
+   },
+   {
+    "turn": 17,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     17,
+     0
+    ],
+    "hand": [
+     1,
+     1
+    ],
+    "units": [
+     6,
+     0
+    ],
+    "power": [
+     19,
+     0
+    ],
+    "score": -1059
+   },
+   {
+    "turn": 18,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     17,
+     0
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     6,
+     2
+    ],
+    "power": [
+     19,
+     4
+    ],
+    "score": -1038
+   },
+   {
+    "turn": 19,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     17,
+     0
+    ],
+    "hand": [
+     2,
+     2
+    ],
+    "units": [
+     6,
+     2
+    ],
+    "power": [
+     19,
+     4
+    ],
+    "score": -1500
+   }
+  ],
+  "swings": [
+   {
+    "turn": 3,
+    "player": 0,
+    "change": 96,
+    "log": [
+     "— Turn 2: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer plays Boulevard of Bones at (3,4).",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "— Turn 3: You —",
+     "You draws a card from their spellbook.",
+     "You plays Mountain Pass at (3,2)."
+    ]
+   },
+   {
+    "turn": 9,
+    "player": 0,
+    "change": -88,
+    "log": [
+     "— Turn 8: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer plays Wuthering Heights at (2,3).",
+     "Computer casts Colicky Dragonettes.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Skeleton takes 1 damage.",
+     "Skeleton dies.",
+     "— Turn 9: You —",
+     "You draws a card from their spellbook.",
+     "You casts Hailstriker.",
+     "Skeleton takes 1 damage.",
+     "Skeleton takes 1 damage.",
+     "Hail batters 2 minions.",
+     "Skeleton dies. (killed by Hailstriker)",
+     "Skeleton dies. (killed by Hailstriker)",
+     "Stomping Mammoth moves to c3.",
+     "Stomping Mammoth attacks Arid Desert!",
+     "Computer loses 4 life (now 16).",
+     "Arid Desert is struck for 4.",
+     "Frost Mage moves to c2."
+    ]
+   },
+   {
+    "turn": 12,
+    "player": 1,
+    "change": -316,
+    "log": [
+     "— Turn 11: You —",
+     "You draws a card from their spellbook.",
+     "Hailstriker shoots Colicky Dragonettes.",
+     "Colicky Dragonettes takes 3 damage.",
+     "Colicky Dragonettes dies. (killed by Hailstriker)",
+     "Frost Mage: Encase a nearby minion in ice.",
+     "Saracen Raiders is encased in ice.",
+     "You casts Shatter.",
+     "Saracen Raiders dies. (killed by Frost Mage)",
+     "Stomping Mammoth moves to c4.",
+     "Stomping Mammoth attacks Necromancer!",
+     "Skeleton defends!",
+     "Skeleton takes 1 damage.",
+     "Necromancer takes 3 damage (life 13).",
+     "Stomping Mammoth takes 1 damage.",
+     "Stomping Mammoth takes 1 damage.",
+     "Skeleton dies. (killed by Stomping Mammoth)",
+     "Gibbous Nightgaunts moves to c3.",
+     "Gibbous Nightgaunts attacks Skeleton!",
+     "Skeleton takes 3 damage.",
+     "Gibbous Nightgaunts takes 1 damage.",
+     "Skeleton dies. (killed by Gibbous Nightgaunts)",
+     "You draws a card from their atlas.",
+     "— Turn 12: Computer —"
+    ]
+   },
+   {
+    "turn": 15,
+    "player": 0,
+    "change": -124,
+    "log": [
+     "— Turn 14: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Vile Imp.",
+     "Computer plays River of Blood at (5,4).",
+     "Computer casts War Horse.",
+     "— Turn 15: You —",
+     "You draws a card from their atlas.",
+     "You plays Spire at (5,3).",
+     "You casts Nanurluk.",
+     "Stomping Mammoth attacks Necromancer!",
+     "Vile Imp defends!",
+     "Vile Imp takes 2 damage.",
+     "Necromancer takes 2 damage (life 7).",
+     "Stomping Mammoth takes 2 damage.",
+     "Stomping Mammoth takes 1 damage.",
+     "Vile Imp dies. (killed by Stomping Mammoth)",
+     "Gibbous Nightgaunts attacks Necromancer!",
+     "Skeleton defends!",
+     "Skeleton takes 3 damage.",
+     "Gibbous Nightgaunts takes 1 damage.",
+     "Skeleton dies. (killed by Gibbous Nightgaunts)",
+     "Hailstriker shoots Skeleton.",
+     "Skeleton takes 3 damage.",
+     "Skeleton dies. (killed by Hailstriker)"
+    ]
+   },
+   {
+    "turn": 17,
+    "player": 0,
+    "change": -446,
+    "log": [
+     "— Turn 16: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Computer casts Firebolts.",
+     "Gibbous Nightgaunts takes 1 damage.",
+     "Gibbous Nightgaunts takes 1 damage.",
+     "Gibbous Nightgaunts takes 1 damage.",
+     "Gibbous Nightgaunts dies.",
+     "War Horse moves to b2.",
+     "War Horse attacks Tundra!",
+     "You loses 2 life (now 17).",
+     "Tundra is struck for 2.",
+     "Computer casts Jihad.",
+     "— Turn 17: You —",
+     "You draws a card from their spellbook.",
+     "Frost Mage: Encase a nearby minion in ice.",
+     "War Horse is encased in ice.",
+     "Aria Wraith loses Stealth.",
+     "Aria Wraith: Break Stealth → destroy nearby artifacts and disabled minions.",
+     "War Horse dies. (killed by Aria Wraith)",
+     "The Wraith's aria shatters what can't hear it.",
+     "Stomping Mammoth attacks Necromancer!",
+     "Skeleton defends!"
+    ]
+   },
+   {
+    "turn": 19,
+    "player": 0,
+    "change": -441,
+    "log": [
+     "— Turn 18: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Computer casts Gift of the Serpent.",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Barging Barghest.",
+     "Computer draws a card from their atlas.",
+     "Wuthering Heights: Fly a minion here to a nearby site.",
+     "No one stands on the heights.",
+     "— Turn 19: You —",
+     "You draws a card from their spellbook.",
+     "Nanurluk moves to c4.",
+     "Nanurluk attacks Necromancer!",
+     "Skeleton defends!",
+     "Skeleton takes 5 damage.",
+     "Death blow! Necromancer is defeated.",
+     "Nanurluk takes 1 damage.",
+     "Nanurluk takes 1 damage."
+    ]
+   }
+  ],
+  "checks": [
+   {
+    "turn": 10,
+    "played": [
+     "Avatar: tap to PLAY Active Volcano at b1",
+     "CAST Saracen Raiders at c2",
+     "ABILITY \"gust\" of Wuthering Heights at d2",
+     "Skeleton at d1 moves to d2",
+     "Skeleton at c1 moves to c2",
+     "ABILITY \"raise\" of Necromancer at c1",
+     "END YOUR TURN"
+    ],
+    "engine": "Avatar: tap to PLAY Active Volcano at b1",
+    "same": true
+   },
+   {
+    "turn": 16,
+    "played": [
+     "ABILITY \"raise\" of Necromancer at c1",
+     "CAST Firebolts direction backward",
+     "War Horse at d2 moves to d3 and ATTACKS THE SITE there {no defender in reach}",
+     "CAST Jihad at d4",
+     "END YOUR TURN"
+    ],
+    "engine": "ABILITY \"raise\" of Necromancer at c1",
+    "same": true
+   },
+   {
+    "turn": 18,
+    "played": [
+     "ABILITY \"raise\" of Necromancer at c1",
+     "CAST Gift of the Serpent targeting Skeleton at c1",
+     "CAST Barging Barghest at a3 (void)",
+     "Avatar: tap to DRAW a site from the atlas",
+     "ABILITY \"gust\" of Wuthering Heights at d2",
+     "END YOUR TURN"
+    ],
+    "engine": "ABILITY \"raise\" of Necromancer at c1",
+    "same": true
+   }
+  ],
+  "rejected": 0
+ },
  "claude": {
   "usage": {
    "calls": 43,
