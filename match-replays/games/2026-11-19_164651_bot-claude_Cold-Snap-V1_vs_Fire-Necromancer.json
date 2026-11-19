@@ -1,11 +1,882 @@
 {
- "savedAt": "2026-11-19T17:07:06.670Z",
+ "savedAt": "2026-11-19T17:07:08.380Z",
  "codeCommit": "d593491",
  "finished": true,
  "winner": "You",
  "turns": 26,
  "botDifficulty": "claude",
  "flags": [],
+ "report": {
+  "version": 1,
+  "botSeat": 1,
+  "winner": 0,
+  "turns": 26,
+  "firstPlayer": 1,
+  "rows": [
+   {
+    "turn": 1,
+    "player": 1,
+    "sites": [
+     0,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -143
+   },
+   {
+    "turn": 2,
+    "player": 0,
+    "sites": [
+     1,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     5
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -167
+   },
+   {
+    "turn": 3,
+    "player": 1,
+    "sites": [
+     1,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     0,
+     3
+    ],
+    "power": [
+     0,
+     4
+    ],
+    "score": -62
+   },
+   {
+    "turn": 4,
+    "player": 0,
+    "sites": [
+     2,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     4
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     1,
+     4
+    ],
+    "score": -115
+   },
+   {
+    "turn": 5,
+    "player": 1,
+    "sites": [
+     2,
+     3
+    ],
+    "life": [
+     18,
+     20
+    ],
+    "hand": [
+     4,
+     4
+    ],
+    "units": [
+     0,
+     4
+    ],
+    "power": [
+     0,
+     5
+    ],
+    "score": 69
+   },
+   {
+    "turn": 6,
+    "player": 0,
+    "sites": [
+     3,
+     3
+    ],
+    "life": [
+     19,
+     20
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     1,
+     4
+    ],
+    "power": [
+     3,
+     5
+    ],
+    "score": -16
+   },
+   {
+    "turn": 7,
+    "player": 1,
+    "sites": [
+     3,
+     4
+    ],
+    "life": [
+     19,
+     20
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     1,
+     7
+    ],
+    "power": [
+     3,
+     10
+    ],
+    "score": 122
+   },
+   {
+    "turn": 8,
+    "player": 0,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     19,
+     20
+    ],
+    "hand": [
+     2,
+     4
+    ],
+    "units": [
+     2,
+     6
+    ],
+    "power": [
+     7,
+     8
+    ],
+    "score": -22
+   },
+   {
+    "turn": 9,
+    "player": 1,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     16,
+     20
+    ],
+    "hand": [
+     2,
+     3
+    ],
+    "units": [
+     2,
+     9
+    ],
+    "power": [
+     7,
+     14
+    ],
+    "score": 170
+   },
+   {
+    "turn": 10,
+    "player": 0,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     2,
+     3
+    ],
+    "units": [
+     2,
+     7
+    ],
+    "power": [
+     5,
+     9
+    ],
+    "score": 45
+   },
+   {
+    "turn": 11,
+    "player": 1,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     16,
+     20
+    ],
+    "hand": [
+     2,
+     4
+    ],
+    "units": [
+     2,
+     9
+    ],
+    "power": [
+     5,
+     14
+    ],
+    "score": 220
+   },
+   {
+    "turn": 12,
+    "player": 0,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     1,
+     4
+    ],
+    "units": [
+     2,
+     6
+    ],
+    "power": [
+     5,
+     6
+    ],
+    "score": -43
+   },
+   {
+    "turn": 13,
+    "player": 1,
+    "sites": [
+     5,
+     6
+    ],
+    "life": [
+     15,
+     20
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     2,
+     8
+    ],
+    "power": [
+     5,
+     12
+    ],
+    "score": 139
+   },
+   {
+    "turn": 14,
+    "player": 0,
+    "sites": [
+     5,
+     6
+    ],
+    "life": [
+     16,
+     20
+    ],
+    "hand": [
+     2,
+     2
+    ],
+    "units": [
+     3,
+     7
+    ],
+    "power": [
+     9,
+     8
+    ],
+    "score": -100
+   },
+   {
+    "turn": 15,
+    "player": 1,
+    "sites": [
+     5,
+     6
+    ],
+    "life": [
+     10,
+     20
+    ],
+    "hand": [
+     2,
+     2
+    ],
+    "units": [
+     3,
+     9
+    ],
+    "power": [
+     9,
+     12
+    ],
+    "score": 102
+   },
+   {
+    "turn": 16,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     11,
+     13
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     4,
+     8
+    ],
+    "power": [
+     13,
+     11
+    ],
+    "score": -41
+   },
+   {
+    "turn": 17,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     9,
+     13
+    ],
+    "hand": [
+     1,
+     4
+    ],
+    "units": [
+     4,
+     9
+    ],
+    "power": [
+     13,
+     12
+    ],
+    "score": 90
+   },
+   {
+    "turn": 18,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     11,
+     10
+    ],
+    "hand": [
+     1,
+     3
+    ],
+    "units": [
+     6,
+     4
+    ],
+    "power": [
+     18,
+     5
+    ],
+    "score": -258
+   },
+   {
+    "turn": 19,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     11,
+     10
+    ],
+    "hand": [
+     1,
+     3
+    ],
+    "units": [
+     4,
+     2
+    ],
+    "power": [
+     11,
+     3
+    ],
+    "score": -122
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "sites": [
+     7,
+     6
+    ],
+    "life": [
+     11,
+     4
+    ],
+    "hand": [
+     1,
+     3
+    ],
+    "units": [
+     4,
+     1
+    ],
+    "power": [
+     11,
+     1
+    ],
+    "score": -340
+   },
+   {
+    "turn": 21,
+    "player": 1,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     11,
+     4
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     3,
+     3
+    ],
+    "power": [
+     7,
+     6
+    ],
+    "score": -167
+   },
+   {
+    "turn": 22,
+    "player": 0,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     11,
+     0
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     5,
+     2
+    ],
+    "power": [
+     13,
+     5
+    ],
+    "score": -564
+   },
+   {
+    "turn": 23,
+    "player": 1,
+    "sites": [
+     7,
+     8
+    ],
+    "life": [
+     11,
+     0
+    ],
+    "hand": [
+     1,
+     1
+    ],
+    "units": [
+     3,
+     3
+    ],
+    "power": [
+     7,
+     5
+    ],
+    "score": -413
+   },
+   {
+    "turn": 24,
+    "player": 0,
+    "sites": [
+     7,
+     8
+    ],
+    "life": [
+     11,
+     0
+    ],
+    "hand": [
+     1,
+     1
+    ],
+    "units": [
+     4,
+     2
+    ],
+    "power": [
+     10,
+     4
+    ],
+    "score": -556
+   },
+   {
+    "turn": 25,
+    "player": 1,
+    "sites": [
+     7,
+     8
+    ],
+    "life": [
+     11,
+     0
+    ],
+    "hand": [
+     1,
+     1
+    ],
+    "units": [
+     4,
+     4
+    ],
+    "power": [
+     10,
+     7
+    ],
+    "score": -523
+   },
+   {
+    "turn": 26,
+    "player": 0,
+    "sites": [
+     7,
+     8
+    ],
+    "life": [
+     11,
+     0
+    ],
+    "hand": [
+     1,
+     1
+    ],
+    "units": [
+     5,
+     4
+    ],
+    "power": [
+     11,
+     7
+    ],
+    "score": -1500
+   }
+  ],
+  "swings": [
+   {
+    "turn": 5,
+    "player": 1,
+    "change": 131,
+    "log": [
+     "— Turn 4: You —",
+     "You draws a card from their spellbook.",
+     "You plays Mountain Pass at (3,2).",
+     "You casts Arctic Fox.",
+     "— Turn 5: Computer —",
+     "Computer draws a card from their atlas.",
+     "Computer plays Mirror Realm at (2,3).",
+     "The Mirror Realm becomes a perfect image of Red Desert.",
+     "Arctic Fox takes 1 damage.",
+     "Arctic Fox dies.",
+     "Vile Imp moves to c2.",
+     "Vile Imp attacks Mountain Pass!",
+     "You loses 2 life (now 18).",
+     "Mountain Pass is struck for 2.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears."
+    ]
+   },
+   {
+    "turn": 12,
+    "player": 0,
+    "change": -88,
+    "log": [
+     "— Turn 11: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Siege Giant.",
+     "Computer draws a card from their atlas.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Skeleton moves to b3.",
+     "Frost Mage takes 1 damage (life 16).",
+     "— Turn 12: You —",
+     "You draws a card from their atlas.",
+     "You plays Tundra at (4,3).",
+     "Frost Mage: Encase a nearby minion in ice.",
+     "Siege Giant is encased in ice.",
+     "You casts Shatter.",
+     "Colicky Dragonettes takes 1 damage.",
+     "You gains 1 life (now 17).",
+     "Siege Giant dies. (killed by Frost Mage)",
+     "Sissi Marksmen shoots Colicky Dragonettes.",
+     "Colicky Dragonettes takes 2 damage.",
+     "Colicky Dragonettes dies. (killed by Sissi Marksmen)",
+     "Gibbous Nightgaunts moves to b3.",
+     "Gibbous Nightgaunts attacks Skeleton!",
+     "Skeleton takes 3 damage.",
+     "Gibbous Nightgaunts takes 1 damage."
+    ]
+   },
+   {
+    "turn": 18,
+    "player": 0,
+    "change": -217,
+    "log": [
+     "— Turn 17: Computer —",
+     "Computer draws a card from their atlas.",
+     "Skeleton moves to c3.",
+     "Skeleton moves to b4.",
+     "Computer draws a card from their atlas.",
+     "Wild Fanatic moves to d2.",
+     "Wild Fanatic attacks Spire!",
+     "You loses 2 life (now 9).",
+     "Spire is struck for 2.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Skeleton moves to c3.",
+     "— Turn 18: You —",
+     "You draws a card from their spellbook.",
+     "Sissi Marksmen shoots Skeleton.",
+     "Skeleton takes 2 damage.",
+     "Skeleton dies. (killed by Sissi Marksmen)",
+     "Lugbog Cat moves to d3.",
+     "Lugbog Cat attacks Redcap Powries!",
+     "Redcap Powries takes 4 damage.",
+     "Lugbog Cat takes 3 damage.",
+     "Redcap Powries dies. (killed by Lugbog Cat)",
+     "You casts Arctic Fox.",
+     "Skeleton takes 1 damage."
+    ]
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "change": -82,
+    "log": [
+     "— Turn 19: Computer —",
+     "Computer draws a card from their atlas.",
+     "Computer casts Lava Flow.",
+     "Skeleton takes 5 damage.",
+     "Skeleton takes 5 damage.",
+     "Skeleton takes 5 damage.",
+     "Gibbous Nightgaunts takes 4 damage.",
+     "Frost Elemental takes 4 damage.",
+     "Gibbous Nightgaunts dies.",
+     "Frost Elemental dies.",
+     "Skeleton dies.",
+     "Skeleton dies.",
+     "Skeleton dies.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "— Turn 20: You —",
+     "You draws a card from their spellbook.",
+     "You plays Lighthouse at (1,2).",
+     "Lacuna Entity attacks Wild Fanatic!",
+     "Wild Fanatic takes 4 damage.",
+     "Lacuna Entity takes 2 damage.",
+     "Wild Fanatic dies. (killed by Lacuna Entity)",
+     "Lugbog Cat moves to c3.",
+     "Lugbog Cat attacks Red Desert!"
+    ]
+   },
+   {
+    "turn": 23,
+    "player": 1,
+    "change": -246,
+    "log": [
+     "— Turn 22: You —",
+     "You draws a card from their spellbook.",
+     "Sissi Marksmen shoots Necromancer.",
+     "Necromancer takes 2 damage (life 2).",
+     "You casts Stomping Mammoth.",
+     "Skeleton takes 1 damage.",
+     "Skeleton dies. (killed by Frost Mage)",
+     "You casts Coy Nixie.",
+     "Lugbog Cat takes 1 damage.",
+     "Lacuna Entity moves to c3.",
+     "Lacuna Entity attacks Red Desert!",
+     "Computer loses 4 life (now 0).",
+     "Necromancer is at death's door!",
+     "Red Desert is struck for 4.",
+     "You draws a card from their atlas.",
+     "— Turn 23: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Lugbog Cat attacks Lacuna Entity!",
+     "Lugbog Cat loses Stealth.",
+     "Lacuna Entity takes 4 damage.",
+     "Lugbog Cat takes 4 damage.",
+     "Lugbog Cat's cover is blown — it returns to its owner.",
+     "Lugbog Cat dies. (killed by Lacuna Entity)",
+     "Lacuna Entity dies. (killed by Lugbog Cat)"
+    ]
+   },
+   {
+    "turn": 26,
+    "player": 0,
+    "change": -944,
+    "log": [
+     "— Turn 25: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Vile Imp.",
+     "Necromancer moves to b4.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Skeleton moves to c3.",
+     "Wuthering Heights: Fly a minion here to a nearby site.",
+     "— Turn 26: You —",
+     "You draws a card from their spellbook.",
+     "You casts Highland Princess.",
+     "Death blow! Necromancer is defeated.",
+     "No matching card in the spellbook."
+    ]
+   }
+  ],
+  "checks": [
+   {
+    "turn": 17,
+    "played": [
+     "Skeleton at c1 moves to c2",
+     "Skeleton at c1 moves to d1",
+     "Avatar: tap to DRAW a site from the atlas",
+     "Wild Fanatic at b2 moves to b3 and ATTACKS THE SITE there {no defender in reach}",
+     "ABILITY \"raise\" of Necromancer at c1",
+     "Skeleton at c1 moves to c2",
+     "END YOUR TURN"
+    ],
+    "engine": "Wild Fanatic at b2 moves to b3 and ATTACKS THE SITE there {no defender in reach}",
+    "same": false
+   },
+   {
+    "turn": 21,
+    "played": [
+     "CAST Infiltrate targeting Lugbog Cat (enemy) at c2",
+     "ABILITY \"raise\" of Necromancer at c1",
+     "Avatar: tap to PLAY River of Blood at e1",
+     "ABILITY \"gust\" of Wuthering Heights at e2",
+     "Skeleton at c1 moves to c2",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Infiltrate targeting Lacuna Entity (enemy) at c3",
+    "same": false
+   },
+   {
+    "turn": 25,
+    "played": [
+     "CAST Vile Imp at e2",
+     "Necromancer at c1 moves to d1",
+     "ABILITY \"raise\" of Necromancer at d1",
+     "Skeleton at c1 moves to c2",
+     "ABILITY \"gust\" of Wuthering Heights at e2",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Vile Imp at d2",
+    "same": false
+   }
+  ],
+  "rejected": 0
+ },
  "claude": {
   "usage": {
    "calls": 48,
