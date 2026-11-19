@@ -1004,6 +1004,14 @@ export function searchBotAction(state: GameState, me: PlayerId, cfg: SearchConfi
   return botAction(view(), me, cfg.banned) // generator offered nothing legal → base policy (ban-aware)
 }
 
+/** How far the last root search's best first move was ahead of its second best (in evaluation points);
+ *  Infinity when only one move was looked at. Small = a close decision. */
+export function lastRootGap(): number {
+  if (ROOT_ALTS.length < 2) return Infinity
+  const v = ROOT_ALTS.map((x) => x.val).sort((x, y) => y - x)
+  return v[0] - v[1]
+}
+
 // ── DEEP mode: play the best few lines out several turns ────────────────────
 let ROLL_KEY = ''
 let ROLL_SPENT = 0
@@ -1013,7 +1021,7 @@ export const rolloutStats = () => ROLL_STATS
 /** A copy of the game in which every card `me` has not seen is reshuffled: the opponent's hand is redealt
  *  from their hand and decks together (keeping how many spells and sites they hold), and both players'
  *  decks are put in a new order. What `me` knows stays as it is. */
-function reshuffled(real: GameState, me: PlayerId, rand: () => number): GameState {
+export function reshuffled(real: GameState, me: PlayerId, rand: () => number): GameState {
   const s = clone(real)
   const shuffle = (a: string[]) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] } }
   const foe = s.players[opponent(me)]
