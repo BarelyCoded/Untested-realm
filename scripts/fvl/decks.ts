@@ -248,6 +248,32 @@ DECKS['Cold Snap'] = {
   },
 }
 
+// Cold Snap V1: what the user is playing in the app on 19 Nov (Cold Snap with Jormungand rather than the Hydra)
+DECKS['Cold Snap V1'] = { ...DECKS['Cold Snap'], name: 'Cold Snap V1', spellbook: { ...DECKS['Cold Snap'].spellbook, 'Seirawan Hydra': 0, Jormungand: 1 } }
+// Cold Snap V2: V1 within the copies the user really has (19 Nov: 2 Sissi Marksmen, 1 Arctic Fox, 2 Headless
+// Haunt, 2 Stomping Mammoth, 1 Full-tilt Goliaths, 1 Hibernal Legion, 2 Lighthouse, 1 Avalanche, 1 Whirling
+// Blades, 2 Gyre Hippogriffs), minus Jormungand ("a dead card"); in come Research x3 as the draw engine, the
+// Seirawan Hydra and a third Freeze.
+DECKS['Cold Snap V2'] = {
+  ...DECKS['Cold Snap'], name: 'Cold Snap V2',
+  spellbook: {
+    Freeze: 3, Shatter: 3, Frostbolt: 3, Slide: 2, Pollimorph: 1, Research: 3,
+    'Sissi Marksmen': 2, 'The White Death': 1, 'Stygian Archers': 3, Hailstriker: 2,
+    'Arctic Fox': 1, 'Highland Princess': 1, 'Adept Illusionist': 2, 'Coy Nixie': 3, 'Lugbog Cat': 2, 'Headless Haunt': 2, 'Gibbous Nightgaunts': 3, 'Order of the Sacred Oak': 3, 'Aria Wraith': 2, 'Frost Elemental': 3,
+    'Sacred Stag': 1, 'Lacuna Entity': 1, 'Stomping Mammoth': 2, 'Frozen Horror': 2,
+    'Full-tilt Goliaths': 1, 'Hibernal Legion': 1, Nanurluk: 1, 'Seirawan Hydra': 1, 'Draconian Bonekite': 1,
+    Toolbox: 3, 'Ring of Morrigan': 1,
+  },
+  atlas: { ...DECKS['Cold Snap'].atlas, Lighthouse: 2, Avalanche: 1, 'Gothic Tower': 1, 'Dark Tower': 1 },
+}
+
+// Cold Snap V3: V2 within what the user has after pulling cards (20 Nov: only 2 Research, 2 Order of the
+// Sacred Oak, 2 Stygian Archers) — a third Lugbog Cat, a Gyre Hippogriffs and a Whirling Blades come in.
+DECKS['Cold Snap V3'] = {
+  ...DECKS['Cold Snap V2'], name: 'Cold Snap V3',
+  spellbook: { ...DECKS['Cold Snap V2'].spellbook, Research: 2, 'Order of the Sacred Oak': 2, 'Stygian Archers': 2, 'Lugbog Cat': 3, 'Gyre Hippogriffs': 1, 'Whirling Blades': 1 },
+}
+
 // L6 (control): the Fire Necromancer list with the Avatar swapped, to see what the Lavamancer costs a proven shell.
 import { featuredDecks } from '../../packages/shared/src'
 const necro = (featuredDecks as DeckList[]).find((d) => d.name === 'Fire Necromancer')
