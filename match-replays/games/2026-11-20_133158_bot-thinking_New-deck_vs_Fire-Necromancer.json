@@ -1,11 +1,856 @@
 {
- "savedAt": "2026-11-20T13:49:04.670Z",
+ "savedAt": "2026-11-20T13:49:06.040Z",
  "codeCommit": "bd3269c",
  "finished": true,
  "winner": "Computer",
  "turns": 25,
  "botDifficulty": "thinking",
  "flags": [],
+ "report": {
+  "version": 1,
+  "botSeat": 1,
+  "winner": 1,
+  "turns": 25,
+  "firstPlayer": 1,
+  "rows": [
+   {
+    "turn": 1,
+    "player": 1,
+    "sites": [
+     0,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -143
+   },
+   {
+    "turn": 2,
+    "player": 0,
+    "sites": [
+     1,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -199
+   },
+   {
+    "turn": 3,
+    "player": 1,
+    "sites": [
+     1,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     2
+    ],
+    "power": [
+     0,
+     2
+    ],
+    "score": -116
+   },
+   {
+    "turn": 4,
+    "player": 0,
+    "sites": [
+     2,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     2
+    ],
+    "power": [
+     0,
+     2
+    ],
+    "score": -172
+   },
+   {
+    "turn": 5,
+    "player": 1,
+    "sites": [
+     2,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     4
+    ],
+    "units": [
+     0,
+     3
+    ],
+    "power": [
+     0,
+     5
+    ],
+    "score": -23
+   },
+   {
+    "turn": 6,
+    "player": 0,
+    "sites": [
+     3,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     3,
+     5
+    ],
+    "score": -96
+   },
+   {
+    "turn": 7,
+    "player": 1,
+    "sites": [
+     3,
+     4
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     0,
+     2
+    ],
+    "power": [
+     0,
+     4
+    ],
+    "score": 77
+   },
+   {
+    "turn": 8,
+    "player": 0,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -71
+   },
+   {
+    "turn": 9,
+    "player": 1,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     14,
+     20
+    ],
+    "hand": [
+     5,
+     5
+    ],
+    "units": [
+     0,
+     3
+    ],
+    "power": [
+     0,
+     5
+    ],
+    "score": 161
+   },
+   {
+    "turn": 10,
+    "player": 0,
+    "sites": [
+     5,
+     4
+    ],
+    "life": [
+     14,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     3
+    ],
+    "power": [
+     0,
+     5
+    ],
+    "score": -3
+   },
+   {
+    "turn": 11,
+    "player": 1,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     6,
+     3
+    ],
+    "units": [
+     0,
+     5
+    ],
+    "power": [
+     0,
+     10
+    ],
+    "score": 289
+   },
+   {
+    "turn": 12,
+    "player": 0,
+    "sites": [
+     6,
+     5
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     4,
+     3
+    ],
+    "units": [
+     1,
+     4
+    ],
+    "power": [
+     4,
+     7
+    ],
+    "score": 199
+   },
+   {
+    "turn": 13,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     5,
+     20
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     1,
+     6
+    ],
+    "power": [
+     4,
+     11
+    ],
+    "score": 538
+   },
+   {
+    "turn": 14,
+    "player": 0,
+    "sites": [
+     7,
+     6
+    ],
+    "life": [
+     5,
+     20
+    ],
+    "hand": [
+     3,
+     2
+    ],
+    "units": [
+     2,
+     6
+    ],
+    "power": [
+     7,
+     11
+    ],
+    "score": 457
+   },
+   {
+    "turn": 15,
+    "player": 1,
+    "sites": [
+     7,
+     6
+    ],
+    "life": [
+     0,
+     20
+    ],
+    "hand": [
+     3,
+     2
+    ],
+    "units": [
+     2,
+     6
+    ],
+    "power": [
+     7,
+     13
+    ],
+    "score": 828
+   },
+   {
+    "turn": 16,
+    "player": 0,
+    "sites": [
+     7,
+     6
+    ],
+    "life": [
+     0,
+     20
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     3,
+     5
+    ],
+    "power": [
+     9,
+     10
+    ],
+    "score": 704
+   },
+   {
+    "turn": 17,
+    "player": 1,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     0,
+     20
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     3,
+     6
+    ],
+    "power": [
+     9,
+     11
+    ],
+    "score": 802
+   },
+   {
+    "turn": 18,
+    "player": 0,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     0,
+     20
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     3,
+     3
+    ],
+    "power": [
+     6,
+     3
+    ],
+    "score": 642
+   },
+   {
+    "turn": 19,
+    "player": 1,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     0,
+     20
+    ],
+    "hand": [
+     1,
+     4
+    ],
+    "units": [
+     3,
+     4
+    ],
+    "power": [
+     6,
+     4
+    ],
+    "score": 679
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "sites": [
+     8,
+     7
+    ],
+    "life": [
+     0,
+     19
+    ],
+    "hand": [
+     0,
+     4
+    ],
+    "units": [
+     5,
+     2
+    ],
+    "power": [
+     12,
+     2
+    ],
+    "score": 510
+   },
+   {
+    "turn": 21,
+    "player": 1,
+    "sites": [
+     8,
+     7
+    ],
+    "life": [
+     0,
+     18
+    ],
+    "hand": [
+     0,
+     4
+    ],
+    "units": [
+     5,
+     4
+    ],
+    "power": [
+     12,
+     7
+    ],
+    "score": 626
+   },
+   {
+    "turn": 22,
+    "player": 0,
+    "sites": [
+     8,
+     7
+    ],
+    "life": [
+     0,
+     9
+    ],
+    "hand": [
+     1,
+     4
+    ],
+    "units": [
+     4,
+     1
+    ],
+    "power": [
+     11,
+     1
+    ],
+    "score": 304
+   },
+   {
+    "turn": 23,
+    "player": 1,
+    "sites": [
+     8,
+     8
+    ],
+    "life": [
+     0,
+     9
+    ],
+    "hand": [
+     1,
+     3
+    ],
+    "units": [
+     3,
+     2
+    ],
+    "power": [
+     6,
+     2
+    ],
+    "score": 446
+   },
+   {
+    "turn": 24,
+    "player": 0,
+    "sites": [
+     8,
+     8
+    ],
+    "life": [
+     0,
+     3
+    ],
+    "hand": [
+     2,
+     3
+    ],
+    "units": [
+     3,
+     1
+    ],
+    "power": [
+     6,
+     1
+    ],
+    "score": 167
+   },
+   {
+    "turn": 25,
+    "player": 1,
+    "sites": [
+     8,
+     8
+    ],
+    "life": [
+     0,
+     2
+    ],
+    "hand": [
+     2,
+     2
+    ],
+    "units": [
+     2,
+     3
+    ],
+    "power": [
+     3,
+     6
+    ],
+    "score": 1500
+   }
+  ],
+  "swings": [
+   {
+    "turn": 11,
+    "player": 1,
+    "change": 128,
+    "log": [
+     "— Turn 10: You —",
+     "You draws a card from their atlas.",
+     "You plays Tundra at (2,1).",
+     "Frost Mage: Encase a nearby minion in ice.",
+     "Redcap Powries is encased in ice.",
+     "You casts Research.",
+     "You draws 2 cards from their spellbook.",
+     "— Turn 11: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer plays Court of Equity at (4,4).",
+     "Computer casts Redcap Powries.",
+     "Computer casts Vile Imp.",
+     "Redcap Powries moves to c2.",
+     "Redcap Powries attacks Lighthouse!",
+     "You loses 3 life (now 11).",
+     "Lighthouse is struck for 3."
+    ]
+   },
+   {
+    "turn": 13,
+    "player": 1,
+    "change": 249,
+    "log": [
+     "— Turn 12: You —",
+     "You draws a card from their atlas.",
+     "You plays Winter River at (4,1).",
+     "The river carries the spell to the bottom.",
+     "Frost Mage: Encase a nearby minion in ice.",
+     "Redcap Powries is encased in ice.",
+     "You casts Shatter.",
+     "Redcap Powries dies. (killed by Frost Mage)",
+     "You casts Lugbog Cat.",
+     "— Turn 13: Computer —",
+     "Computer draws a card from their atlas.",
+     "Redcap Powries moves to d2.",
+     "Redcap Powries attacks Icicle Dome!",
+     "You loses 3 life (now 8).",
+     "Icicle Dome is struck for 3.",
+     "Vile Imp moves to b2.",
+     "Vile Imp attacks Mountain Peaks!",
+     "You loses 2 life (now 6).",
+     "Mountain Peaks is struck for 2.",
+     "Computer plays Boulevard of Bones at (4,3).",
+     "Computer casts Clamor of Harpies.",
+     "Skeleton moves to b2.",
+     "Skeleton attacks Mountain Peaks!",
+     "You loses 1 life (now 5)."
+    ]
+   },
+   {
+    "turn": 15,
+    "player": 1,
+    "change": 290,
+    "log": [
+     "— Turn 14: You —",
+     "You draws a card from their atlas.",
+     "You plays Permafrost at (5,2).",
+     "Frost Mage: Encase a nearby minion in ice.",
+     "Redcap Powries is encased in ice.",
+     "You casts Stygian Archers.",
+     "— Turn 15: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Slobbermaw.",
+     "Skeleton dies.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Computer casts Firebolts.",
+     "Frost Mage takes 1 damage (life 4).",
+     "Frost Mage takes 1 damage (life 3).",
+     "Frost Mage takes 1 damage (life 2).",
+     "Computer draws a card from their atlas.",
+     "Skeleton moves to b4.",
+     "Vile Imp moves to c2.",
+     "Vile Imp attacks Lighthouse!",
+     "Lugbog Cat defends!",
+     "Lugbog Cat takes 2 damage.",
+     "Vile Imp takes 4 damage.",
+     "Vile Imp dies. (killed by Lugbog Cat)"
+    ]
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "change": -132,
+    "log": [
+     "— Turn 19: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer draws a card from their atlas.",
+     "Skeleton moves to c3.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Skeleton moves to c3.",
+     "— Turn 20: You —",
+     "You draws a card from their spellbook.",
+     "You plays Spire at (5,1).",
+     "You casts Hibernal Legion.",
+     "The Mobbed Court bays for blood — 1 life lost.",
+     "Skeleton takes 1 damage.",
+     "Skeleton dies. (killed by Frost Mage)",
+     "Coy Nixie: Beckon a nearby enemy closer.",
+     "Stygian Archers moves to c2.",
+     "Stygian Archers attacks Skeleton!",
+     "Skeleton takes 3 damage.",
+     "Stygian Archers takes 1 damage.",
+     "Skeleton dies. (killed by Stygian Archers)",
+     "A Skeleton token appears.",
+     "The fallen rises again, fletched with stygian arrows.",
+     "Skeleton moves to c3.",
+     "Skeleton attacks Court of Equity!"
+    ]
+   },
+   {
+    "turn": 22,
+    "player": 0,
+    "change": -206,
+    "log": [
+     "— Turn 21: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Màzuj Ifrit.",
+     "Computer loses 1 life (now 18).",
+     "The Mobbed Court bays for blood — 1 life lost.",
+     "Necromancer moves to b4.",
+     "Computer casts Torshammar Trinket.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Skeleton picks up Torshammar Trinket.",
+     "Skeleton moves to c3.",
+     "Skeleton moves to c4.",
+     "Skeleton drops Torshammar Trinket.",
+     "The Torshammar Trinket flies back to its owner.",
+     "— Turn 22: You —",
+     "You draws a card from their spellbook.",
+     "Frost Mage: Encase a nearby minion in ice.",
+     "Màzuj Ifrit is encased in ice.",
+     "You casts Shatter.",
+     "Skeleton takes 1 damage.",
+     "Skeleton dies. (killed by Frost Mage)",
+     "Màzuj Ifrit dies. (killed by Frost Mage)",
+     "Toolbox: Sacrifice → fetch an Ordinary spell from your collection.",
+     "You casts Ice Shards."
+    ]
+   },
+   {
+    "turn": 25,
+    "player": 1,
+    "change": 1054,
+    "log": [
+     "— Turn 24: You —",
+     "You draws a card from their spellbook.",
+     "You casts Toolbox.",
+     "Skeleton takes 1 damage.",
+     "Skeleton dies. (killed by Frost Mage)",
+     "Frost Mage picks up Toolbox.",
+     "You draws a card from their atlas.",
+     "Stygian Archers moves to c4.",
+     "Stygian Archers attacks River of Blood!",
+     "Computer loses 3 life (now 6).",
+     "River of Blood is struck for 3.",
+     "Skeleton moves to b3.",
+     "Skeleton attacks Mobbed Court!",
+     "Computer loses 1 life (now 5).",
+     "Mobbed Court is struck for 1.",
+     "Coy Nixie moves to c3.",
+     "Coy Nixie attacks Court of Equity!",
+     "Computer loses 2 life (now 3).",
+     "Court of Equity is struck for 2.",
+     "— Turn 25: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Infiltrate.",
+     "Computer loses 1 life (now 2).",
+     "The Mobbed Court bays for blood — 1 life lost."
+    ]
+   }
+  ],
+  "checks": [
+   {
+    "turn": 19,
+    "played": [
+     "Avatar: tap to DRAW a site from the atlas",
+     "Skeleton at c1 moves to c2",
+     "ABILITY \"raise\" of Necromancer at c1",
+     "Skeleton at c1 moves to c2",
+     "END YOUR TURN"
+    ],
+    "engine": "Skeleton at c1 moves to c2",
+    "same": false
+   },
+   {
+    "turn": 21,
+    "played": [
+     "CAST Màzuj Ifrit at d2",
+     "Necromancer at c1 moves to d1",
+     "CAST Torshammar Trinket at c1",
+     "ABILITY \"raise\" of Necromancer at d1",
+     "Skeleton at c1 PICKS UP Torshammar Trinket",
+     "Skeleton at c1 moves to c2",
+     "Skeleton at d1 moves to c1",
+     "Skeleton at c2 DROPS what it carries",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Màzuj Ifrit at c2",
+    "same": false
+   }
+  ],
+  "rejected": 0
+ },
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795181518893,
