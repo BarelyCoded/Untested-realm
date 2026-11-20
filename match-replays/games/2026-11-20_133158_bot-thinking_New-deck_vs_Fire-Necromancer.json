@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-20T13:49:06.040Z",
+ "savedAt": "2026-11-20T13:49:25.658Z",
  "codeCommit": "bd3269c",
  "finished": true,
  "winner": "Computer",
@@ -851,6 +851,7 @@
   ],
   "rejected": 0
  },
+ "review": "The game was decided early: the Computer got a faster board, and the Lighthouse-based defence took repeated hits, so you were at 0 life by turn 15. Your late comeback came one turn short.\n\nKey moments:\n- Turns 7-11 (your mistake, mostly): After a 3-card mulligan you had no minion until turn 6. Redcap Powries and the Barghest then hit the Lighthouse and your life every turn. On turn 10 you froze the Redcap but cast Research instead of adding a body, and a second Redcap hit for 3 on turn 11. Putting a blocker on the board there would have been better.\n- Turns 13-15: You lost 6 life on turn 13 and the last 5 on turn 15, which put you at 0. Your turn 12 Shatter did kill a Redcap, but the Frost Mage was then left at 2 life to Firebolts. Keeping the Avatar out of burn range would have cost you less.\n- Turns 21-22 (Computer's mistake): It cast Màzuj Ifrit at d2, where the engine prefers c2. The Ifrit was frozen and shattered at once, and the cast cost it 1 life to its own Mobbed Court. Your Hibernal Legion then hit for 5 and the Computer fell to 9.\n- Turns 24-25 (your mistake): You took the Computer to 3 life, but the Frost Mage, which is your Avatar, was within reach. The Computer used Infiltrate to steal your Archers and Wild Fanatic delivered the death blow. The log is too thin on positions to say exactly where the Frost Mage should have stood.\n\nFor you: at 0 life every point of damage matters, so keep the Avatar where a freshly cast haste minion cannot reach it. Also spend early turns on minions rather than card draw.\n\nFor the bot: it keeps paying life to its own Mobbed Court. It lost life on Ifrit and Infiltrate while at 3-9 life, and a faster clock could have punished that. It also feeds Skeletons into the Frost Mage's 1-damage pings and stalled on turn 19, only moving Skeletons with 4 cards in hand. I see no clear rules errors by the simulator.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795181518893,
