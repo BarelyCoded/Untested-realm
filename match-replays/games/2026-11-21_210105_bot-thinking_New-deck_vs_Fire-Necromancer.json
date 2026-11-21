@@ -1,11 +1,851 @@
 {
- "savedAt": "2026-11-21T21:12:01.125Z",
+ "savedAt": "2026-11-21T21:12:02.168Z",
  "codeCommit": "e748b65",
  "finished": true,
  "winner": "Computer",
  "turns": 26,
  "botDifficulty": "thinking",
  "flags": [],
+ "report": {
+  "version": 1,
+  "botSeat": 1,
+  "winner": 1,
+  "turns": 26,
+  "firstPlayer": 0,
+  "rows": [
+   {
+    "turn": 1,
+    "player": 0,
+    "sites": [
+     1,
+     0
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     6
+    ],
+    "units": [
+     0,
+     0
+    ],
+    "power": [
+     0,
+     0
+    ],
+    "score": -285
+   },
+   {
+    "turn": 2,
+    "player": 1,
+    "sites": [
+     1,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     7
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -136
+   },
+   {
+    "turn": 3,
+    "player": 0,
+    "sites": [
+     2,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     7
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -192
+   },
+   {
+    "turn": 4,
+    "player": 1,
+    "sites": [
+     2,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     7
+    ],
+    "units": [
+     0,
+     2
+    ],
+    "power": [
+     0,
+     2
+    ],
+    "score": -103
+   },
+   {
+    "turn": 5,
+    "player": 0,
+    "sites": [
+     3,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     7
+    ],
+    "units": [
+     1,
+     2
+    ],
+    "power": [
+     3,
+     2
+    ],
+    "score": -189
+   },
+   {
+    "turn": 6,
+    "player": 1,
+    "sites": [
+     3,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     6
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     3,
+     6
+    ],
+    "score": -51
+   },
+   {
+    "turn": 7,
+    "player": 0,
+    "sites": [
+     4,
+     3
+    ],
+    "life": [
+     20,
+     18
+    ],
+    "hand": [
+     4,
+     6
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     3,
+     6
+    ],
+    "score": -111
+   },
+   {
+    "turn": 8,
+    "player": 1,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     13,
+     18
+    ],
+    "hand": [
+     4,
+     5
+    ],
+    "units": [
+     1,
+     4
+    ],
+    "power": [
+     3,
+     9
+    ],
+    "score": 181
+   },
+   {
+    "turn": 9,
+    "player": 0,
+    "sites": [
+     5,
+     4
+    ],
+    "life": [
+     13,
+     18
+    ],
+    "hand": [
+     3,
+     5
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     3,
+     5
+    ],
+    "score": 114
+   },
+   {
+    "turn": 10,
+    "player": 1,
+    "sites": [
+     5,
+     4
+    ],
+    "life": [
+     8,
+     18
+    ],
+    "hand": [
+     3,
+     6
+    ],
+    "units": [
+     1,
+     4
+    ],
+    "power": [
+     3,
+     8
+    ],
+    "score": 322
+   },
+   {
+    "turn": 11,
+    "player": 0,
+    "sites": [
+     5,
+     4
+    ],
+    "life": [
+     8,
+     18
+    ],
+    "hand": [
+     3,
+     6
+    ],
+    "units": [
+     2,
+     4
+    ],
+    "power": [
+     7,
+     8
+    ],
+    "score": 195
+   },
+   {
+    "turn": 12,
+    "player": 1,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     0,
+     18
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     3
+    ],
+    "score": 769
+   },
+   {
+    "turn": 13,
+    "player": 0,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     0,
+     18
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     1,
+     1
+    ],
+    "power": [
+     3,
+     3
+    ],
+    "score": 603
+   },
+   {
+    "turn": 14,
+    "player": 1,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     0,
+     18
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     3,
+     10
+    ],
+    "score": 847
+   },
+   {
+    "turn": 15,
+    "player": 0,
+    "sites": [
+     6,
+     5
+    ],
+    "life": [
+     0,
+     18
+    ],
+    "hand": [
+     1,
+     4
+    ],
+    "units": [
+     2,
+     2
+    ],
+    "power": [
+     5,
+     7
+    ],
+    "score": 724
+   },
+   {
+    "turn": 16,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     0,
+     18
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     2,
+     9
+    ],
+    "score": 862
+   },
+   {
+    "turn": 17,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     2,
+     2
+    ],
+    "units": [
+     1,
+     2
+    ],
+    "power": [
+     2,
+     6
+    ],
+    "score": 723
+   },
+   {
+    "turn": 18,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     2,
+     2
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     2,
+     7
+    ],
+    "score": 761
+   },
+   {
+    "turn": 19,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     6,
+     2
+    ],
+    "units": [
+     1,
+     2
+    ],
+    "power": [
+     2,
+     5
+    ],
+    "score": 576
+   },
+   {
+    "turn": 20,
+    "player": 1,
+    "sites": [
+     6,
+     7
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     6,
+     2
+    ],
+    "units": [
+     0,
+     4
+    ],
+    "power": [
+     0,
+     10
+    ],
+    "score": 789
+   },
+   {
+    "turn": 21,
+    "player": 0,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     3,
+     6
+    ],
+    "score": 623
+   },
+   {
+    "turn": 22,
+    "player": 1,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     4,
+     5
+    ],
+    "units": [
+     1,
+     6
+    ],
+    "power": [
+     3,
+     12
+    ],
+    "score": 812
+   },
+   {
+    "turn": 23,
+    "player": 0,
+    "sites": [
+     8,
+     7
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     3,
+     5
+    ],
+    "units": [
+     2,
+     6
+    ],
+    "power": [
+     5,
+     12
+    ],
+    "score": 796
+   },
+   {
+    "turn": 24,
+    "player": 1,
+    "sites": [
+     8,
+     8
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     1,
+     9
+    ],
+    "power": [
+     2,
+     17
+    ],
+    "score": 1004
+   },
+   {
+    "turn": 25,
+    "player": 0,
+    "sites": [
+     8,
+     8
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     2,
+     4
+    ],
+    "units": [
+     2,
+     9
+    ],
+    "power": [
+     6,
+     13
+    ],
+    "score": 951
+   },
+   {
+    "turn": 26,
+    "player": 1,
+    "sites": [
+     8,
+     8
+    ],
+    "life": [
+     0,
+     16
+    ],
+    "hand": [
+     2,
+     5
+    ],
+    "units": [
+     2,
+     9
+    ],
+    "power": [
+     6,
+     13
+    ],
+    "score": 1500
+   }
+  ],
+  "swings": [
+   {
+    "turn": 8,
+    "player": 1,
+    "change": 232,
+    "log": [
+     "— Turn 7: You —",
+     "You draws a card from their atlas.",
+     "You plays Deep Sea at (4,1).",
+     "Order of the Sacred Oak moves to c1.",
+     "— Turn 8: Computer —",
+     "Computer loses 2 life (now 18).",
+     "Computer draws a card from their spellbook.",
+     "Computer plays Sinkhole at (2,3).",
+     "Computer casts Saracen Raiders.",
+     "Saracen Raiders moves to d2.",
+     "Saracen Raiders attacks Winter River!",
+     "You loses 3 life (now 17).",
+     "Winter River is struck for 3.",
+     "Màzuj Ifrit moves to d2.",
+     "Màzuj Ifrit attacks Winter River!",
+     "You loses 4 life (now 13).",
+     "Winter River is struck for 4."
+    ]
+   },
+   {
+    "turn": 10,
+    "player": 1,
+    "change": 141,
+    "log": [
+     "— Turn 9: You —",
+     "You draws a card from their atlas.",
+     "Frost Mage: Encase a nearby minion in ice.",
+     "Màzuj Ifrit is encased in ice.",
+     "You casts Shatter.",
+     "Màzuj Ifrit dies. (killed by Frost Mage)",
+     "You plays Gothic Tower at (2,1).",
+     "Gothic Tower hums with power: +① this turn.",
+     "— Turn 10: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer draws a card from their atlas.",
+     "Saracen Raiders attacks Winter River!",
+     "You loses 3 life (now 10).",
+     "Winter River is struck for 3.",
+     "Computer casts Clamor of Harpies.",
+     "Skeleton moves to c2.",
+     "Skeleton attacks Mountain Pass!",
+     "You loses 1 life (now 9).",
+     "Mountain Pass is struck for 1.",
+     "Skeleton moves to d2.",
+     "Skeleton attacks Winter River!",
+     "You loses 1 life (now 8).",
+     "Winter River is struck for 1."
+    ]
+   },
+   {
+    "turn": 12,
+    "player": 1,
+    "change": 447,
+    "log": [
+     "— Turn 11: You —",
+     "You draws a card from their spellbook.",
+     "You casts Stomping Mammoth.",
+     "You draws a card from their atlas.",
+     "You casts Freeze.",
+     "— Turn 12: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Clamor of Harpies moves to c2.",
+     "Clamor of Harpies attacks Mountain Pass!",
+     "You loses 3 life (now 5).",
+     "Mountain Pass is struck for 3.",
+     "Computer casts Blaze of Glory.",
+     "Clamor of Harpies charges into a blaze of glory (3 foes)!",
+     "Frost Mage takes 3 damage (life 2).",
+     "Clamor of Harpies takes 1 damage.",
+     "Order of the Sacred Oak's ward breaks — the ability cannot touch it.",
+     "Stomping Mammoth takes 3 damage.",
+     "Clamor of Harpies takes 4 damage.",
+     "Order of the Sacred Oak takes 3 damage.",
+     "Clamor of Harpies takes 3 damage.",
+     "Order of the Sacred Oak dies. (killed by Clamor of Harpies)",
+     "Clamor of Harpies dies.",
+     "Computer plays Sinkhole at (2,4).",
+     "Computer casts Firebolts."
+    ]
+   },
+   {
+    "turn": 19,
+    "player": 0,
+    "change": -147,
+    "log": [
+     "— Turn 18: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Redcap Powries.",
+     "Vile Imp moves to c2.",
+     "Computer draws a card from their atlas.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Redmane Hyena moves to c3.",
+     "Redcap Powries moves to d3.",
+     "Computer casts Toolbox.",
+     "Necromancer picks up Toolbox.",
+     "Denied their violence, the Redcap Powries turn on themselves.",
+     "Redcap Powries dies.",
+     "— Turn 19: You —",
+     "You draws a card from their spellbook.",
+     "You casts Research.",
+     "You draws 2 cards from their spellbook.",
+     "You casts Research.",
+     "You draws 2 cards from their spellbook.",
+     "Sissi Marksmen shoots Vile Imp.",
+     "Vile Imp takes 2 damage.",
+     "Vile Imp dies. (killed by Sissi Marksmen)",
+     "You draws a card from their atlas."
+    ]
+   },
+   {
+    "turn": 24,
+    "player": 1,
+    "change": 192,
+    "log": [
+     "— Turn 23: You —",
+     "You draws a card from their spellbook.",
+     "You casts Coy Nixie.",
+     "You plays Spire at (2,2).",
+     "Deep Snow: Spring the trap: tap the minions at an adjacent site; they stay tapped.",
+     "Deep snow buries Sinkhole.",
+     "You casts Slide.",
+     "You draws a card from their spellbook.",
+     "— Turn 24: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Infiltrate.",
+     "Computer gains control of Stygian Archers!",
+     "Computer plays River of Blood at (1,3).",
+     "A Skeleton token appears.",
+     "Bones rattle up from beneath the boulevard.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Siege Giant moves to c2."
+    ]
+   },
+   {
+    "turn": 26,
+    "player": 1,
+    "change": 496,
+    "log": [
+     "— Turn 25: You —",
+     "You draws a card from their spellbook.",
+     "Frost Mage moves to b1.",
+     "You casts Pollimorph.",
+     "Siege Giant transforms into a Frog.",
+     "You casts Lugbog Cat.",
+     "— Turn 26: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Stygian Archers moves to b1.",
+     "Stygian Archers attacks Frost Mage!",
+     "Stygian Archers loses Stealth.",
+     "Death blow! Frost Mage is defeated.",
+     "Stygian Archers takes 1 damage."
+    ]
+   }
+  ],
+  "checks": [
+   {
+    "turn": 18,
+    "played": [
+     "CAST Redcap Powries at c2",
+     "Vile Imp at c2 moves to c3",
+     "Avatar: tap to DRAW a site from the atlas",
+     "ABILITY \"raise\" of Necromancer at c1",
+     "Redmane Hyena at c1 moves to c2",
+     "Redcap Powries at c2 moves to b2",
+     "CAST Toolbox at c1",
+     "Necromancer at c1 PICKS UP Toolbox",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Redcap Powries at b2",
+    "same": false
+   }
+  ],
+  "rejected": 0
+ },
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795294865103,
