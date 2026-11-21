@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-21T21:12:02.168Z",
+ "savedAt": "2026-11-21T21:12:19.439Z",
  "codeCommit": "e748b65",
  "finished": true,
  "winner": "Computer",
@@ -846,6 +846,7 @@
   ],
   "rejected": 0
  },
+ "review": "The game turned on the early damage and on the Frost Mage staying at 0 life from turn 12 until it died on turn 26.\n\nKey moments:\n- Turn 8 (your side was behind): you mulliganed to 3 and developed slowly. Saracen Raiders and Màzuj Ifrit hit Winter River for 7, taking you from 20 to 13, and you never had a lead again. On turn 7 you played a site and moved the Oak to c1, and nothing in the log shows a defender for that attack.\n- Turn 12 (your error, in part): at 8 life you cast Mammoth and Freeze on turn 11, but the Harpies still attacked and Blaze of Glory hit three of your units. That killed the Oak, dropped the Frost Mage to 2, and Firebolts finished it to 0 (death's door). The log doesn't show what Freeze did, so I can't say whether a different target would have prevented this. Dealing with the Harpies, or keeping the avatar out of Blaze's reach, was the better play.\n- Turns 24-26 (your error): Infiltrate stole your Stygian Archers. On turn 25 you moved the 0-life Frost Mage to b1 and cast Pollimorph and Lugbog Cat. The stolen stealthy Archers walked in and killed the mage.\n\nFor you: once your avatar is at death's door, treat it as the whole game. Keep it away from enemy reach, and don't leave stealthy or stealable units on the board next to it. You also had 8 sites and 2 cards on turn 25, so you could have held up a blocker instead of tapping out.\n\nFor the bot: on turn 18 it cast Redcap Powries and then Toolbox on the Necromancer. The Powries turned on themselves and died, which wasted the card. The engine re-check would have cast it at b2 instead. It also walked a Vile Imp into Sissi Marksmen range, and the Imp died on turn 19. I see no clear rules mistakes by the simulator in the log.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795294865103,
