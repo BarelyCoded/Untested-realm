@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-24T20:30:19.591Z",
+ "savedAt": "2026-11-24T20:30:36.830Z",
  "codeCommit": "e748b65",
  "finished": true,
  "winner": "Computer",
@@ -677,6 +677,7 @@
   "checks": [],
   "rejected": 0
  },
+ "review": "The Computer won the race: from turn 7 it kept hitting your sites, each hit cost you life, and you never stabilized, going from 20 to 0 by turn 17.\n\nKey moments:\n- Turn 6 (you): you spent the turn on Fertile Earth, Landmass and Molten Maar, and your only minion, Sinterfee, left to kill a Skeleton. On turn 7 Ruler of Thul and a Skeleton hit you freely, and the score swung +252. Keeping a defender back, or casting a second body before the extra land, was better.\n- Turn 11 (you): Sinterfee and Vile Imp both defended against Order of the Sacred Oak. Its ward broke, but you lost both minions and it survived. Slag Slug had to trade with it on turn 12. The log doesn't show whether defending with one minion was legal, so I can't say what you should have done there.\n- Turn 14 (you): Sinterfee attacked Hyperparasite, dealt 2 damage and died. Next turn Hyperparasite and an Illusionist cost you 6 life (10 to 4). Keeping Sinterfee home, or waiting for the Witch, was better.\n- Turns 16-18 (you): Lavamancer's rubble killed three Skeletons, and the Witch's throw plus more rubble killed an Illusionist and the Lugbog Cat. It was too late. At 0 life, one hit finished you on turn 19.\n\nFor you: you were behind on life from turn 7, so stop attacking with your few minions and use them as blockers. Count how much damage the opponent's units can deal to your sites each turn, and trade your attackers for those first.\n\nFor the bot: it wastes actions. River Rapids was activated twice with no minion on the rivers, and an Illusionist tapped with no second Illusionist to summon. It sent a lone Skeleton into Slag Slug's trail on turn 11, and the Cat walked into your rubble area and died. It also never defended its own sites. I saw nothing in the log that looks like a simulator rules error.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795551634088,
