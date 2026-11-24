@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-24T15:45:09.047Z",
+ "savedAt": "2026-11-24T15:45:25.951Z",
  "codeCommit": "e748b65",
  "finished": true,
  "winner": "You",
@@ -840,6 +840,7 @@
   ],
   "rejected": 0
  },
+ "review": "You won because Pudge Butcher's hook kept dragging the Computer's avatar, Frost Mage, into range until it died on turn 26, even though you were down to 2 life.\n\nKey moments:\n- Turns 6-9 (you erred): Polar Bears hit Lavamancer twice and a site, taking you from 20 to 11 life. You spent those turns on sites and a Lavamancer pull-apart, and Pudge Butcher only arrived on turn 8. Developing a blocker or removal a turn earlier would have saved life.\n- Turn 10 (you were right): the hook killed Polar Bears, Lavamancer's rubble killed Fey Changeling, and Vile Imp finished the second Bears. That swing cleared its whole board.\n- Turn 12-13 (you erred): Morgana le Fay came down into an open Frost Mage. Frost Breath and Shatter killed her and Emberleaf Dryad the next turn, and three bonded cards (Landmass, Toolbox, Colicky Dragonettes) were discarded. The log does not show whether another line was available.\n- Turn 18 (risky): Searing Truth burned your own Lavamancer for 4, from 11 to 7. When the Peaks Fell and Frost Breath then took it to 2. You nearly lost to burn you had put yourself in range of.\n\nFor you: Your avatar's life was your main liability. Keep it out of area damage and avoid self-damaging spells like Searing Truth against a deck full of Frost Breath and When the Peaks Fell. Hold Morgana until the opponent's removal is spent.\n\nFor the bot: It kept Frost Mage in the hook's range on turns 20, 24 and 26. On turn 25 it cast Runeling and Slide, but Frost Mage was still at c4 and the hook killed it. The engine re-check agrees with its opening moves on turns 11, 23 and 25, so I can't call those errors. Its turn 21 sweeper also hit its own Frost Mage and A Yeti So Shy. I see no rules mistakes by the simulator; the death's-door sequence at 0 life looks correct.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795533459849,
