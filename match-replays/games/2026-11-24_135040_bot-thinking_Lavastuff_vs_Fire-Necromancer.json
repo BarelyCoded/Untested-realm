@@ -1,11 +1,529 @@
 {
- "savedAt": "2026-11-24T13:58:38.043Z",
+ "savedAt": "2026-11-24T13:58:38.463Z",
  "codeCommit": "e748b65",
  "finished": true,
  "winner": "Computer",
  "turns": 16,
  "botDifficulty": "thinking",
  "flags": [],
+ "report": {
+  "version": 1,
+  "botSeat": 1,
+  "winner": 1,
+  "turns": 16,
+  "firstPlayer": 0,
+  "rows": [
+   {
+    "turn": 1,
+    "player": 0,
+    "sites": [
+     1,
+     0
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     6
+    ],
+    "units": [
+     0,
+     0
+    ],
+    "power": [
+     0,
+     0
+    ],
+    "score": -285
+   },
+   {
+    "turn": 2,
+    "player": 1,
+    "sites": [
+     1,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     6
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -125
+   },
+   {
+    "turn": 3,
+    "player": 0,
+    "sites": [
+     2,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     6
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -181
+   },
+   {
+    "turn": 4,
+    "player": 1,
+    "sites": [
+     2,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     5
+    ],
+    "units": [
+     0,
+     2
+    ],
+    "power": [
+     0,
+     3
+    ],
+    "score": -85
+   },
+   {
+    "turn": 5,
+    "player": 0,
+    "sites": [
+     3,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     5
+    ],
+    "units": [
+     1,
+     1
+    ],
+    "power": [
+     3,
+     2
+    ],
+    "score": -202
+   },
+   {
+    "turn": 6,
+    "player": 1,
+    "sites": [
+     3,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     4
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     2
+    ],
+    "score": -59
+   },
+   {
+    "turn": 7,
+    "player": 0,
+    "sites": [
+     4,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     1,
+     0
+    ],
+    "power": [
+     2,
+     0
+    ],
+    "score": -183
+   },
+   {
+    "turn": 8,
+    "player": 1,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     3,
+     3
+    ],
+    "units": [
+     1,
+     1
+    ],
+    "power": [
+     2,
+     4
+    ],
+    "score": -48
+   },
+   {
+    "turn": 9,
+    "player": 0,
+    "sites": [
+     5,
+     4
+    ],
+    "life": [
+     16,
+     18
+    ],
+    "hand": [
+     4,
+     3
+    ],
+    "units": [
+     1,
+     1
+    ],
+    "power": [
+     2,
+     4
+    ],
+    "score": -67
+   },
+   {
+    "turn": 10,
+    "player": 1,
+    "sites": [
+     5,
+     4
+    ],
+    "life": [
+     10,
+     18
+    ],
+    "hand": [
+     4,
+     4
+    ],
+    "units": [
+     1,
+     2
+    ],
+    "power": [
+     2,
+     6
+    ],
+    "score": 160
+   },
+   {
+    "turn": 11,
+    "player": 0,
+    "sites": [
+     6,
+     4
+    ],
+    "life": [
+     8,
+     14
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     1,
+     1
+    ],
+    "power": [
+     2,
+     4
+    ],
+    "score": 169
+   },
+   {
+    "turn": 12,
+    "player": 1,
+    "sites": [
+     6,
+     5
+    ],
+    "life": [
+     1,
+     14
+    ],
+    "hand": [
+     3,
+     3
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     2,
+     8
+    ],
+    "score": 646
+   },
+   {
+    "turn": 13,
+    "player": 0,
+    "sites": [
+     7,
+     5
+    ],
+    "life": [
+     1,
+     12
+    ],
+    "hand": [
+     2,
+     3
+    ],
+    "units": [
+     2,
+     2
+    ],
+    "power": [
+     5,
+     5
+    ],
+    "score": 497
+   },
+   {
+    "turn": 14,
+    "player": 1,
+    "sites": [
+     7,
+     5
+    ],
+    "life": [
+     0,
+     12
+    ],
+    "hand": [
+     2,
+     4
+    ],
+    "units": [
+     2,
+     4
+    ],
+    "power": [
+     5,
+     8
+    ],
+    "score": 672
+   },
+   {
+    "turn": 15,
+    "player": 0,
+    "sites": [
+     7,
+     5
+    ],
+    "life": [
+     0,
+     8
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     2,
+     2
+    ],
+    "power": [
+     5,
+     2
+    ],
+    "score": 297
+   },
+   {
+    "turn": 16,
+    "player": 1,
+    "sites": [
+     7,
+     6
+    ],
+    "life": [
+     0,
+     8
+    ],
+    "hand": [
+     3,
+     3
+    ],
+    "units": [
+     2,
+     4
+    ],
+    "power": [
+     5,
+     5
+    ],
+    "score": 1500
+   }
+  ],
+  "swings": [
+   {
+    "turn": 3,
+    "player": 0,
+    "change": 104,
+    "log": [
+     "— Turn 2: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer plays Active Volcano at (3,4).",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "— Turn 3: You —",
+     "You draws a card from their spellbook.",
+     "You plays Blessed Village at (3,2)."
+    ]
+   },
+   {
+    "turn": 10,
+    "player": 1,
+    "change": 208,
+    "log": [
+     "— Turn 9: You —",
+     "You draws a card from their atlas.",
+     "You plays Wasteland at (4,3).",
+     "You casts Searing Truth.",
+     "You draws 2 cards from their spellbook.",
+     "Revealed: Ground Slam, Reed Cord Measurer — the truth burns for 4.",
+     "Lavamancer takes 4 damage (life 16).",
+     "Vile Imp moves to d2.",
+     "— Turn 10: Computer —",
+     "Computer loses 2 life (now 18).",
+     "Computer draws a card from their spellbook.",
+     "Màzuj Ifrit moves to b2.",
+     "Màzuj Ifrit attacks Smoldering Hollow!",
+     "You loses 4 life (now 12).",
+     "Smoldering Hollow is struck for 4.",
+     "Computer casts Gift of the Serpent.",
+     "Computer draws a card from their spellbook.",
+     "Computer draws a card from their atlas.",
+     "Computer casts Wild Fanatic.",
+     "Wild Fanatic moves to d3.",
+     "Wild Fanatic attacks Wasteland!",
+     "You loses 2 life (now 10).",
+     "Wasteland is struck for 2."
+    ]
+   },
+   {
+    "turn": 12,
+    "player": 1,
+    "change": 486,
+    "log": [
+     "— Turn 11: You —",
+     "You draws a card from their atlas.",
+     "You plays Valley at (2,1).",
+     "Vile Imp moves to d3.",
+     "You casts Ground Slam.",
+     "You loses 2 life (now 8).",
+     "Wasteland is struck for 2.",
+     "Wild Fanatic takes 2 damage.",
+     "Necromancer takes 2 damage (life 16).",
+     "Wild Fanatic dies. (killed by Lavamancer)",
+     "— Turn 12: Computer —",
+     "Computer loses 2 life (now 14).",
+     "Computer draws a card from their spellbook.",
+     "Màzuj Ifrit moves to b1.",
+     "Màzuj Ifrit attacks Valley!",
+     "You loses 4 life (now 4).",
+     "Valley is struck for 4.",
+     "Computer casts Saracen Raiders.",
+     "Saracen Raiders moves to d2.",
+     "Saracen Raiders attacks Funeral Pyre!",
+     "You loses 3 life (now 1).",
+     "Funeral Pyre is struck for 3.",
+     "Computer plays Court of Equity at (1,3).",
+     "Necromancer: ① → Summon a Skeleton here."
+    ]
+   },
+   {
+    "turn": 16,
+    "player": 1,
+    "change": 828,
+    "log": [
+     "— Turn 15: You —",
+     "You draws a card from their spellbook.",
+     "You casts Earthquake.",
+     "The earth heaves — the sites grind into a new arrangement.",
+     "The quake swallows everything into the earth.",
+     "Màzuj Ifrit dies.",
+     "Vile Imp dies.",
+     "You draws a card from their atlas.",
+     "Southpaw Dyrodor moves to c2.",
+     "Southpaw Dyrodor attacks Temple of Moloch!",
+     "Computer loses 4 life (now 8).",
+     "Temple of Moloch is struck for 4.",
+     "— Turn 16: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Quarrelsome Kobolds.",
+     "Computer plays River of Flame at (4,4).",
+     "Computer casts Gift of the Serpent.",
+     "Computer draws a card from their spellbook.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Skeleton moves to c3.",
+     "Death blow! Lavamancer is defeated."
+    ]
+   }
+  ],
+  "checks": [],
+  "rejected": 0
+ },
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795528240167,
