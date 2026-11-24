@@ -1,11 +1,845 @@
 {
- "savedAt": "2026-11-24T15:45:07.641Z",
+ "savedAt": "2026-11-24T15:45:09.047Z",
  "codeCommit": "e748b65",
  "finished": true,
  "winner": "You",
  "turns": 26,
  "botDifficulty": "thinking",
  "flags": [],
+ "report": {
+  "version": 1,
+  "botSeat": 1,
+  "winner": 0,
+  "turns": 26,
+  "firstPlayer": 1,
+  "rows": [
+   {
+    "turn": 1,
+    "player": 1,
+    "sites": [
+     0,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     0
+    ],
+    "power": [
+     0,
+     0
+    ],
+    "score": -160
+   },
+   {
+    "turn": 2,
+    "player": 0,
+    "sites": [
+     1,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     0
+    ],
+    "power": [
+     0,
+     0
+    ],
+    "score": -216
+   },
+   {
+    "turn": 3,
+    "player": 1,
+    "sites": [
+     1,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     0
+    ],
+    "power": [
+     0,
+     0
+    ],
+    "score": -147
+   },
+   {
+    "turn": 4,
+    "player": 0,
+    "sites": [
+     2,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     0
+    ],
+    "power": [
+     0,
+     0
+    ],
+    "score": -203
+   },
+   {
+    "turn": 5,
+    "player": 1,
+    "sites": [
+     2,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     4
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     3
+    ],
+    "score": -99
+   },
+   {
+    "turn": 6,
+    "player": 0,
+    "sites": [
+     3,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     4
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     3
+    ],
+    "score": -155
+   },
+   {
+    "turn": 7,
+    "player": 1,
+    "sites": [
+     3,
+     4
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     6,
+     3
+    ],
+    "units": [
+     0,
+     2
+    ],
+    "power": [
+     0,
+     6
+    ],
+    "score": 67
+   },
+   {
+    "turn": 8,
+    "player": 0,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     5,
+     3
+    ],
+    "units": [
+     1,
+     2
+    ],
+    "power": [
+     5,
+     6
+    ],
+    "score": -13
+   },
+   {
+    "turn": 9,
+    "player": 1,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     5,
+     7
+    ],
+    "score": 165
+   },
+   {
+    "turn": 10,
+    "player": 0,
+    "sites": [
+     5,
+     4
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     4,
+     4
+    ],
+    "units": [
+     2,
+     0
+    ],
+    "power": [
+     7,
+     0
+    ],
+    "score": -46
+   },
+   {
+    "turn": 11,
+    "player": 1,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     4,
+     3
+    ],
+    "units": [
+     1,
+     0
+    ],
+    "power": [
+     5,
+     0
+    ],
+    "score": 54
+   },
+   {
+    "turn": 12,
+    "player": 0,
+    "sites": [
+     6,
+     5
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     7,
+     3
+    ],
+    "units": [
+     3,
+     0
+    ],
+    "power": [
+     10,
+     0
+    ],
+    "score": -261
+   },
+   {
+    "turn": 13,
+    "player": 1,
+    "sites": [
+     6,
+     5
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     1,
+     0
+    ],
+    "power": [
+     5,
+     0
+    ],
+    "score": -148
+   },
+   {
+    "turn": 14,
+    "player": 0,
+    "sites": [
+     8,
+     5
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     3,
+     2
+    ],
+    "units": [
+     2,
+     0
+    ],
+    "power": [
+     7,
+     0
+    ],
+    "score": -131
+   },
+   {
+    "turn": 15,
+    "player": 1,
+    "sites": [
+     8,
+     5
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     3,
+     3
+    ],
+    "units": [
+     2,
+     1
+    ],
+    "power": [
+     7,
+     2
+    ],
+    "score": 34
+   },
+   {
+    "turn": 16,
+    "player": 0,
+    "sites": [
+     8,
+     5
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     4,
+     3
+    ],
+    "units": [
+     2,
+     0
+    ],
+    "power": [
+     7,
+     0
+    ],
+    "score": -148
+   },
+   {
+    "turn": 17,
+    "player": 1,
+    "sites": [
+     8,
+     6
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     2,
+     1
+    ],
+    "power": [
+     7,
+     2
+    ],
+    "score": -29
+   },
+   {
+    "turn": 18,
+    "player": 0,
+    "sites": [
+     8,
+     6
+    ],
+    "life": [
+     7,
+     18
+    ],
+    "hand": [
+     5,
+     2
+    ],
+    "units": [
+     4,
+     0
+    ],
+    "power": [
+     11,
+     0
+    ],
+    "score": -130
+   },
+   {
+    "turn": 19,
+    "player": 1,
+    "sites": [
+     8,
+     6
+    ],
+    "life": [
+     7,
+     18
+    ],
+    "hand": [
+     5,
+     2
+    ],
+    "units": [
+     4,
+     1
+    ],
+    "power": [
+     11,
+     4
+    ],
+    "score": -81
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "sites": [
+     8,
+     6
+    ],
+    "life": [
+     7,
+     11
+    ],
+    "hand": [
+     6,
+     2
+    ],
+    "units": [
+     5,
+     1
+    ],
+    "power": [
+     15,
+     4
+    ],
+    "score": -218
+   },
+   {
+    "turn": 21,
+    "player": 1,
+    "sites": [
+     8,
+     6
+    ],
+    "life": [
+     4,
+     8
+    ],
+    "hand": [
+     6,
+     2
+    ],
+    "units": [
+     2,
+     1
+    ],
+    "power": [
+     7,
+     4
+    ],
+    "score": 7
+   },
+   {
+    "turn": 22,
+    "player": 0,
+    "sites": [
+     8,
+     5
+    ],
+    "life": [
+     4,
+     8
+    ],
+    "hand": [
+     5,
+     2
+    ],
+    "units": [
+     3,
+     0
+    ],
+    "power": [
+     9,
+     0
+    ],
+    "score": -148
+   },
+   {
+    "turn": 23,
+    "player": 1,
+    "sites": [
+     8,
+     5
+    ],
+    "life": [
+     2,
+     8
+    ],
+    "hand": [
+     5,
+     2
+    ],
+    "units": [
+     3,
+     0
+    ],
+    "power": [
+     9,
+     0
+    ],
+    "score": -97
+   },
+   {
+    "turn": 24,
+    "player": 0,
+    "sites": [
+     9,
+     5
+    ],
+    "life": [
+     2,
+     0
+    ],
+    "hand": [
+     3,
+     2
+    ],
+    "units": [
+     5,
+     0
+    ],
+    "power": [
+     15,
+     0
+    ],
+    "score": -443
+   },
+   {
+    "turn": 25,
+    "player": 1,
+    "sites": [
+     9,
+     5
+    ],
+    "life": [
+     2,
+     0
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     5,
+     1
+    ],
+    "power": [
+     15,
+     1
+    ],
+    "score": -243
+   },
+   {
+    "turn": 26,
+    "player": 0,
+    "sites": [
+     9,
+     5
+    ],
+    "life": [
+     2,
+     0
+    ],
+    "hand": [
+     4,
+     4
+    ],
+    "units": [
+     5,
+     1
+    ],
+    "power": [
+     15,
+     1
+    ],
+    "score": -1500
+   }
+  ],
+  "swings": [
+   {
+    "turn": 7,
+    "player": 1,
+    "change": 166,
+    "log": [
+     "— Turn 6: You —",
+     "You draws a card from their spellbook.",
+     "You plays Vast Desert at (4,2).",
+     "Lavamancer: Pull apart a partial row or column (Rubble, 1 damage nearby).",
+     "🌋 The land is pulled apart — Rubble boils up at (3,3)!",
+     "Polar Bears takes 1 damage.",
+     "— Turn 7: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Polar Bears moves to c1.",
+     "Polar Bears attacks Lavamancer!",
+     "Lavamancer takes 3 damage (life 17).",
+     "Polar Bears takes 1 damage.",
+     "Computer plays Permafrost at (3,3).",
+     "Computer casts Polar Bears.",
+     "Springstem Meadow: Spring the trap: fling a unit atop it onto a nearby site.",
+     "Frost Mage is flung through the air!"
+    ]
+   },
+   {
+    "turn": 9,
+    "player": 1,
+    "change": 98,
+    "log": [
+     "— Turn 8: You —",
+     "You draws a card from their spellbook.",
+     "You plays Vast Desert at (4,1).",
+     "You casts Pudge Butcher.",
+     "— Turn 9: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Polar Bears moves to d2.",
+     "Polar Bears attacks Vast Desert!",
+     "You loses 3 life (now 14).",
+     "Vast Desert is struck for 3.",
+     "Polar Bears attacks Lavamancer!",
+     "Lavamancer takes 3 damage (life 11).",
+     "Polar Bears takes 1 damage.",
+     "Computer draws a card from their atlas.",
+     "Computer casts Fey Changeling."
+    ]
+   },
+   {
+    "turn": 12,
+    "player": 0,
+    "change": -215,
+    "log": [
+     "— Turn 11: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer plays Mountain Peaks at (2,4).",
+     "Computer casts Frostbolt.",
+     "Vile Imp takes 3 damage.",
+     "Ice spreads from the impact.",
+     "Vile Imp dies.",
+     "— Turn 12: You —",
+     "You draws a card from their spellbook.",
+     "You casts Emberleaf Dryad.",
+     "The Rubble is reshaped into Sulfur Vents.",
+     "You plays Wasteland at (4,3).",
+     "You casts Morgana le Fay.",
+     "A spell is drawn — only Morgana may cast it.",
+     "A spell is drawn — only Morgana may cast it.",
+     "A spell is drawn — only Morgana may cast it.",
+     "You draws a card from their atlas."
+    ]
+   },
+   {
+    "turn": 15,
+    "player": 1,
+    "change": 182,
+    "log": [
+     "— Turn 14: You —",
+     "You draws a card from their spellbook.",
+     "You plays Active Volcano at (2,1).",
+     "Lavamancer: Pull apart a partial row or column (Rubble, 1 damage nearby).",
+     "🌋 The land is pulled apart — Rubble boils up at (3,2)!",
+     "Pudge Butcher takes 1 damage.",
+     "You casts Emberleaf Dryad.",
+     "The Rubble is reshaped into Fertile Earth.",
+     "You plays Fertile Earth at (3,2).",
+     "— Turn 15: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts The White Death.",
+     "Computer draws a card from their atlas."
+    ]
+   },
+   {
+    "turn": 24,
+    "player": 0,
+    "change": -295,
+    "log": [
+     "— Turn 23: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Frost Breath.",
+     "Lavamancer takes 2 damage (life 2).",
+     "Frost Mage moves to b1.",
+     "— Turn 24: You —",
+     "You draws a card from their spellbook.",
+     "Pudge Butcher: Throw the hook (projectile drag).",
+     "Pudge's hook drags Frost Mage in!",
+     "Frost Mage takes 5 damage (life 3).",
+     "Pudge Butcher takes 1 damage.",
+     "Vile Imp attacks Frost Mage!",
+     "Frost Mage takes 2 damage (life 1).",
+     "Vile Imp takes 1 damage.",
+     "You casts Autumn Unicorn.",
+     "You casts Arjaro Exorcist.",
+     "You plays Valley at (4,1).",
+     "Root Spider moves to d3.",
+     "Root Spider attacks Permafrost!",
+     "Computer loses 2 life (now 0).",
+     "Frost Mage is at death's door!",
+     "Permafrost is struck for 2."
+    ]
+   },
+   {
+    "turn": 26,
+    "player": 0,
+    "change": -1057,
+    "log": [
+     "— Turn 25: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Runeling.",
+     "A spell is drawn — only the Runeling may cast it.",
+     "Computer casts Slide with Runeling.",
+     "Computer draws a card from their spellbook.",
+     "Computer draws a card from their atlas.",
+     "— Turn 26: You —",
+     "You draws a card from their spellbook.",
+     "Arjaro Exorcist moves to d2.",
+     "Pudge Butcher: Throw the hook (projectile drag).",
+     "Pudge's hook drags Frost Mage in!",
+     "Death blow! Frost Mage is defeated.",
+     "Pudge Butcher takes 1 damage."
+    ]
+   }
+  ],
+  "checks": [
+   {
+    "turn": 11,
+    "played": [
+     "Avatar: tap to PLAY Mountain Peaks at d1",
+     "CAST Frostbolt direction forward",
+     "END YOUR TURN"
+    ],
+    "engine": "Avatar: tap to PLAY Mountain Peaks at d1",
+    "same": true
+   },
+   {
+    "turn": 23,
+    "played": [
+     "CAST Frost Breath",
+     "Frost Mage at c4 moves to d4",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Frost Breath",
+    "same": true
+   },
+   {
+    "turn": 25,
+    "played": [
+     "CAST Runeling at b2",
+     "CAST Slide targeting Frost Mage at c4, cast by Runeling at b2",
+     "Avatar: tap to DRAW a site from the atlas",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Runeling at b2",
+    "same": true
+   }
+  ],
+  "rejected": 0
+ },
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795533459849,
