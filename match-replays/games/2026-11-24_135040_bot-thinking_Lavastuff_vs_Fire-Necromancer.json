@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-24T13:58:38.463Z",
+ "savedAt": "2026-11-24T13:59:00.210Z",
  "codeCommit": "e748b65",
  "finished": true,
  "winner": "Computer",
@@ -524,6 +524,7 @@
   "checks": [],
   "rejected": 0
  },
+ "review": "The game was decided by a life race you lost: the Computer's Màzuj Ifrit hit your sites for 4 on turns 10, 12 and 14 with no answer until it was too late, and your own spells added to the damage.\n\nKey moments:\n- Turn 9 (you): Searing Truth cost you 4 life, taking you to 16. Turn 11's Ground Slam cost another 2. That is 6 life you paid yourself while the Ifrit was racing. Cards that cost life are poor value when the opponent already has an unblocked attacker.\n- Turn 10 to 12 (you): The Ifrit and Wild Fanatic took you from 16 to 10, and the Ifrit and Saracen Raiders then took you to 1. You spent turn 11 killing the Fanatic. The log shows nothing aimed at the Ifrit, which was the real threat. The engine score jumped by 486 across these turns.\n- Turn 13 (you): You were at 1 life. Trading Vile Imp for Saracen Raiders was fine, but the Ifrit was left alone and hit you to 0 on turn 14. At 1 life, stopping the Ifrit or holding back blockers should have come first.\n- Turns 15 and 16: Earthquake killed the Ifrit and Imp, and it was a strong play. It came a turn or two too late, though. Dyrodor then attacked the Temple of Moloch instead of staying home, and a Skeleton walked in for the death blow at 0 life. The log is too thin on board geometry to say if Dyrodor could have blocked.\n\nFor you: start dealing with a recurring site-attacker once your life drops below about 12. Avoid life-costing spells in that spot, and keep a minion near your avatar when you are at 0 or 1.\n\nFor the bot: it overextended into Earthquake, putting both the Ifrit and Imp on a board where one spell wiped them. It also kept summoning Skeletons with Necromancer, and one of those finished the game. I can't tell what made the Computer lose 2 life at the start of turns 10, 12 and 14, and the log doesn't show it. On turn 7 your Vile Imp \"took 2 damage and died, killed by Vile Imp\" on being cast, which looks odd. I can't confirm a rules error.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795528240167,
