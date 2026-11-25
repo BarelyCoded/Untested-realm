@@ -320,6 +320,7 @@ DECKS['Frost Pathfinder'] = {
 // Ashen Ossuary (25 Nov): Earth/Fire Necromancer (66.8% in real play, 0.8% of games) built from the user's
 // collection with the Lavamancer half of FvL. Theorycraft, untested.
 DECKS['Ashen Ossuary'] = (featuredDecks as DeckList[]).find((d) => d.name === 'Ashen Ossuary')!
+DECKS['Lava Boy'] = (featuredDecks as DeckList[]).find((d) => d.name === 'Lava Boy')!
 
 // L6 (control): the Fire Necromancer list with the Avatar swapped, to see what the Lavamancer costs a proven shell.
 import { featuredDecks } from '../../packages/shared/src'

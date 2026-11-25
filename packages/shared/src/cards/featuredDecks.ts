@@ -806,13 +806,74 @@ export const featuredDecks: DeckList[] = [
       "Exorcism": 1
     }
   },
+  // Lava Boy by TCG_TALK (updated 25 Nov 2026), an Earth/Fire Lavamancer list, as published (maybeboard left out)
+  // — https://sorcerytcg.com/decks/cmwmkjkss00j808lbctelasxk
+  {
+    "name": "Lava Boy",
+    "avatar": "Lavamancer",
+    "spellbook": {
+      "Arjaro Exorcist": 2,
+      "Emberleaf Dryad": 2,
+      "Kettletop Leprechaun": 3,
+      "Sinterfee": 2,
+      "Toolbox": 2,
+      "Vile Imp": 4,
+      "Autumn Unicorn": 3,
+      "Blaze": 3,
+      "Blaze of Glory": 1,
+      "Colicky Dragonettes": 3,
+      "Gnarled Laborers": 2,
+      "Landmass": 3,
+      "Morgana le Fay": 1,
+      "Reed Cord Measurer": 3,
+      "Root Spider": 2,
+      "Slumbering Giantess": 2,
+      "Fireball": 3,
+      "Ground Slam": 2,
+      "Infiltrate": 2,
+      "Lava Elemental": 2,
+      "Pudge Butcher": 3,
+      "Slag Slug": 2,
+      "Stiff-pitch Witch": 2,
+      "Earthquake": 2,
+      "Poison Nova": 2,
+      "Infernal Legion": 1,
+      "Major Explosion": 1
+    },
+    "atlas": {
+      "Active Volcano": 2,
+      "Blessed Village": 4,
+      "Bouldermaw": 1,
+      "Fertile Earth": 2,
+      "Funeral Pyre": 3,
+      "Molten Maar": 2,
+      "Scoria": 2,
+      "Sinkhole": 2,
+      "Smoldering Hollow": 2,
+      "Spike Trap": 2,
+      "Steppe": 3,
+      "Sulfur Vents": 2,
+      "Vast Desert": 3
+    },
+    "collection": {
+      "Dispel": 1,
+      "Gift of the Serpent": 1,
+      "Boil": 1,
+      "Bury": 1,
+      "Hamlet's Ablaze!": 1,
+      "Heat Ray": 1,
+      "Hellhounds": 2,
+      "Rolling Boulder": 1,
+      "Amazon Warriors": 1
+    }
+  },
   // Frost Mage vs Lavamancer (Nov 2026) — the two preconstructed decks (the printed deck lists)
   fvlPrecon('precon:fvl-frost', 'Frost Mage (FvL precon)'),
   fvlPrecon('precon:fvl-lava', 'Lavamancer (FvL precon)'),
 ]
 
 /** Decks built for the player: listed in the picker, but not part of the meta field. */
-export const OWN_BUILDS: ReadonlySet<string> = new Set(['Ashen Ossuary'])
+export const OWN_BUILDS: ReadonlySet<string> = new Set(['Ashen Ossuary', 'Lava Boy'])
 
 /** The meta field that bot tests, deck gauntlets and self-play play against: the tournament lists and the
  *  test build, without the FvL precons and without the player's own builds. */
