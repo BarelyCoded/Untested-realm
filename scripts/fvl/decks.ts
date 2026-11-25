@@ -293,7 +293,7 @@ DECKS['Fire Pathfinder FvL'] = {
 }
 DECKS['Water Necromancer FvL'] = {
   ...meta('Water Necromancer'), name: 'Water Necromancer FvL',
-  spellbook: swap(meta('Water Necromancer').spellbook as Record<string, number>, { Geyser: -1, 'Acid Rain': -1, 'Grapple Shot': -2, 'Failed Mutation': -2, 'Chaos Twister': -2, Frostbolt: 2, Research: 2, 'Jussi Puffins': 2, Hailstriker: 2 }),
+  spellbook: swap(meta('Water Necromancer').spellbook as Record<string, number>, { Geyser: -1, 'Acid Rain': -1, 'Grapple Shot': -2, 'Failed Mutation': -2, 'Chaos Twister': -2, Frostbolt: 2, Research: 2, 'Sissi Marksmen': 2, Hailstriker: 2 }), // Sissi Marksmen took the Jussi Puffins' slots (24 Nov)
 }
 
 // L6 (control): the Fire Necromancer list with the Avatar swapped, to see what the Lavamancer costs a proven shell.
