@@ -274,6 +274,28 @@ DECKS['Cold Snap V3'] = {
   spellbook: { ...DECKS['Cold Snap V2'].spellbook, Research: 2, 'Order of the Sacred Oak': 2, 'Stygian Archers': 2, 'Lugbog Cat': 3, 'Gyre Hippogriffs': 1, 'Whirling Blades': 1 },
 }
 
+// ── Meta lists updated with Frost Mage vs Lavamancer cards (24 Nov, theorycraft — untested) ──
+const meta = (n: string) => (featuredDecks as DeckList[]).find((d) => d.name === n)!
+const swap = (base: Record<string, number>, changes: Record<string, number>) => {
+  const out: Record<string, number> = { ...base }
+  for (const [k, v] of Object.entries(changes)) { out[k] = (out[k] ?? 0) + v; if (out[k] <= 0) delete out[k] }
+  return out
+}
+DECKS['Fire Necromancer FvL'] = {
+  ...meta('Fire Necromancer'), name: 'Fire Necromancer FvL',
+  spellbook: swap(meta('Fire Necromancer').spellbook as Record<string, number>, { 'Barging Barghest': -3, Slobbermaw: -1, 'Redmane Hyena': -1, 'Clamor of Harpies': -1, 'Snapjaw Raptor': 2, 'Dust Devil': 2, 'Flametongue Newt': 2 }),
+  atlas: swap(meta('Fire Necromancer').atlas as Record<string, number>, { 'Arid Desert': -1, 'River of Flame': -1, 'Smoldering Hollow': 1, 'Volcanic Eruption': 1 }),
+}
+DECKS['Fire Pathfinder FvL'] = {
+  ...meta('Fire Pathfinder'), name: 'Fire Pathfinder FvL',
+  spellbook: swap(meta('Fire Pathfinder').spellbook as Record<string, number>, { 'Redmane Hyena': -2, 'Warp Spasm': -1, Betrayal: -1, Sinterfee: -1, 'Snapjaw Raptor': 2, 'Dust Devil': 2, 'Flametongue Newt': 1 }),
+  atlas: swap(meta('Fire Pathfinder').atlas as Record<string, number>, { 'Poisoned Well': -1, 'Desert Bloom': -1, 'Kor Crematory': -1, Leadworks: -1, 'Smoldering Hollow': 1, 'Sulfur Vents': 1, 'Volcanic Eruption': 1, 'Combusting Busts': 1 }),
+}
+DECKS['Water Necromancer FvL'] = {
+  ...meta('Water Necromancer'), name: 'Water Necromancer FvL',
+  spellbook: swap(meta('Water Necromancer').spellbook as Record<string, number>, { Geyser: -1, 'Acid Rain': -1, 'Grapple Shot': -2, 'Failed Mutation': -2, 'Chaos Twister': -2, Frostbolt: 2, Research: 2, 'Jussi Puffins': 2, Hailstriker: 2 }),
+}
+
 // L6 (control): the Fire Necromancer list with the Avatar swapped, to see what the Lavamancer costs a proven shell.
 import { featuredDecks } from '../../packages/shared/src'
 const necro = (featuredDecks as DeckList[]).find((d) => d.name === 'Fire Necromancer')
