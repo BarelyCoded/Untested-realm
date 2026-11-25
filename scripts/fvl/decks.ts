@@ -296,6 +296,27 @@ DECKS['Water Necromancer FvL'] = {
   spellbook: swap(meta('Water Necromancer').spellbook as Record<string, number>, { Geyser: -1, 'Acid Rain': -1, 'Grapple Shot': -2, 'Failed Mutation': -2, 'Chaos Twister': -2, Frostbolt: 2, Research: 2, 'Sissi Marksmen': 2, Hailstriker: 2 }), // Sissi Marksmen took the Jussi Puffins' slots (24 Nov)
 }
 
+// Frost Pathfinder (25 Nov, theorycraft — untested): Air Pathfinder (61.5% in real play, 1% of games) carrying
+// the Frost Mage half of FvL, with a light Water touch for Frostbolt and Hailstriker (single W only).
+DECKS['Frost Pathfinder'] = {
+  name: 'Frost Pathfinder', avatar: 'Pathfinder',
+  spellbook: {
+    'Ring of Morrigan': 1, Toolbox: 3, 'Torshammar Trinket': 3,
+    Shatter: 2, Slide: 2, Research: 2, Frostbolt: 2, Blink: 2, 'Lightning Bolt': 2, 'Whirling Blades': 1, Thunderstorm: 2, 'Flanking Maneuver': 1, Displace: 1,
+    'Arctic Fox': 1, 'Highland Princess': 1, 'Sissi Marksmen': 2, 'The White Death': 1, Forsaken: 2, 'Tooth Faeries': 2,
+    'Apprentice Wizard': 3, 'Headless Haunt': 2, 'Gibbous Nightgaunts': 3, 'Stygian Archers': 2, 'Phase Assassin': 2, 'Aria Wraith': 2, 'Lone Wolf': 2,
+    'Gyre Hippogriffs': 2, Hailstriker: 2, 'Avenging Angel': 2, 'Daperyll Vampire': 2, 'Hounds of Ondaros': 1, 'Riddle Sphinx': 1, 'Full-tilt Goliaths': 1,
+  },
+  atlas: {
+    'Lone Tower': 1, 'Dark Tower': 1, 'Gothic Tower': 1, 'Wuthering Heights': 1, 'Icicle Dome': 1, 'Deep Snow': 1, Avalanche: 1, 'Springstem Meadow': 1,
+    'Mountain Peaks': 1, 'Mountain Pass': 1, Watchtower: 1, 'Updraft Ridge': 1, Beacon: 1, 'Treetop Hideout': 1, 'Spore Spouts': 1, 'Forsaken Crypt': 1, 'Open Mausoleum': 1, 'Dark Alley': 1, Spire: 1,
+    Lighthouse: 1, Tundra: 1,
+    'Babbling Brook': 1, Bog: 1, 'Troll Bridge': 1, 'Thin Ice': 1, 'River Rapids': 1,
+    'Dome of Osiros': 1, Sinkhole: 1, Hamlet: 1, 'Ghost Town': 1,
+  },
+  collection: { Ghoul: 1, 'Lightning Bolt': 1, Disenchant: 1, Displace: 1, 'Arc Lightning': 1, 'Magic Missiles': 1, Teleport: 1, 'Zap!': 1, Sleep: 1, 'Ice Lance': 1 },
+} as DeckList
+
 // L6 (control): the Fire Necromancer list with the Avatar swapped, to see what the Lavamancer costs a proven shell.
 import { featuredDecks } from '../../packages/shared/src'
 const necro = (featuredDecks as DeckList[]).find((d) => d.name === 'Fire Necromancer')
