@@ -4,7 +4,7 @@
 // Candidates n and n + half use opposite nudges, which makes the comparison much less noisy.
 //   npx tsx scripts/fvl/tune_gen.ts <candidate> <candidates> <pairs> <seed> <sigma> <budget ms> '<base weights json>' [part i/n]
 // Prints one JSON line: { candidate, a (base wins), b (candidate wins), draws }
-import { createGame, applyAction, featuredDecks, DEFAULT_WEIGHTS, type PlayerId, type DeckList, type EvalWeights } from '../../packages/shared/src'
+import { createGame, applyAction, featuredDecks, metaDecks, DEFAULT_WEIGHTS, type PlayerId, type DeckList, type EvalWeights } from '../../packages/shared/src'
 import '../../packages/shared/src/cards/scripts/index'
 import { botAction, botNeedsToAct } from '../../packages/client/src/bot'
 import { searchBotAction, DEFAULT_SEARCH, resetSearchState, type SearchConfig } from '../../packages/client/src/bot_search'
@@ -16,7 +16,7 @@ const [pi, pn] = (partArg ?? '0/1').split('/').map(Number)
 const base: EvalWeights = { ...DEFAULT_WEIGHTS, ...JSON.parse(baseArg || '{}') }
 const cand = applyNudges(base, nudges(Object.keys(DEFAULT_WEIGHTS), SEED, CAND, CANDS), SIGMA) as EvalWeights
 const cfgs: SearchConfig[] = [{ ...DEFAULT_SEARCH, timeBudgetMs: MS, weights: base }, { ...DEFAULT_SEARCH, timeBudgetMs: MS, weights: cand }]
-const field = (featuredDecks as DeckList[]).filter((d) => !/FvL precon/.test(d.name))
+const field = (metaDecks as DeckList[])
 let rng = (SEED * 2654435761 + 97) >>> 0 // the same pairings for every candidate of a generation
 const rand = (n: number) => { rng = (rng * 1664525 + 1013904223) >>> 0; return rng % n }
 const wins = [0, 0]; let draws = 0

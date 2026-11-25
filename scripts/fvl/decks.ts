@@ -274,6 +274,53 @@ DECKS['Cold Snap V3'] = {
   spellbook: { ...DECKS['Cold Snap V2'].spellbook, Research: 2, 'Order of the Sacred Oak': 2, 'Stygian Archers': 2, 'Lugbog Cat': 3, 'Gyre Hippogriffs': 1, 'Whirling Blades': 1 },
 }
 
+// ── Meta lists updated with Frost Mage vs Lavamancer cards (24 Nov, theorycraft — untested) ──
+const meta = (n: string) => (featuredDecks as DeckList[]).find((d) => d.name === n)!
+const swap = (base: Record<string, number>, changes: Record<string, number>) => {
+  const out: Record<string, number> = { ...base }
+  for (const [k, v] of Object.entries(changes)) { out[k] = (out[k] ?? 0) + v; if (out[k] <= 0) delete out[k] }
+  return out
+}
+DECKS['Fire Necromancer FvL'] = {
+  ...meta('Fire Necromancer'), name: 'Fire Necromancer FvL',
+  spellbook: swap(meta('Fire Necromancer').spellbook as Record<string, number>, { 'Barging Barghest': -3, Slobbermaw: -1, 'Redmane Hyena': -1, 'Clamor of Harpies': -1, 'Snapjaw Raptor': 2, 'Dust Devil': 2, 'Flametongue Newt': 2 }),
+  atlas: swap(meta('Fire Necromancer').atlas as Record<string, number>, { 'Arid Desert': -1, 'River of Flame': -1, 'Smoldering Hollow': 1, 'Volcanic Eruption': 1 }),
+}
+DECKS['Fire Pathfinder FvL'] = {
+  ...meta('Fire Pathfinder'), name: 'Fire Pathfinder FvL',
+  spellbook: swap(meta('Fire Pathfinder').spellbook as Record<string, number>, { 'Redmane Hyena': -2, 'Warp Spasm': -1, Betrayal: -1, Sinterfee: -2, 'Snapjaw Raptor': 2, 'Dust Devil': 2, 'Flametongue Newt': 1 }), // the meta list runs 61 spells: the second Sinterfee goes to make 60
+  atlas: swap(meta('Fire Pathfinder').atlas as Record<string, number>, { 'Poisoned Well': -1, 'Desert Bloom': -1, 'Kor Crematory': -1, Leadworks: -1, 'Smoldering Hollow': 1, 'Sulfur Vents': 1, 'Volcanic Eruption': 1, 'Combusting Busts': 1 }),
+}
+DECKS['Water Necromancer FvL'] = {
+  ...meta('Water Necromancer'), name: 'Water Necromancer FvL',
+  spellbook: swap(meta('Water Necromancer').spellbook as Record<string, number>, { Geyser: -1, 'Acid Rain': -1, 'Grapple Shot': -2, 'Failed Mutation': -2, 'Chaos Twister': -2, Frostbolt: 2, Research: 2, 'Sissi Marksmen': 2, Hailstriker: 2 }), // Sissi Marksmen took the Jussi Puffins' slots (24 Nov)
+}
+
+// Frost Pathfinder (25 Nov, theorycraft — untested): Air Pathfinder (61.5% in real play, 1% of games) carrying
+// the Frost Mage half of FvL, with a light Water touch for Frostbolt and Hailstriker (single W only).
+DECKS['Frost Pathfinder'] = {
+  name: 'Frost Pathfinder', avatar: 'Pathfinder',
+  spellbook: {
+    'Ring of Morrigan': 1, Toolbox: 3, 'Torshammar Trinket': 3,
+    Shatter: 2, Slide: 2, Research: 2, Frostbolt: 2, Blink: 2, 'Lightning Bolt': 2, 'Whirling Blades': 1, Thunderstorm: 2, 'Flanking Maneuver': 1, Displace: 1,
+    'Arctic Fox': 1, 'Highland Princess': 1, 'Sissi Marksmen': 2, 'The White Death': 1, Forsaken: 2, 'Tooth Faeries': 2,
+    'Apprentice Wizard': 3, 'Headless Haunt': 2, 'Gibbous Nightgaunts': 3, 'Stygian Archers': 2, 'Phase Assassin': 2, 'Aria Wraith': 2, 'Lone Wolf': 2,
+    'Gyre Hippogriffs': 2, Hailstriker: 2, 'Avenging Angel': 2, 'Daperyll Vampire': 2, 'Hounds of Ondaros': 1, 'Riddle Sphinx': 1, 'Full-tilt Goliaths': 1,
+  },
+  atlas: {
+    'Lone Tower': 1, 'Dark Tower': 1, 'Gothic Tower': 1, 'Wuthering Heights': 1, 'Icicle Dome': 1, 'Deep Snow': 1, Avalanche: 1, 'Springstem Meadow': 1,
+    'Mountain Peaks': 1, 'Mountain Pass': 1, Watchtower: 1, 'Updraft Ridge': 1, Beacon: 1, 'Treetop Hideout': 1, 'Spore Spouts': 1, 'Forsaken Crypt': 1, 'Open Mausoleum': 1, 'Dark Alley': 1, Spire: 1,
+    Lighthouse: 1, Tundra: 1,
+    'Babbling Brook': 1, Bog: 1, 'Troll Bridge': 1, 'Thin Ice': 1, 'River Rapids': 1,
+    'Dome of Osiros': 1, Sinkhole: 1, Hamlet: 1, 'Ghost Town': 1,
+  },
+  collection: { Ghoul: 1, 'Lightning Bolt': 1, Disenchant: 1, Displace: 1, 'Arc Lightning': 1, 'Magic Missiles': 1, Teleport: 1, 'Zap!': 1, Sleep: 1, 'Ice Lance': 1 },
+} as DeckList
+
+// Ashen Ossuary (25 Nov): Earth/Fire Necromancer (66.8% in real play, 0.8% of games) built from the user's
+// collection with the Lavamancer half of FvL. Theorycraft, untested.
+DECKS['Ashen Ossuary'] = (featuredDecks as DeckList[]).find((d) => d.name === 'Ashen Ossuary')!
+
 // L6 (control): the Fire Necromancer list with the Avatar swapped, to see what the Lavamancer costs a proven shell.
 import { featuredDecks } from '../../packages/shared/src'
 const necro = (featuredDecks as DeckList[]).find((d) => d.name === 'Fire Necromancer')

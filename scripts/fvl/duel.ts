@@ -2,7 +2,7 @@
 // configurations swapped, so deck strength and who goes first cancel out.
 //   npx tsx scripts/fvl/duel.ts <pairs=10> <seed=1> '<cfg A json>' '<cfg B json>' [part i/n]
 // Prints one JSON line: { pairs, a, b, draws, msA, msB } (ms = mean thinking time per own turn)
-import { createGame, applyAction, featuredDecks, type PlayerId, type DeckList } from '../../packages/shared/src'
+import { createGame, applyAction, featuredDecks, metaDecks, type PlayerId, type DeckList } from '../../packages/shared/src'
 import '../../packages/shared/src/cards/scripts/index'
 import { botAction, botNeedsToAct } from '../../packages/client/src/bot'
 import { searchBotAction, DEFAULT_SEARCH, resetSearchState, rolloutStats, type SearchConfig } from '../../packages/client/src/bot_search'
@@ -13,7 +13,7 @@ const PAIRS = Number(pArg ?? 10), SEED = Number(sArg ?? 1)
 const cfgOf = (json: string | undefined): SearchConfig => { const o = JSON.parse(json || '{}'); return { ...DEFAULT_SEARCH, ...o, weights: { ...DEFAULT_SEARCH.weights, ...(o.weights ?? {}) } } }
 const cfgs: SearchConfig[] = [cfgOf(aArg), cfgOf(bArg)]
 const [pi, pn] = (partArg ?? '0/1').split('/').map(Number)
-const field = (featuredDecks as DeckList[]).filter((d) => !/FvL precon/.test(d.name))
+const field = (metaDecks as DeckList[])
 let rng = SEED * 2654435761 >>> 0
 const rand = (n: number) => { rng = (rng * 1664525 + 1013904223) >>> 0; return rng % n }
 const wins = [0, 0]; let draws = 0
