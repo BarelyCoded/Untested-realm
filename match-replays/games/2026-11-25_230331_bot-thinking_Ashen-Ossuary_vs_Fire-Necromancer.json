@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-25T23:14:33.387Z",
+ "savedAt": "2026-11-25T23:14:50.495Z",
  "codeCommit": "fd37126",
  "finished": true,
  "winner": "Computer",
@@ -656,6 +656,7 @@
   "checks": [],
   "rejected": 0
  },
+ "review": "The game was decided by the Computer's steady attacks on your sites, which took you from 20 life to 0 by turn 17. At 0 life your Necromancer was at death's door, so any hit would kill it.\n\nKey moments:\n- Turn 6: you sent War Horse and a Skeleton at Wuthering Heights for 3 damage. On turn 7 Saracen Raiders hit Vast Desert for 4, and the evaluation jumped by +143. Your minions were off attacking, so nothing was left to block. The better play was to keep a defender near your own sites. This was your error.\n- Turn 13: Redcap Powries and Redmane Hyena hit Vast Desert for 7 in one turn, taking you from 16 to 9. The Witch you cast on turn 12 died in a trade with Barging Barghest. You had no blockers back, and the Computer's attacks went through. You erred on this turn.\n- Turns 14-15: you spent turn 14 on Arid Desert, a second Witch and a Toolbox. Raiders then hit for another 4, leaving you at 5. A blocker for the Raiders was more urgent. Your turn-16 Witch throw killed two minions, which was good, but it came too late.\n- Turn 20: at 0 life, you moved the Necromancer to c2 and Màzuj Ifrit intercepted and killed it. Keeping it back would have been the better play, and moving it was a clear blunder.\n\nFor you: once you are low on life, count the enemy minions that can reach your Avatar or sites each turn. Keep the Avatar out of reach and put blockers where the attackers arrive, instead of trading attacks with Wuthering Heights.\n\nFor the bot: it kept sending Saracen Raiders at an open site until turn 18, and it ended up dying to the Witch's throw plus Kobolds. It also traded Barging Barghest for a Witch, which was fine for it. The log shows no clear simulator rules mistake. Some pickup lines, such as \"Necromancer picks up Toolbox\" appearing for both sides, are ambiguous.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795647811224,
