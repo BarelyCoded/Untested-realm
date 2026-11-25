@@ -740,7 +740,80 @@ export const featuredDecks: DeckList[] = [
       "Screamer": 1
     }
   },
+  // Your builds: decks made for the player in Realmforge, shown in the picker but kept out of the meta field
+  // that bot tests and self-play use (see `metaDecks`). Theorycraft, untested.
+  // Ashen Ossuary (25 Nov 2026): Earth/Fire Necromancer (66.8% over 503 games on Play Sorcery Online) with the
+  // Lavamancer half of Frost Mage vs Lavamancer: Scoria, Lava Elemental, Stiff-pitch Witch, Earthquake.
+  {
+    "name": "Ashen Ossuary",
+    "avatar": "Necromancer",
+    "spellbook": {
+      "Ring of Morrigan": 1,
+      "Toolbox": 3,
+      "Torshammar Trinket": 3,
+      "Earthquake": 2,
+      "Common Sense": 2,
+      "Landmass": 2,
+      "Firebolts": 3,
+      "Gift of the Serpent": 2,
+      "Lava Flow": 2,
+      "Blaze of Glory": 1,
+      "Ground Slam": 1,
+      "Vile Imp": 4,
+      "War Horse": 3,
+      "Snapjaw Raptor": 2,
+      "Wild Fanatic": 2,
+      "Redcap Powries": 3,
+      "Quarrelsome Kobolds": 3,
+      "Root Spider": 3,
+      "Cauldron Crones": 2,
+      "Autumn Unicorn": 2,
+      "Colicky Dragonettes": 2,
+      "Lava Elemental": 3,
+      "Saracen Raiders": 3,
+      "Pudge Butcher": 2,
+      "Stiff-pitch Witch": 2,
+      "Siege Giant": 1,
+      "Tusslin' Trolls": 1
+    },
+    "atlas": {
+      "Scoria": 2,
+      "Steppe": 3,
+      "Fertile Earth": 3,
+      "Common Village": 2,
+      "Open Grave": 1,
+      "Shallow Grave": 2,
+      "Silent Hills": 1,
+      "Humming Hummocks": 1,
+      "Spike Trap": 1,
+      "Red Desert": 3,
+      "Vast Desert": 3,
+      "Remote Desert": 2,
+      "Active Volcano": 3,
+      "Sinkhole": 2,
+      "Arid Desert": 1
+    },
+    "collection": {
+      "Common Sense": 1,
+      "Gift of the Serpent": 1,
+      "Mad Dash": 1,
+      "Minor Explosion": 1,
+      "Detonate": 1,
+      "Flame Strike": 1,
+      "Vandal Imp": 1,
+      "Bury": 1,
+      "Dispel": 1,
+      "Exorcism": 1
+    }
+  },
   // Frost Mage vs Lavamancer (Nov 2026) — the two preconstructed decks (the printed deck lists)
   fvlPrecon('precon:fvl-frost', 'Frost Mage (FvL precon)'),
   fvlPrecon('precon:fvl-lava', 'Lavamancer (FvL precon)'),
 ]
+
+/** Decks built for the player: listed in the picker, but not part of the meta field. */
+export const OWN_BUILDS: ReadonlySet<string> = new Set(['Ashen Ossuary'])
+
+/** The meta field that bot tests, deck gauntlets and self-play play against: the tournament lists and the
+ *  test build, without the FvL precons and without the player's own builds. */
+export const metaDecks: DeckList[] = featuredDecks.filter((d) => !/FvL precon/.test(d.name) && !OWN_BUILDS.has(d.name))

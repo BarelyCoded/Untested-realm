@@ -1,11 +1,11 @@
-import { createGame, applyAction, featuredDecks, type PlayerId, type DeckList } from '../../packages/shared/src'
+import { createGame, applyAction, featuredDecks, metaDecks, type PlayerId, type DeckList } from '../../packages/shared/src'
 import '../../packages/shared/src/cards/scripts/index'
 import { botAction, botNeedsToAct } from '../../packages/client/src/bot'
 import { DECKS } from './decks'
 import { getScript } from '../../packages/shared/src'
 if (process.argv[4] === 'noability') for (const a of ['Lavamancer', 'Frost Mage']) for (const ab of (getScript(a) as any).abilities) ab.available = () => false
 const key = process.argv[2], N = Number(process.argv[3] ?? 22), noAbility = process.argv[4] === 'noability'
-const deck = DECKS[key] ?? (featuredDecks as DeckList[]).find((d) => d.name === key)!; const field = (featuredDecks as DeckList[]).filter((d) => !/FvL/.test(d.name))
+const deck = DECKS[key] ?? (featuredDecks as DeckList[]).find((d) => d.name === key)!; const field = (metaDecks as DeckList[])
 let casts = 0, ends = 0, manaLeft = 0, w = 0, l = 0, acts = 0, traps = 0, games = 0, avatarDeaths = 0; const sitesAt: number[] = []; const msgs: Record<string, number> = {}
 for (let i = 0; i < N; i++) {
   const opp = field[i % field.length]; const me = (i % 2) as PlayerId

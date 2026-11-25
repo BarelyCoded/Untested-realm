@@ -1,7 +1,7 @@
 // Deck gauntlet: one deck against the field of meta decks, bot against bot.
 //   npx tsx scripts/fvl/gauntlet.ts <deck key> [games per opponent=16] [seed=1] [fast|search:<ms>] [part i/n]
 // Prints one JSON line: { deck, games, wins, losses, draws, byOpp }
-import { createGame, applyAction, featuredDecks, validateDeck, type PlayerId, type DeckList } from '../../packages/shared/src'
+import { createGame, applyAction, featuredDecks, metaDecks, validateDeck, type PlayerId, type DeckList } from '../../packages/shared/src'
 import '../../packages/shared/src/cards/scripts/index'
 import { botAction, botNeedsToAct } from '../../packages/client/src/bot'
 import { searchBotAction, DEFAULT_SEARCH, resetSearchState } from '../../packages/client/src/bot_search'
@@ -16,7 +16,7 @@ const deck = all[key]
 if (!deck) { console.error('no deck', key, Object.keys(all)); process.exit(1) }
 const errs = validateDeck(deck).filter((p) => p.level === 'error')
 if (errs.length) { console.error('ILLEGAL', key, errs.map((e) => e.msg)); process.exit(1) }
-const field = (featuredDecks as DeckList[]).filter((d) => !/FvL precon/.test(d.name) && d.name !== key).filter((_, i) => i % pn === pi)
+const field = (metaDecks as DeckList[]).filter((d) => d.name !== key).filter((_, i) => i % pn === pi)
 const act = (g: any, s: PlayerId) => { if (searchMs) { try { return searchBotAction(g, s, { ...DEFAULT_SEARCH, timeBudgetMs: searchMs }) } catch { /* fall through */ } } return botAction(g, s) }
 const byOpp: Record<string, [number, number, number]> = {}
 let w = 0, l = 0, d = 0, turns = 0

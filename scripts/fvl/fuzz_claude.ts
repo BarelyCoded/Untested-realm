@@ -1,12 +1,12 @@
 // Find crashes in the Claude opponent's request builder: play bot games and build the request at every
 // decision of the bot's seat, without calling the API.  npx tsx scripts/fvl/fuzz_claude.ts [games]
-import { createGame, applyAction, featuredDecks, type PlayerId, type DeckList } from '../../packages/shared/src'
+import { createGame, applyAction, featuredDecks, metaDecks, type PlayerId, type DeckList } from '../../packages/shared/src'
 import '../../packages/shared/src/cards/scripts/index'
 import { botAction, botNeedsToAct } from '../../packages/client/src/bot'
 import { candidates, buildRequest, analyze } from '../../packages/client/src/claude_bot'
 import { DECKS } from './decks'
 const N = Number(process.argv[2] ?? 30)
-const field = (featuredDecks as DeckList[]).filter((d) => !/FvL/.test(d.name))
+const field = (metaDecks as DeckList[])
 const seen = new Map<string, number>()
 let decisions = 0
 for (let i = 0; i < N; i++) {
