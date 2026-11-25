@@ -288,7 +288,7 @@ DECKS['Fire Necromancer FvL'] = {
 }
 DECKS['Fire Pathfinder FvL'] = {
   ...meta('Fire Pathfinder'), name: 'Fire Pathfinder FvL',
-  spellbook: swap(meta('Fire Pathfinder').spellbook as Record<string, number>, { 'Redmane Hyena': -2, 'Warp Spasm': -1, Betrayal: -1, Sinterfee: -2, 'Snapjaw Raptor': 2, 'Dust Devil': 2, 'Flametongue Newt': 1 }) // the meta list runs 61 spells: the second Sinterfee goes to make 60,
+  spellbook: swap(meta('Fire Pathfinder').spellbook as Record<string, number>, { 'Redmane Hyena': -2, 'Warp Spasm': -1, Betrayal: -1, Sinterfee: -2, 'Snapjaw Raptor': 2, 'Dust Devil': 2, 'Flametongue Newt': 1 }), // the meta list runs 61 spells: the second Sinterfee goes to make 60
   atlas: swap(meta('Fire Pathfinder').atlas as Record<string, number>, { 'Poisoned Well': -1, 'Desert Bloom': -1, 'Kor Crematory': -1, Leadworks: -1, 'Smoldering Hollow': 1, 'Sulfur Vents': 1, 'Volcanic Eruption': 1, 'Combusting Busts': 1 }),
 }
 DECKS['Water Necromancer FvL'] = {
