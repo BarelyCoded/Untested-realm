@@ -135,10 +135,15 @@ export function roomCodeFromUrl(): string | null {
 }
 function setRoomUrl(code: string): void {
   if (roomCodeFromUrl() !== code) history.replaceState(null, '', `/room/${code}`)
+  gameHref = location.pathname + location.search
 }
 function clearRoomUrl(): void {
   if (location.pathname.startsWith('/room/')) history.replaceState(null, '', '/')
+  gameHref = location.pathname + location.search
 }
+/** the address the game screen is showing — remembered so the Back-button guard (see App) can put it
+ *  back after the browser's Back popped its history entry. */
+let gameHref: string | null = null
 
 /** playing a CARD (a spell/minion/aura/artifact cast, or a site play) — the only
  *  actions that arm the "↩ Go back" free-undo on their first prompt. */
@@ -1427,6 +1432,78 @@ export default function App() {
     }
   }, [mm.mobile, mm.simulated])
 
+  // ── Back-button guard ────────────────────────────────────────────────────────────────────────
+  // The site is ONE page, so the phone's Back button / edge-swipe used to leave it and drop the game
+  // (very easy to do by accident on a phone). While a game screen is open we hold one extra history
+  // entry: Back only pops that entry, so you stay on the site, and we ASK before leaving a game that
+  // is still in progress. A finished game just goes back to the menu.
+  const [confirmLeave, setConfirmLeave] = useState(false)
+  const gameOpen = page === 'game' && !!session
+  const gameOpenRef = useRef(gameOpen); gameOpenRef.current = gameOpen
+  const curView = session?.kind === 'online' ? session.view : hotseatView
+  const gameOverRef = useRef(false); gameOverRef.current = curView?.phase === 'over'
+  const backTrapRef = useRef(false) // our extra history entry is on top
+  const skipPopRef = useRef(0) // popstates caused by our own history.back() below
+  const leaveGameRef = useRef<() => void>(() => {})
+  const armBackTrap = (href?: string | null) => {
+    try {
+      history.pushState({ rfBackTrap: 1 }, '', href ?? location.href)
+      gameHref = location.pathname + location.search
+      backTrapRef.current = true
+    } catch { /* history unavailable */ }
+  }
+  useEffect(() => {
+    const onPop = () => {
+      if (skipPopRef.current > 0) { skipPopRef.current--; return }
+      if (!backTrapRef.current) return
+      backTrapRef.current = false
+      if (!gameOpenRef.current) return
+      if (gameOverRef.current) { leaveGameRef.current(); return }
+      armBackTrap(gameHref) // stay on the game (and keep its /room/… address), then ask
+      setConfirmLeave(true)
+    }
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  useEffect(() => {
+    if (!gameOpen) return
+    armBackTrap()
+    return () => {
+      setConfirmLeave(false)
+      // left through an in-game button: drop our extra entry so Back behaves normally again
+      if (backTrapRef.current) { backTrapRef.current = false; skipPopRef.current++; try { history.back() } catch { skipPopRef.current-- } }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gameOpen])
+  // a real phone: also warn before a reload / pull-to-refresh / tab close throws away a game against
+  // the computer or a hotseat game (those live only in this tab; an online game can be rejoined).
+  const localGameOpen = gameOpen && session?.kind !== 'online' && mm.mobile && !mm.simulated
+  useEffect(() => {
+    if (!localGameOpen) return
+    const warn = (e: BeforeUnloadEvent) => { if (!gameOverRef.current) { e.preventDefault(); e.returnValue = '' } }
+    window.addEventListener('beforeunload', warn)
+    return () => window.removeEventListener('beforeunload', warn)
+  }, [localGameOpen])
+  const leaveGame = () => {
+    if (!session) return
+    leavingRef.current = true
+    netRef.current?.close()
+    netRef.current = null
+    disposeBotWorker()
+    clearRoom(); clearRoomUrl()
+    const wasLesson = !!session.tutorial
+    const wasPuzzle = !!coachRef.current?.lesson.puzzle
+    coachRef.current = null
+    if (session.kind === 'online' && !session.view && sealed) setSealed(null) // left during a sealed deckbuild
+    setSession(null)
+    // a sealed practice game: back to your deck, to edit it and play again
+    const toSealed = sealedReturnRef.current && !!soloSealed
+    sealedReturnRef.current = false
+    setPage(toSealed ? 'sealed-solo' : !wasLesson ? 'home' : wasPuzzle ? 'puzzles' : 'tutorial')
+  }
+  leaveGameRef.current = leaveGame
+
   // the mobile frame is PORTRAIT for menus (scrollable) and LANDSCAPE only for the game.
   // The SEALED deckbuild phase runs while page === 'game' but before there's a board (no view yet);
   // it's really a menu, so it must NOT get the fixed landscape 866×400 overflow-hidden game frame
@@ -1455,6 +1532,18 @@ export default function App() {
         )}
       </div>
       {error && <div className="toast error">{error}</div>}
+      {confirmLeave && gameOpen && (
+        <div className="leave-guard" data-leave-guard onClick={() => setConfirmLeave(false)}>
+          <div className="leave-guard-box" onClick={(e) => e.stopPropagation()}>
+            <h3>Leave this game?</h3>
+            <p>{session?.kind === 'online' ? 'You pressed Back. Leaving takes you out of this room.' : 'You pressed Back. If you leave, this game is lost.'}</p>
+            <div className="leave-guard-btns">
+              <button className="leave-guard-stay" onClick={() => setConfirmLeave(false)}>Keep playing</button>
+              <button className="danger" onClick={() => { setConfirmLeave(false); leaveGame() }}>Leave game</button>
+            </div>
+          </div>
+        </div>
+      )}
       <AchievementToasts toasts={achvToasts} onDismiss={(key) => setAchvToasts((c) => c.filter((t) => t.key !== key))} />
       {/* Non-blocking so you can keep browsing (decks, collection…) while you queue — and it runs on its
           own socket, so it stacks with a room you're also holding (create + queue at once). */}
@@ -1642,21 +1731,7 @@ export default function App() {
               onStep: () => setSession((cur) => (cur ? { ...cur, stepBot: true } : cur)),
               onNext: runBotStep,
             } : undefined}
-            onLeave={() => {
-              leavingRef.current = true
-              netRef.current?.close()
-              netRef.current = null
-              disposeBotWorker()
-              clearRoom(); clearRoomUrl()
-              const wasLesson = !!session.tutorial
-              const wasPuzzle = !!coachRef.current?.lesson.puzzle
-              coachRef.current = null
-              setSession(null)
-              // a sealed practice game: back to your deck, to edit it and play again
-              const toSealed = sealedReturnRef.current && !!soloSealed
-              sealedReturnRef.current = false
-              setPage(toSealed ? 'sealed-solo' : !wasLesson ? 'home' : wasPuzzle ? 'puzzles' : 'tutorial')
-            }}
+            onLeave={leaveGame}
             // keep the online session alive and just switch pages, so a player waiting for an
             // opponent (created room / matchmaking) can browse the rest of the site meanwhile.
             onBrowse={session.kind === 'online' && !session.view ? () => setPage('home') : undefined}
