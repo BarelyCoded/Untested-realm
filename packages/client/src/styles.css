@@ -496,7 +496,9 @@ h1, h2, h3 { font-weight: 600; }
   padding: 10px 6px 10px 12px; border-right: 1px solid #303752; overflow-y: auto;
 }
 .railbtn {
-  width: 74px; height: 74px; flex: 0 0 auto; display: flex; flex-direction: column;
+  /* shrinkable: when the rail holds more tiles than fit (Flag, Chat, Undo… were added over time) they
+     all get a little shorter instead of pushing Undo / Concede / End turn off the bottom of the screen */
+  width: 74px; height: 74px; min-height: 48px; flex: 0 1 auto; display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 3px; padding: 4px; text-align: center;
 }
 .railbtn .ri { font-size: 24px; line-height: 1; }
