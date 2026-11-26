@@ -602,13 +602,14 @@ function GameInner({
     const fit = () => {
       if (mobile) {
         // Board fits inside the FIXED design box (constants match the .game.mobile CSS:
-        // 866×400 canvas, 44px left menu, 240px right panel, 40px topbar). Since the whole
+        // 866×400 canvas, 44px left menu, 172px right column, NO top bar — the player bars and
+        // End turn are stacked at the top of the right column, so the board gets the full height). Since the whole
         // canvas is a constant size, boardScale is constant too — the outer uiScale does
         // the device fitting.
         const LEFT = 44 // left icon menu
-        const TOP = 40
+        const TOP = 0
         const PAD = 8
-        const panel = 240 // right card panel
+        const panel = 172 // right column (player bars + card panel)
         const availW = MOBILE_DESIGN_W - LEFT - panel - PAD
         const availH = MOBILE_DESIGN_H - TOP - PAD
         setBoardScale(Math.max(0.12, Math.min(availW / boardW, availH / boardH)))
