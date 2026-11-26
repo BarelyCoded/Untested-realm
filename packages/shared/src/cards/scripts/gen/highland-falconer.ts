@@ -3,8 +3,8 @@ import { getCard } from '../../db'
 import { effectSummonUnit } from '../../../engine/effects'
 import { shuffleDeck } from '../../../engine/knowledge'
 
-// 'Genesis â†’ You may search your hand and spellbook for a Beast with Airborne and
-// mana cost â‘¡ or less and summon it here. Shuffle if needed.'
+// 'Genesis → You may search your hand and spellbook for a Beast with Airborne and
+// mana cost ② or less and summon it here. Shuffle if needed.'
 registerScript('Highland Falconer', {
   genesis: (ctx) => {
     const p = ctx.state.players[ctx.controller]
@@ -27,7 +27,7 @@ registerScript('Highland Falconer', {
         if (idx >= 0) {
           const [cardId] = p[zone].splice(idx, 1)
           const unitId = `u${ctx.state.nextId++}`
-          // summoned into the realm â†’ Genesis fires (FAQ 1242)
+          // summoned into the realm → Genesis fires (FAQ 1242)
           effectSummonUnit(ctx.state, {
             id: unitId, cardId, name: String(choice), owner: ctx.state.cards[cardId].owner,
             controller: ctx.controller, isAvatar: false, x: self.x, y: self.y, region: self.region,

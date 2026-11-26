@@ -32,7 +32,7 @@ export function owned(name: string): { n: number; why: string } {
   // stated 26 Nov 2026: has The Manor at Daperyll Hill; only 2 Order of the Sacred Oak and 1 River Rapids (and, from
   // 20 Nov, only 2 Research). They have the Stygian Archers for both Cold Snap and Bone Tide.
   if (name === 'The Manor at Daperyll Hill') { n = Math.max(n, 1); why = why || 'listed' }
-  const CAP: Record<string, number> = { 'Order of the Sacred Oak': 2, 'River Rapids': 1, Research: 2 }
+  const CAP: Record<string, number> = { 'Order of the Sacred Oak': 2, 'River Rapids': 1, Research: 2, 'Whirling Blades': 1 }
   if (CAP[name] !== undefined && n > CAP[name]) n = CAP[name]
   return { n, why }
 }
