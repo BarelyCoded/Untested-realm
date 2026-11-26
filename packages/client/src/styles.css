@@ -900,8 +900,8 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
    MOBILE GUI — a landscape, "rotated" layout driven by the `.mobile` CLASS (so it
    is identical on a real phone and in the desktop phone-frame preview). Regions:
    left rail = life/mana (both players), centre = board, right = card panel + log,
-   hand = a show/hide overlay over the board. Constants below (rail 96 / top 40 /
-   panel max(230px,30%)) MUST match the boardScale math in Game.tsx.
+   hand = a show/hide overlay over the board. Constants below (left menu 44 / no top bar /
+   right column 172) MUST match the boardScale math in Game.tsx.
    ============================================================================ */
 
 /* real phone: MENUS scroll vertically (portrait, natural); the GAME page is fixed. */
@@ -935,10 +935,11 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
 .game.mobile { position: relative; flex: 0 0 auto; width: 866px; height: 400px; overflow: hidden;
   /* Centre of the BOARD GRID (the site squares — the real "game area"), as a fraction of the 866×400
      canvas. The board sits in the `.table` slot below, flex-centred inside its padding
-     `4px 240px 4px 44px`: x = (44 + (866-240))/2 = 335 → 38.7%; y = 40(top bar) + (4 + (360-8))/2 ≈ 220
-     → 55%. Floating panels (modals, prompt banner, toasts) centre on THIS, not the frame centre, so
-     they land over the board and not under the 240px card panel on the right. */
-  --board-cx: 38.7%; --board-cy: 55%; }
+     `4px 172px 4px 44px`: x = (44 + (866-172))/2 = 369 → 42.6%; y = 400/2 = 200 → 50% (the board
+     runs the full height: the player bars / End turn sit at the top of the right-hand column).
+     Floating panels (modals, prompt banner, toasts) centre on THIS, not the frame centre, so
+     they land over the board and not under the 172px card panel on the right. */
+  --board-cx: 42.6%; --board-cy: 50%; }
 
 /* only the GAME page needs landscape — nudge a real portrait phone to rotate there
    (menus stay portrait, so no hint on them). */
@@ -993,22 +994,25 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
 .app.mobile .packcard { width: 84px; }
 
 /* ---- mobile in-game chrome: TOPBAR(player bars) / [icon menu] [BOARD] [card panel] ---- */
-/* the top bar STOPS where the card panel begins (right: 240px) so the card panel can run the
-   FULL height (top: 0) instead of starting below the bar. */
+/* the "top bar" (player bars, turn pill, End turn) is STACKED at the top of the right-hand column,
+   above the card panel — so the board gets the canvas's full 400px height (bigger squares + cards). */
 .game.mobile .topbar {
-  position: absolute; top: 0; left: 0; right: 240px; height: 40px; z-index: 20;
-  display: flex; align-items: center; gap: 6px; padding: 3px 6px; overflow: hidden;
+  position: absolute; top: 0; right: 0; left: auto; width: 172px; height: 102px; z-index: 20;
+  display: flex; flex-wrap: wrap; align-items: center; align-content: flex-start; gap: 4px;
+  padding: 4px 5px; overflow: hidden; box-sizing: border-box;
+  background: #0f111a; border-left: 1px solid #303752; border-bottom: 1px solid #303752;
 }
 .game.mobile .tb-actions { display: none; }            /* full-text buttons → left icon menu */
-.game.mobile .topbar .turnpill { font-size: 10px; flex: 0 0 auto; }
-.game.mobile .tb-endturn { margin-left: auto; flex: 0 0 auto; padding: 5px 9px; font-size: 11px; white-space: nowrap; }
+.game.mobile .topbar .spacer { display: none; }
+.game.mobile .topbar .turnpill { font-size: 10px; padding: 3px 6px; flex: 1 1 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* End turn is a proper thumb-sized target */
+.game.mobile .tb-endturn { margin-left: auto; flex: 0 0 auto; min-height: 34px; padding: 6px 12px; font-size: 13px; font-weight: 600; white-space: nowrap; }
 
-/* the two player bars sit in the TOP bar — compact, clickable to expand (PlayerInfoPopup). Capped
-   width so they never crowd out the turn pill + End turn in the now-narrower bar. */
+/* the two player bars — compact, one per row, clickable to expand (PlayerInfoPopup). */
 .game.mobile .topbar > .playerbar {
-  flex: 1 1 0; min-width: 0; max-width: 32%; margin: 0; height: 32px; overflow: hidden; cursor: pointer;
-  flex-direction: row; align-items: center; gap: 6px;
-  font-size: 10px; padding: 3px 6px; background: #171b28; border-radius: 6px;
+  flex: 1 1 100%; min-width: 0; margin: 0; height: 26px; overflow: hidden; cursor: pointer;
+  flex-direction: row; align-items: center; gap: 6px; box-sizing: border-box;
+  font-size: 11px; padding: 3px 6px; background: #171b28; border-radius: 6px;
 }
 .game.mobile .playerbar .deckcount,
 .game.mobile .playerbar .barthresh,
@@ -1017,21 +1021,21 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
 
 /* LEFT: icon-only action menu (subsurface / editor / undo / log / concede…) */
 .game.mobile .m-leftmenu {
-  position: absolute; top: 44px; left: 3px; bottom: 4px; z-index: 18;
+  position: absolute; top: 4px; left: 3px; bottom: 4px; z-index: 18;
   display: flex; flex-direction: column; gap: 3px;
   overflow-y: auto; overflow-x: hidden; scrollbar-width: none;
 }
 .game.mobile .m-leftmenu::-webkit-scrollbar { display: none; }
 .game.mobile .m-leftmenu button {
-  width: 36px; height: 28px; flex: 0 0 auto; padding: 0; font-size: 15px; line-height: 1;
+  width: 36px; height: 27px; box-sizing: border-box; flex: 0 0 auto; margin: 0; padding: 0; font-size: 15px; line-height: 1;
   display: flex; align-items: center; justify-content: center;
 }
 .game.mobile .m-leftmenu button.flag { background: #a33; color: #fff; }
 
 /* CENTRE: the board fills between the icon menu and the card panel (boardScale fits it) */
 .game.mobile .table {
-  position: absolute; top: 40px; left: 0; right: 0; bottom: 0;
-  padding: 4px 240px 4px 44px;
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  padding: 4px 172px 4px 44px;
   display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
 .game.mobile .boardscaler { margin: 0 !important; }
@@ -1042,10 +1046,10 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
 .game.mobile .square { flex-shrink: 0; }
 .game.mobile .avatarpanel { display: none; }
 
-/* RIGHT: card detail only — the log is a toggle overlay (📜) now. Runs the FULL height (top: 0)
-   since the top bar now stops at its left edge, giving the card panel more room. */
+/* RIGHT: card detail only — the log is a toggle overlay (📜) now. Starts below the stacked
+   player bars / End turn (102px, see .topbar above). */
 .game.mobile .sidebar {
-  position: absolute; top: 0; right: 0; bottom: 0; width: 240px;
+  position: absolute; top: 102px; right: 0; bottom: 0; width: 172px;
   border-left: 1px solid #303752; border-top: none; flex-direction: column;
   background: #0f111a; z-index: 15;
 }
@@ -1055,16 +1059,16 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
 
 /* HAND: bottom overlay over the board, toggled by the floating centre-bottom 🂠 button */
 .game.mobile .hand {
-  position: absolute; left: 44px; right: 240px; bottom: 0; z-index: 30;
+  position: absolute; left: 44px; right: 172px; bottom: 0; z-index: 30;
   flex-wrap: nowrap; overflow-x: auto; gap: 6px; padding: 8px 8px 14px;
   background: rgba(12,14,22,0.96); border-top: 1px solid #303752;
   transform: translateY(105%); transition: transform 0.18s ease; pointer-events: none;
 }
 .game.mobile.hand-open .hand { transform: none; pointer-events: auto; }
-.game.mobile .hand .handcard { width: 92px; flex: 0 0 auto; }
+.game.mobile .hand .handcard { width: 118px; flex: 0 0 auto; }
 /* the 🂠 Hand button floats at the centre-bottom of the BOARD region, partially over it */
 .game.mobile .m-hand-btn {
-  position: absolute; left: calc(50% - 98px); bottom: 6px; transform: translateX(-50%);
+  position: absolute; left: var(--board-cx); bottom: 6px; transform: translateX(-50%);
   z-index: 35; padding: 6px 16px; font-size: 15px; border-radius: 18px;
   background: #2a3358; border: 1px solid #4a5378; box-shadow: 0 3px 10px rgba(0,0,0,0.5);
 }
@@ -1072,7 +1076,7 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
 
 /* LOG overlay (📜) — fills the board area (NOT over the card panel), scrollable */
 .game.mobile .m-logs {
-  position: absolute; top: 44px; left: 44px; right: 246px; bottom: 6px; z-index: 60;
+  position: absolute; top: 6px; left: 44px; right: 178px; bottom: 6px; z-index: 60;
   background: rgba(8,10,16,0.97); border: 1px solid #303752; border-radius: 10px;
   display: flex; flex-direction: column; padding: 8px;
 }
@@ -1083,7 +1087,7 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
 
 /* EDITOR (judge tools) must stay inside the frame — fill the board area, scrollable */
 .game.mobile .judgepanel {
-  position: absolute; top: 44px; left: 44px; right: 6px; bottom: 6px; z-index: 70;
+  position: absolute; top: 6px; left: 44px; right: 6px; bottom: 6px; z-index: 70;
   max-width: none; max-height: none; width: auto; overflow: auto; margin: 0;
 }
 
@@ -1102,7 +1106,7 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
      square you need to click; `none` stops the touch gesture becoming a page pan. */
   touch-action: none; cursor: move;
 }
-.game.mobile .logtoasts { position: absolute; top: 42px; left: var(--board-cx); transform: translateX(-50%); z-index: 40; }
+.game.mobile .logtoasts { position: absolute; top: 8px; left: var(--board-cx); transform: translateX(-50%); z-index: 40; }
 .game.mobile .oppplay-stack { position: absolute; left: var(--board-cx); top: 6px; right: auto; transform: translateX(-50%); }
 .game.mobile .oppplay-card { max-width: 150px; }
 .game.mobile .oppplay-card img, .game.mobile .oppplay-card .cardimg { max-width: 150px; height: auto; }
@@ -2145,6 +2149,19 @@ button.autobattle:hover:not(:disabled) { background: #4a5cc0; }
   box-shadow: 0 10px 40px rgba(0,0,0,.6);
 }
 .modal h3 { margin-top: 0; }
+/* "Leave this game?" — shown by the Back-button guard (App.tsx). Lives OUTSIDE the scaled game canvas,
+   so it is laid out in real screen pixels and sits above everything (incl. the rotate hint). */
+.leave-guard { position: fixed; inset: 0; z-index: 2000; display: flex; align-items: center; justify-content: center;
+  padding: 16px; background: rgba(4, 5, 10, 0.72); }
+.leave-guard-box { background: #1d2130; border: 1px solid #4a5378; border-radius: 12px; padding: 18px 22px;
+  max-width: 360px; width: 100%; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.6); }
+.leave-guard-box h3 { margin: 0 0 6px; }
+.leave-guard-box p { color: #b9c0d8; margin: 0 0 16px; }
+.leave-guard-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.leave-guard-btns button { min-height: 44px; padding: 10px 18px; font-size: 15px; }
+.leave-guard-stay { background: #3d7a3a; border-color: #5a9c56; color: #fff; font-weight: 600; }
+/* a phone in a game: no pull-to-refresh / overscroll navigation while dragging on the board */
+html:has(.app.mobile.at-game), html:has(.app.mobile.at-game) body { overscroll-behavior: none; }
 .confirm-concede { text-align: center; }
 .confirm-concede p { color: #b9c0d8; margin: 6px 0 14px; }
 .confirm-actions { display: flex; gap: 10px; justify-content: center; }
