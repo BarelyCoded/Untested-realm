@@ -1,7 +1,7 @@
 import { registerScript, type EffectAPI } from '../registry'
 import { nearbySquaresW, unitsAt } from '../../../engine/grid'
 
-// 'Deal 2 damage to target unit nearby. Any number of times, you may spend â‘¡ to
+// 'Deal 2 damage to target unit nearby. Any number of times, you may spend ② to
 // additionally target a new unit nearby the previous one.'
 // FAQ: all costs paid and targets chosen at cast time, each target must be NEW,
 // and all damage resolves simultaneously at the end.
@@ -36,7 +36,7 @@ registerScript('Chain Lightning', {
 
 function chainAsk(ctx: EffectAPI, chain: string[]) {
   if (ctx.state.players[ctx.controller].mana >= 2) {
-    ctx.ask({ kind: 'yesNo', title: `Chain Lightning (${chain.length} target(s) so far): spend â‘¡ to add another?` }, 'jump', { chain })
+    ctx.ask({ kind: 'yesNo', title: `Chain Lightning (${chain.length} target(s) so far): spend ② to add another?` }, 'jump', { chain })
   } else {
     chainResolve(ctx, chain)
   }
