@@ -926,13 +926,80 @@ export const featuredDecks: DeckList[] = [
       "Hellhounds": 2
     }
   },
+  // Bone Tide (26 Nov 2026): Air/Water Necromancer (54.9% over 1,638 games on Play Sorcery Online) as tempo-control.
+  // Skeletons are Undead, so they cast Kiss of Death and feed Bone Spear and Gnarled Wendigo.
+  {
+    "name": "Bone Tide",
+    "avatar": "Necromancer",
+    "spellbook": {
+      "Toolbox": 3,
+      "Kiss of Death": 3,
+      "Bone Spear": 3,
+      "Thunderstorm": 2,
+      "Whirling Blades": 2,
+      "Overflow": 2,
+      "Riptide": 2,
+      "Blink": 3,
+      "Displace": 2,
+      "Swap": 2,
+      "Novice Necromancer": 4,
+      "Apprentice Wizard": 4,
+      "Winter Nymph": 3,
+      "Coy Nixie": 1,
+      "Order of the Sacred Oak": 1,
+      "Headless Haunt": 1,
+      "Stygian Archers": 1,
+      "Mesmer Demon": 3,
+      "Deep-Sea Mermaids": 2,
+      "Phase Assassin": 3,
+      "Accursed Albatross": 2,
+      "Gnarled Wendigo": 3,
+      "Grim Reaper": 1,
+      "Pied Piper of Hameln": 1,
+      "Daperyll Vampire": 2,
+      "Riddle Sphinx": 1,
+      "Hounds of Ondaros": 1,
+      "Dormant Monstrosity": 1,
+      "Diluvian Kraken": 1
+    },
+    "atlas": {
+      "Lone Tower": 2,
+      "Dark Tower": 2,
+      "Gothic Tower": 2,
+      "Watchtower": 2,
+      "Mountain Peaks": 2,
+      "Accursed Tower": 1,
+      "Treetop Hideout": 1,
+      "Lighthouse": 2,
+      "Troll Bridge": 3,
+      "River Rapids": 1,
+      "Thin Ice": 2,
+      "Babbling Brook": 3,
+      "Bog": 2,
+      "Undertow": 2,
+      "Stinging Kelp": 2,
+      "Autumn River": 1
+    },
+    "collection": {
+      "Bone Spear": 1,
+      "Riptide": 1,
+      "Led Astray": 1,
+      "Second Wind": 1,
+      "Gift of the Frog": 1,
+      "Blink": 1,
+      "Lightning Bolt": 1,
+      "Arc Lightning": 1,
+      "Disenchant": 1,
+      "Sleep": 1
+    }
+  },
   // Frost Mage vs Lavamancer (Nov 2026) — the two preconstructed decks (the printed deck lists)
   fvlPrecon('precon:fvl-frost', 'Frost Mage (FvL precon)'),
   fvlPrecon('precon:fvl-lava', 'Lavamancer (FvL precon)'),
 ]
 
 /** Decks built for the player: listed in the picker, but not part of the meta field. */
-export const OWN_BUILDS: ReadonlySet<string> = new Set(['Ashen Ossuary', 'Lava Boy', "Heretic's Brand"])
+export const OWN_BUILDS: ReadonlySet<string> = new Set(['Ashen Ossuary', 'Lava Boy', "Heretic's Brand", 'Bone Tide'])
 
 /** The meta field that bot tests, deck gauntlets and self-play play against: the tournament lists and the
  *  test build, without the FvL precons and without the player's own builds. */
