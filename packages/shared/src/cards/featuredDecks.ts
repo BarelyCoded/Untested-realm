@@ -867,13 +867,72 @@ export const featuredDecks: DeckList[] = [
       "Amazon Warriors": 1
     }
   },
+  // Heretic's Brand (25 Nov 2026): Persecutor mono Fire (54.9% over 514 games on Play Sorcery Online). The
+  // Persecutor brands an enemy as Evil each turn, and Begone!, Holy Water and Accusation then treat it as Evil.
+  {
+    "name": "Heretic's Brand",
+    "avatar": "Persecutor",
+    "spellbook": {
+      "Toolbox": 3,
+      "Holy Water": 2,
+      "Torshammar Trinket": 1,
+      "Begone!": 3,
+      "Accusation": 2,
+      "Fireball": 3,
+      "Trial by Fire": 3,
+      "Gift of the Serpent": 3,
+      "Firebolts": 2,
+      "Wild Fanatic": 4,
+      "Snapjaw Raptor": 2,
+      "War Horse": 2,
+      "Flametongue Newt": 3,
+      "Namira Cheetah": 2,
+      "Redcap Powries": 3,
+      "Quarrelsome Kobolds": 2,
+      "Pookas": 3,
+      "Dust Devil": 2,
+      "Martyrs of Tomorrow": 2,
+      "Saracen Raiders": 3,
+      "Angry Mob": 3,
+      "Petrosian Cavalry": 3,
+      "Siege Giant": 2,
+      "Zeppelin of Zealots": 2
+    },
+    "atlas": {
+      "Red Desert": 4,
+      "Remote Desert": 3,
+      "Arid Desert": 2,
+      "Vast Desert": 1,
+      "Active Volcano": 3,
+      "Volcanic Eruption": 3,
+      "Combusting Busts": 2,
+      "Smoldering Hollow": 2,
+      "Sulfur Vents": 2,
+      "Supervolcano": 1,
+      "Molten Maar": 2,
+      "Road to Perdition": 2,
+      "River of Blood": 2,
+      "Forge": 1
+    },
+    "collection": {
+      "Trial by Fire": 1,
+      "Minor Explosion": 1,
+      "Flame Strike": 1,
+      "Detonate": 1,
+      "Mad Dash": 1,
+      "Boil": 1,
+      "Lash": 1,
+      "Charge": 1,
+      "Hellhounds": 2
+    }
+  },
   // Frost Mage vs Lavamancer (Nov 2026) — the two preconstructed decks (the printed deck lists)
   fvlPrecon('precon:fvl-frost', 'Frost Mage (FvL precon)'),
   fvlPrecon('precon:fvl-lava', 'Lavamancer (FvL precon)'),
 ]
 
 /** Decks built for the player: listed in the picker, but not part of the meta field. */
-export const OWN_BUILDS: ReadonlySet<string> = new Set(['Ashen Ossuary', 'Lava Boy'])
+export const OWN_BUILDS: ReadonlySet<string> = new Set(['Ashen Ossuary', 'Lava Boy', "Heretic's Brand"])
 
 /** The meta field that bot tests, deck gauntlets and self-play play against: the tournament lists and the
  *  test build, without the FvL precons and without the player's own builds. */

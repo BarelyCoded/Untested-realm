@@ -321,6 +321,19 @@ DECKS['Frost Pathfinder'] = {
 // collection with the Lavamancer half of FvL. Theorycraft, untested.
 DECKS['Ashen Ossuary'] = (featuredDecks as DeckList[]).find((d) => d.name === 'Ashen Ossuary')!
 DECKS['Lava Boy'] = (featuredDecks as DeckList[]).find((d) => d.name === 'Lava Boy')!
+// Heretic's Brand (25 Nov): Persecutor mono Fire (54.9% over 514 games in real play) from cards not already in
+// Lava Boy (paper) or Cold Snap V3. The Persecutor brands an enemy as Evil each turn; Begone!, Holy Water and
+// Accusation then treat it as Evil. Theorycraft, untested.
+DECKS["Heretic's Brand"] = (featuredDecks as DeckList[]).find((d) => d.name === "Heretic's Brand")!
+// Lava Boy (paper): within the user's collection. Two of the three swaps come from the author's own maybeboard.
+{
+  const lb = DECKS['Lava Boy']
+  const sb: Record<string, number> = { ...lb.spellbook }
+  sb['Arjaro Exorcist'] = 1; delete sb['Morgana le Fay']; delete sb['Infernal Legion']
+  sb['War Horse'] = 1; sb['Quarrelsome Kobolds'] = 1; sb["Tusslin' Trolls"] = 1
+  delete sb['Blaze of Glory']; sb['Gift of the Wolf'] = 1 // the one Blaze of Glory is needed elsewhere
+  DECKS['Lava Boy (paper)'] = { ...lb, name: 'Lava Boy (paper)', spellbook: sb }
+}
 
 // L6 (control): the Fire Necromancer list with the Avatar swapped, to see what the Lavamancer costs a proven shell.
 import { featuredDecks } from '../../packages/shared/src'

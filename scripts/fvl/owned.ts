@@ -26,5 +26,8 @@ export function owned(name: string): { n: number; why: string } {
   if (boxed && c.rarity === 'Exceptional') bump(3, 'playset')
   if (LISTED.has(name)) { n = Math.max(n, 1); why = why || 'listed' }
   if (name === 'Adept Illusionist') n = Math.max(n, 2) // they have two
+  // stated 25 Nov 2026 (for Lava Boy): 1 Arjaro Exorcist, 1 Major Explosion, 2 Infiltrate
+  const MORE: Record<string, number> = { 'Arjaro Exorcist': 1, 'Major Explosion': 1, Infiltrate: 2 }
+  if (MORE[name] && MORE[name] > n) { n = MORE[name]; why = why || 'listed' }
   return { n, why }
 }
