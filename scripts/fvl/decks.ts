@@ -327,6 +327,7 @@ DECKS['Lava Boy'] = (featuredDecks as DeckList[]).find((d) => d.name === 'Lava B
   const sb: Record<string, number> = { ...lb.spellbook }
   sb['Arjaro Exorcist'] = 1; delete sb['Morgana le Fay']; delete sb['Infernal Legion']
   sb['War Horse'] = 1; sb['Quarrelsome Kobolds'] = 1; sb["Tusslin' Trolls"] = 1
+  delete sb['Blaze of Glory']; sb['Gift of the Wolf'] = 1 // the one Blaze of Glory is needed elsewhere
   DECKS['Lava Boy (paper)'] = { ...lb, name: 'Lava Boy (paper)', spellbook: sb }
 }
 
