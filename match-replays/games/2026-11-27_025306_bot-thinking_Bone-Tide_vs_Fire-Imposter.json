@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-27T03:10:18.560Z",
+ "savedAt": "2026-11-27T03:10:36.343Z",
  "codeCommit": "af1fcfc",
  "finished": true,
  "winner": "Computer",
@@ -347,6 +347,7 @@
   ],
   "rejected": 189
  },
+ "review": "The Computer's sweepers decided it: Major Explosion and Arid Desert repeatedly wiped out your wide board of Skeletons and Bone Jumbles, and the Necromancer himself took the splash.\n\nKey moments:\n- Turn 12 (you): On turn 11 you stacked the Mesmer Demon, Skeletons and Mermaids around c1/c2. Arid Desert then pinged the whole group, killing four Skeletons, and Autumn Unicorn finished the damaged Demon. Keeping the Demon out of the blast and not feeding more Skeletons into that cell was better. The score had been swinging toward you, and this undid it.\n- Turn 18 (you): Riddle Sphinx and three Skeletons were lost to Major Explosion, and the Necromancer fell to 15. Against a Fire deck, leaving the avatar and several minions in one area is risky.\n- Turn 26 (you): This was the same mistake. You rebuilt a wide board and got the Computer to 10 life. A second Major Explosion cleared Mermaids, two Jumbles, Albatross and Hounds, and dropped you to 10.\n- Turns 28-32 (Computer): Infernal Legion plus repeated Torshammar Trinket pings and Firebolts wore the Necromancer from 7 to 0. Kobolds then hit your site for the last 2 points. I can't judge whether you had a way out, because the log is too thin on your hand.\n\nFor you: after Major Explosion showed up on turn 18, play around it. Keep the Necromancer away from the minion pile and hold back some threats. You also kept sacrificing Skeletons into 1-power Jumbles, which die to any ping.\n\nFor the bot: it cast Lava Flow on turn 12 and Major Explosion on turn 18, each hitting its own minion (Gargantula, Kobolds). It also loops Torshammar Trinket every turn for small pings. The engine re-check at turn 10 agreed with its play, so I found no clear mistake there.\n\nTwo oddities. The report says the game was unfinished, but the log ends with the Necromancer defeated on turn 34. And 189 recorded actions were refused on replay, so parts of the log may be incomplete.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795747986637,
