@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-27T01:26:23.177Z",
+ "savedAt": "2026-11-27T01:26:43.839Z",
  "codeCommit": "d5e233a",
  "finished": true,
  "winner": "You",
@@ -1017,6 +1017,7 @@
   ],
   "rejected": 0
  },
+ "review": "The game was decided by a race to death's door: both avatars sat at 0 life, and your Skeleton landed the first hit on Frost Mage on turn 32.\n\nKey moments:\n- Turn 20 (you): Riddle Sphinx, Phase Assassin and Cloud Spirit hit the Computer's sites for 4, 3 and 2, taking it from 16 to 7 life. This was your best turn, and the score swung about 174 points toward you.\n- Turn 22 (you): you spent Archers, Riddle Sphinx, Cloud Spirit and a Skeleton to kill Jormungand. It took all four, but Sphinx and Cloud Spirit each ate 10 retaliation damage. The log doesn't show a cheaper answer, so I can't call it an error. It did hand the Computer a 212-point swing.\n- Turn 25 (Computer): it dealt 4 and 3 with Failed Mutation and Lone Wolf, then cast When the Peaks Fell. That put you at 0 life and killed five of your units, but it also dropped its own Frost Mage to 4. You were left at 1 life only because the Computer ran out of damage.\n- Turn 26 (you): Chain Lightning took Frost Mage to 2, and Bone Spear went on Failed Mutation. I can't tell from the log whether a second shot at the Mage would have been legal and won on the spot.\n\nFor you: you went from 18 to 1 life on turns 23-25 by leaving Troll Bridge, Undertow and Bog open to site attacks. Keep a defender near the avatar's sites. Also keep your own life high enough that a mass-damage spell can't put your avatar on 0.\n\nFor the bot: casting When the Peaks Fell with its own avatar at 7 life cost it 3 life and let your burn reach 2. Later it kept its avatar at 0 life within reach of your Skeleton and spent turn 31 on Research, Slide and The White Death instead of protecting it. I see no clear rules error by the simulator in the log.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795741218230,
