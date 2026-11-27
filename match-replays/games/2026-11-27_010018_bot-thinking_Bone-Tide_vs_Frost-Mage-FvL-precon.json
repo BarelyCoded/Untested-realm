@@ -1,11 +1,1022 @@
 {
- "savedAt": "2026-11-27T01:26:21.389Z",
+ "savedAt": "2026-11-27T01:26:23.177Z",
  "codeCommit": "d5e233a",
  "finished": true,
  "winner": "You",
  "turns": 32,
  "botDifficulty": "thinking",
  "flags": [],
+ "report": {
+  "version": 1,
+  "botSeat": 1,
+  "winner": 0,
+  "turns": 32,
+  "firstPlayer": 1,
+  "rows": [
+   {
+    "turn": 1,
+    "player": 1,
+    "sites": [
+     0,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     0
+    ],
+    "power": [
+     0,
+     0
+    ],
+    "score": -158
+   },
+   {
+    "turn": 2,
+    "player": 0,
+    "sites": [
+     1,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     1,
+     0
+    ],
+    "power": [
+     1,
+     0
+    ],
+    "score": -234
+   },
+   {
+    "turn": 3,
+    "player": 1,
+    "sites": [
+     1,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     4
+    ],
+    "units": [
+     1,
+     1
+    ],
+    "power": [
+     1,
+     2
+    ],
+    "score": -133
+   },
+   {
+    "turn": 4,
+    "player": 0,
+    "sites": [
+     2,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     4,
+     1
+    ],
+    "power": [
+     4,
+     2
+    ],
+    "score": -246
+   },
+   {
+    "turn": 5,
+    "player": 1,
+    "sites": [
+     2,
+     3
+    ],
+    "life": [
+     18,
+     20
+    ],
+    "hand": [
+     5,
+     3
+    ],
+    "units": [
+     3,
+     1
+    ],
+    "power": [
+     3,
+     2
+    ],
+    "score": -48
+   },
+   {
+    "turn": 6,
+    "player": 0,
+    "sites": [
+     3,
+     3
+    ],
+    "life": [
+     18,
+     20
+    ],
+    "hand": [
+     4,
+     3
+    ],
+    "units": [
+     3,
+     0
+    ],
+    "power": [
+     3,
+     0
+    ],
+    "score": -154
+   },
+   {
+    "turn": 7,
+    "player": 1,
+    "sites": [
+     3,
+     4
+    ],
+    "life": [
+     18,
+     20
+    ],
+    "hand": [
+     4,
+     3
+    ],
+    "units": [
+     3,
+     1
+    ],
+    "power": [
+     3,
+     1
+    ],
+    "score": -44
+   },
+   {
+    "turn": 8,
+    "player": 0,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     18,
+     20
+    ],
+    "hand": [
+     3,
+     3
+    ],
+    "units": [
+     5,
+     1
+    ],
+    "power": [
+     7,
+     1
+    ],
+    "score": -175
+   },
+   {
+    "turn": 9,
+    "player": 1,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     18,
+     20
+    ],
+    "hand": [
+     3,
+     4
+    ],
+    "units": [
+     5,
+     2
+    ],
+    "power": [
+     7,
+     5
+    ],
+    "score": -93
+   },
+   {
+    "turn": 10,
+    "player": 0,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     18,
+     19
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     7,
+     2
+    ],
+    "power": [
+     9,
+     5
+    ],
+    "score": -259
+   },
+   {
+    "turn": 11,
+    "player": 1,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     18,
+     19
+    ],
+    "hand": [
+     5,
+     3
+    ],
+    "units": [
+     7,
+     3
+    ],
+    "power": [
+     9,
+     7
+    ],
+    "score": -209
+   },
+   {
+    "turn": 12,
+    "player": 0,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     18,
+     18
+    ],
+    "hand": [
+     3,
+     2
+    ],
+    "units": [
+     6,
+     1
+    ],
+    "power": [
+     10,
+     4
+    ],
+    "score": -281
+   },
+   {
+    "turn": 13,
+    "player": 1,
+    "sites": [
+     5,
+     6
+    ],
+    "life": [
+     18,
+     18
+    ],
+    "hand": [
+     3,
+     1
+    ],
+    "units": [
+     6,
+     2
+    ],
+    "power": [
+     10,
+     9
+    ],
+    "score": -145
+   },
+   {
+    "turn": 14,
+    "player": 0,
+    "sites": [
+     5,
+     6
+    ],
+    "life": [
+     18,
+     18
+    ],
+    "hand": [
+     4,
+     1
+    ],
+    "units": [
+     7,
+     2
+    ],
+    "power": [
+     14,
+     9
+    ],
+    "score": -230
+   },
+   {
+    "turn": 15,
+    "player": 1,
+    "sites": [
+     5,
+     6
+    ],
+    "life": [
+     13,
+     18
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     7,
+     3
+    ],
+    "power": [
+     14,
+     13
+    ],
+    "score": -10
+   },
+   {
+    "turn": 16,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     13,
+     18
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     8,
+     3
+    ],
+    "power": [
+     16,
+     13
+    ],
+    "score": -99
+   },
+   {
+    "turn": 17,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     8,
+     18
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     8,
+     4
+    ],
+    "power": [
+     16,
+     14
+    ],
+    "score": 88
+   },
+   {
+    "turn": 18,
+    "player": 0,
+    "sites": [
+     7,
+     6
+    ],
+    "life": [
+     12,
+     16
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     4,
+     1
+    ],
+    "power": [
+     10,
+     4
+    ],
+    "score": -218
+   },
+   {
+    "turn": 19,
+    "player": 1,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     12,
+     16
+    ],
+    "hand": [
+     4,
+     0
+    ],
+    "units": [
+     3,
+     2
+    ],
+    "power": [
+     9,
+     6
+    ],
+    "score": -35
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     12,
+     7
+    ],
+    "hand": [
+     5,
+     0
+    ],
+    "units": [
+     5,
+     2
+    ],
+    "power": [
+     13,
+     6
+    ],
+    "score": -392
+   },
+   {
+    "turn": 21,
+    "player": 1,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     12,
+     7
+    ],
+    "hand": [
+     5,
+     0
+    ],
+    "units": [
+     4,
+     3
+    ],
+    "power": [
+     10,
+     16
+    ],
+    "score": -207
+   },
+   {
+    "turn": 22,
+    "player": 0,
+    "sites": [
+     8,
+     7
+    ],
+    "life": [
+     12,
+     7
+    ],
+    "hand": [
+     4,
+     0
+    ],
+    "units": [
+     3,
+     2
+    ],
+    "power": [
+     10,
+     6
+    ],
+    "score": -207
+   },
+   {
+    "turn": 23,
+    "player": 1,
+    "sites": [
+     8,
+     7
+    ],
+    "life": [
+     8,
+     7
+    ],
+    "hand": [
+     4,
+     0
+    ],
+    "units": [
+     3,
+     3
+    ],
+    "power": [
+     10,
+     9
+    ],
+    "score": 5
+   },
+   {
+    "turn": 24,
+    "player": 0,
+    "sites": [
+     9,
+     7
+    ],
+    "life": [
+     8,
+     7
+    ],
+    "hand": [
+     4,
+     0
+    ],
+    "units": [
+     5,
+     2
+    ],
+    "power": [
+     12,
+     7
+    ],
+    "score": -121
+   },
+   {
+    "turn": 25,
+    "player": 1,
+    "sites": [
+     9,
+     7
+    ],
+    "life": [
+     0,
+     4
+    ],
+    "hand": [
+     4,
+     1
+    ],
+    "units": [
+     1,
+     1
+    ],
+    "power": [
+     6,
+     4
+    ],
+    "score": 302
+   },
+   {
+    "turn": 26,
+    "player": 0,
+    "sites": [
+     9,
+     7
+    ],
+    "life": [
+     0,
+     2
+    ],
+    "hand": [
+     2,
+     1
+    ],
+    "units": [
+     2,
+     0
+    ],
+    "power": [
+     9,
+     0
+    ],
+    "score": -1071
+   },
+   {
+    "turn": 27,
+    "player": 1,
+    "sites": [
+     9,
+     7
+    ],
+    "life": [
+     0,
+     2
+    ],
+    "hand": [
+     2,
+     1
+    ],
+    "units": [
+     2,
+     1
+    ],
+    "power": [
+     9,
+     1
+    ],
+    "score": 153
+   },
+   {
+    "turn": 28,
+    "player": 0,
+    "sites": [
+     9,
+     7
+    ],
+    "life": [
+     0,
+     0
+    ],
+    "hand": [
+     2,
+     1
+    ],
+    "units": [
+     5,
+     1
+    ],
+    "power": [
+     12,
+     1
+    ],
+    "score": -187
+   },
+   {
+    "turn": 29,
+    "player": 1,
+    "sites": [
+     9,
+     7
+    ],
+    "life": [
+     0,
+     0
+    ],
+    "hand": [
+     2,
+     0
+    ],
+    "units": [
+     4,
+     1
+    ],
+    "power": [
+     11,
+     1
+    ],
+    "score": -84
+   },
+   {
+    "turn": 30,
+    "player": 0,
+    "sites": [
+     9,
+     7
+    ],
+    "life": [
+     0,
+     0
+    ],
+    "hand": [
+     3,
+     0
+    ],
+    "units": [
+     6,
+     1
+    ],
+    "power": [
+     20,
+     1
+    ],
+    "score": -481
+   },
+   {
+    "turn": 31,
+    "player": 1,
+    "sites": [
+     9,
+     7
+    ],
+    "life": [
+     0,
+     0
+    ],
+    "hand": [
+     3,
+     2
+    ],
+    "units": [
+     6,
+     2
+    ],
+    "power": [
+     20,
+     3
+    ],
+    "score": -271
+   },
+   {
+    "turn": 32,
+    "player": 0,
+    "sites": [
+     9,
+     7
+    ],
+    "life": [
+     0,
+     0
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     7,
+     2
+    ],
+    "power": [
+     21,
+     3
+    ],
+    "score": -1500
+   }
+  ],
+  "swings": [
+   {
+    "turn": 20,
+    "player": 0,
+    "change": -174,
+    "log": [
+     "— Turn 19: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Coy Nixie.",
+     "Computer plays Stream at (1,4).",
+     "Computer casts Frost Breath.",
+     "Cloud Spirit takes 1 damage.",
+     "Apprentice Wizard takes 1 damage.",
+     "Apprentice Wizard dies.",
+     "Failed Mutation takes 3 damage.",
+     "The troll lashes out at Failed Mutation!",
+     "Failed Mutation moves to d3.",
+     "— Turn 20: You —",
+     "You draws a card from their spellbook.",
+     "Riddle Sphinx moves to c3.",
+     "Riddle Sphinx attacks Permafrost!",
+     "Computer loses 4 life (now 12).",
+     "Permafrost is struck for 4.",
+     "Phase Assassin moves to c3.",
+     "Phase Assassin attacks Permafrost!",
+     "Phase Assassin loses Stealth.",
+     "Computer loses 3 life (now 9).",
+     "Permafrost is struck for 3.",
+     "You casts Stygian Archers.",
+     "You casts Blink."
+    ]
+   },
+   {
+    "turn": 23,
+    "player": 1,
+    "change": 212,
+    "log": [
+     "— Turn 22: You —",
+     "You draws a card from their spellbook.",
+     "Stygian Archers shoots Jormungand.",
+     "Jormungand takes 3 damage.",
+     "Riddle Sphinx moves to b4.",
+     "Riddle Sphinx attacks Jormungand!",
+     "Jormungand takes 4 damage.",
+     "Riddle Sphinx takes 10 damage.",
+     "Riddle Sphinx dies. (killed by Jormungand)",
+     "Cloud Spirit attacks Jormungand!",
+     "Jormungand takes 2 damage.",
+     "Cloud Spirit takes 10 damage.",
+     "Cloud Spirit dies. (killed by Jormungand)",
+     "Skeleton attacks Jormungand!",
+     "Jormungand takes 1 damage.",
+     "Skeleton takes 10 damage.",
+     "Jormungand dies. (killed by Skeleton)",
+     "Skeleton dies. (killed by Jormungand)",
+     "You casts Dormant Monstrosity.",
+     "You plays Dark Tower at (4,1).",
+     "Dark Tower hums with power: +① this turn.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "— Turn 23: Computer —"
+    ]
+   },
+   {
+    "turn": 26,
+    "player": 0,
+    "change": -950,
+    "log": [
+     "— Turn 25: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Failed Mutation moves to d2.",
+     "Failed Mutation attacks Undertow!",
+     "You loses 4 life (now 4).",
+     "Undertow is struck for 4.",
+     "Lone Wolf moves to b1.",
+     "Lone Wolf attacks Bog!",
+     "Lone Wolf loses Stealth.",
+     "You loses 3 life (now 1).",
+     "Bog is struck for 3.",
+     "Computer casts When the Peaks Fell.",
+     "Skeleton takes 3 damage.",
+     "Necromancer takes 3 damage (life 0).",
+     "Necromancer is at death's door!",
+     "Skeleton takes 3 damage.",
+     "Stygian Archers takes 3 damage.",
+     "Skeleton takes 3 damage.",
+     "Lone Wolf takes 3 damage.",
+     "Dormant Monstrosity takes 3 damage.",
+     "Frost Mage takes 3 damage (life 4).",
+     "Failed Mutation is untouched by magic.",
+     "🏔 The peaks fall: 9 units are buried in snow.",
+     "Stygian Archers dies."
+    ]
+   },
+   {
+    "turn": 28,
+    "player": 0,
+    "change": 884,
+    "log": [
+     "— Turn 27: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Arctic Fox.",
+     "Frost Mage moves to d2.",
+     "— Turn 28: You —",
+     "You draws a card from their spellbook.",
+     "You casts Novice Necromancer.",
+     "A Skeleton token appears.",
+     "Dormant Monstrosity moves to a3.",
+     "Dormant Monstrosity attacks Tundra!",
+     "Computer loses 6 life (now 0).",
+     "Frost Mage is at death's door!",
+     "Tundra is struck for 6.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Necromancer moves to c1."
+    ]
+   },
+   {
+    "turn": 30,
+    "player": 0,
+    "change": -294,
+    "log": [
+     "— Turn 29: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Frostbolt.",
+     "Novice Necromancer takes 3 damage.",
+     "Ice spreads from the impact.",
+     "Novice Necromancer dies.",
+     "Frost Mage moves to d3.",
+     "Frost Mage pays the troll's toll.",
+     "— Turn 30: You —",
+     "You draws a card from their spellbook.",
+     "Dormant Monstrosity moves to b3.",
+     "Dormant Monstrosity attacks Stream!",
+     "Stream is struck for 6.",
+     "You casts Diluvian Kraken.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "You draws a card from their atlas."
+    ]
+   },
+   {
+    "turn": 32,
+    "player": 0,
+    "change": -1019,
+    "log": [
+     "— Turn 31: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Research.",
+     "Computer draws 2 cards from their spellbook.",
+     "Computer casts Slide.",
+     "Computer draws a card from their spellbook.",
+     "Computer casts The White Death.",
+     "Computer draws a card from their atlas.",
+     "— Turn 32: You —",
+     "You draws a card from their spellbook.",
+     "You casts Apprentice Wizard.",
+     "You draws a card from their spellbook.",
+     "Skeleton moves to d1.",
+     "Skeleton attacks Frost Mage!",
+     "Death blow! Frost Mage is defeated.",
+     "Skeleton takes 1 damage."
+    ]
+   }
+  ],
+  "checks": [
+   {
+    "turn": 25,
+    "played": [
+     "Failed Mutation at b2 moves to b3 and ATTACKS THE SITE there {no defender in reach}",
+     "Lone Wolf at c4 moves to d4 and ATTACKS THE SITE there {cannot be defended: Stealth}",
+     "CAST When the Peaks Fell",
+     "Avatar: tap to DRAW a site from the atlas",
+     "END YOUR TURN"
+    ],
+    "engine": "Failed Mutation at b2 stays and ATTACKS THE SITE there {no defender in reach}",
+    "same": false
+   },
+   {
+    "turn": 29,
+    "played": [
+     "CAST Frostbolt direction right",
+     "Frost Mage at b3 moves to b2",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Frostbolt direction right",
+    "same": true
+   },
+   {
+    "turn": 31,
+    "played": [
+     "CAST Research",
+     "CAST Slide targeting Frost Mage at b2",
+     "CAST The White Death at c2",
+     "Avatar: tap to DRAW a site from the atlas",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Research",
+    "same": true
+   }
+  ],
+  "rejected": 0
+ },
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795741218230,
