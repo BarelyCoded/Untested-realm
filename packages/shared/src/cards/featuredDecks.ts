@@ -930,6 +930,8 @@ export const featuredDecks: DeckList[] = [
   // Skeletons are Undead, so they cast Kiss of Death and feed Bone Spear and Gnarled Wendigo.
   // Chain Lightning and Ice Lance in place of Whirling Blades (the user has no spare Whirling Blades and one
   // Chain Lightning; 26 Nov 2026), and Cloud Spirit for Headless Haunt (both of theirs are in Cold Snap).
+  // Realmforge test (26 Nov): 3 Bone Jumble and 1 Symmetric Suffering in for 3 Winter Nymph (it taps your own
+  // Skeletons) and the Diluvian Kraken. The paper list (spreadsheet, bone-tide.txt) still has those four.
   {
     "name": "Bone Tide",
     "avatar": "Necromancer",
@@ -945,9 +947,10 @@ export const featuredDecks: DeckList[] = [
       "Blink": 3,
       "Displace": 2,
       "Swap": 2,
+      "Symmetric Suffering": 1,
       "Novice Necromancer": 4,
+      "Bone Jumble": 3,
       "Apprentice Wizard": 4,
-      "Winter Nymph": 3,
       "Coy Nixie": 1,
       "Cloud Spirit": 1,
       "Stygian Archers": 1,
@@ -961,8 +964,7 @@ export const featuredDecks: DeckList[] = [
       "Daperyll Vampire": 2,
       "Riddle Sphinx": 1,
       "Hounds of Ondaros": 1,
-      "Dormant Monstrosity": 1,
-      "Diluvian Kraken": 1
+      "Dormant Monstrosity": 1
     },
     "atlas": {
       "Lone Tower": 2,
