@@ -325,6 +325,13 @@ DECKS['Lava Boy'] = (featuredDecks as DeckList[]).find((d) => d.name === 'Lava B
 // from cards not in Lava Boy (paper) or Cold Snap V3. The Skeletons are Undead, so they cast Kiss of Death
 // and feed Bone Spear and Gnarled Wendigo. Theorycraft, untested.
 DECKS['Bone Tide'] = (featuredDecks as DeckList[]).find((d) => d.name === 'Bone Tide')!
+// Bone Tide (paper): the user's sleeved copy. The Realmforge version (above) tests 3 Bone Jumble and 1 Symmetric
+// Suffering in place of 3 Winter Nymph and the Diluvian Kraken (26 Nov).
+{
+  const sb: Record<string, number> = { ...DECKS['Bone Tide'].spellbook, 'Winter Nymph': 3, 'Diluvian Kraken': 1 }
+  delete sb['Bone Jumble']; delete sb['Symmetric Suffering']
+  DECKS['Bone Tide (paper)'] = { ...DECKS['Bone Tide'], name: 'Bone Tide (paper)', spellbook: sb }
+}
 // Heretic's Brand (25 Nov): Persecutor mono Fire (54.9% over 514 games in real play) from cards not already in
 // Lava Boy (paper) or Cold Snap V3. The Persecutor brands an enemy as Evil each turn; Begone!, Holy Water and
 // Accusation then treat it as Evil. Theorycraft, untested.
