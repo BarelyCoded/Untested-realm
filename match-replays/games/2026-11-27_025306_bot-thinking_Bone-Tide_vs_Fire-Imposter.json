@@ -1,0 +1,2580 @@
+{
+ "savedAt": "2026-11-27T03:10:17.728Z",
+ "codeCommit": "af1fcfc",
+ "finished": true,
+ "winner": "Computer",
+ "turns": 34,
+ "botDifficulty": "thinking",
+ "flags": [],
+ "replay": {
+  "replayVersion": 1,
+  "createdAt": 1795747986637,
+  "mode": "bot",
+  "decks": [
+   {
+    "name": "Bone Tide",
+    "avatar": "Necromancer",
+    "spellbook": {
+     "Toolbox": 3,
+     "Kiss of Death": 3,
+     "Bone Spear": 3,
+     "Thunderstorm": 2,
+     "Chain Lightning": 1,
+     "Ice Lance": 1,
+     "Overflow": 2,
+     "Riptide": 2,
+     "Blink": 3,
+     "Displace": 2,
+     "Swap": 2,
+     "Symmetric Suffering": 1,
+     "Novice Necromancer": 4,
+     "Bone Jumble": 3,
+     "Apprentice Wizard": 4,
+     "Coy Nixie": 1,
+     "Cloud Spirit": 1,
+     "Stygian Archers": 1,
+     "Mesmer Demon": 3,
+     "Deep-Sea Mermaids": 3,
+     "Phase Assassin": 3,
+     "Accursed Albatross": 2,
+     "Gnarled Wendigo": 3,
+     "Grim Reaper": 1,
+     "Pied Piper of Hameln": 1,
+     "Daperyll Vampire": 2,
+     "Riddle Sphinx": 1,
+     "Hounds of Ondaros": 1,
+     "Dormant Monstrosity": 1
+    },
+    "atlas": {
+     "Lone Tower": 2,
+     "Dark Tower": 2,
+     "Gothic Tower": 2,
+     "Watchtower": 2,
+     "Mountain Peaks": 2,
+     "Accursed Tower": 1,
+     "Treetop Hideout": 1,
+     "Lighthouse": 2,
+     "Troll Bridge": 3,
+     "The Manor at Daperyll Hill": 1,
+     "Thin Ice": 2,
+     "Babbling Brook": 3,
+     "Bog": 2,
+     "Undertow": 2,
+     "Stinging Kelp": 2,
+     "Autumn River": 1
+    },
+    "collection": {
+     "Bone Spear": 1,
+     "Riptide": 1,
+     "Led Astray": 1,
+     "Second Wind": 1,
+     "Gift of the Frog": 1,
+     "Blink": 1,
+     "Lightning Bolt": 1,
+     "Arc Lightning": 1,
+     "Disenchant": 1,
+     "Sleep": 1
+    },
+    "id": "starter:Bone Tide"
+   },
+   {
+    "name": "Fire Imposter",
+    "avatar": "Imposter",
+    "spellbook": {
+     "Key to the City": 1,
+     "Ring of Morrigan": 1,
+     "Torshammar Trinket": 2,
+     "The Great Famine": 1,
+     "Wildfire": 2,
+     "Archangel Michael": 1,
+     "Arjaro Exorcist": 2,
+     "Autumn Unicorn": 3,
+     "Balor of the Evil Eye": 1,
+     "Colicky Dragonettes": 3,
+     "Gargantula": 2,
+     "Infernal Legion": 2,
+     "Kettletop Leprechaun": 3,
+     "Morgana le Fay": 1,
+     "Order of the White Wing": 3,
+     "Paladins of Bazia": 2,
+     "Quarrelsome Kobolds": 3,
+     "Root Spider": 3,
+     "Sister Stefánia": 1,
+     "The Inquisition": 1,
+     "Vile Imp": 3,
+     "Bury": 1,
+     "Disintegrate": 2,
+     "Divine Healing": 2,
+     "Earthquake": 2,
+     "Firebolts": 2,
+     "Gift of the Serpent": 2,
+     "Gigantism": 1,
+     "Lava Flow": 2,
+     "Major Explosion": 2,
+     "Peasant Revolt": 1,
+     "Poison Nova": 2
+    },
+    "atlas": {
+     "Active Volcano": 3,
+     "Arid Desert": 3,
+     "Briar Patch": 3,
+     "Fertile Earth": 3,
+     "Fields of Camlann": 1,
+     "Gnome Hollows": 3,
+     "Mirror Realm": 1,
+     "Mount Ussar Sanctuary": 1,
+     "Pebbled Paths": 3,
+     "Red Desert": 3,
+     "River of Flame": 1,
+     "Steppe": 3,
+     "Valley of Delight": 2
+    },
+    "collection": {
+     "Avatar of Earth": 1,
+     "Archimago": 1,
+     "Witch": 1,
+     "Deathspeaker": 1,
+     "Enchantress": 1,
+     "Flamecaller": 1,
+     "Pathfinder": 1,
+     "Sorcerer": 1,
+     "Interrogator": 1,
+     "Ironclad": 1
+    },
+    "id": "starter:Fire Imposter"
+   }
+  ],
+  "names": [
+   "You",
+   "Computer"
+  ],
+  "seed": 1604364161,
+  "firstPlayer": 0,
+  "clock": null,
+  "secondSeer": false,
+  "actions": [
+   {
+    "seat": 1,
+    "action": {
+     "t": "mulligan",
+     "back": []
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "mulligan",
+     "back": [
+      "c14",
+      "c6"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p185",
+     "choice": "c73"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p189",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p190",
+     "choice": "c161"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p192",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c78",
+     "x": 2,
+     "y": 1
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u188",
+     "path": [
+      {
+       "x": 2,
+       "y": 1,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p196",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c178",
+     "x": 2,
+     "y": 2
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p198",
+     "choice": [
+      "s193"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c131",
+     "casterId": "u94",
+     "at": {
+      "x": 2,
+      "y": 2,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p200",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c68",
+     "x": 3,
+     "y": 0
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c4",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 0
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "pickUp",
+     "unitId": "u2",
+     "artifactIds": [
+      "a202"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u195",
+     "path": [
+      {
+       "x": 2,
+       "y": 1,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p205",
+     "choice": "atlas"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c168",
+     "x": 1,
+     "y": 2
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c105",
+     "casterId": "u94",
+     "at": {
+      "x": 2,
+      "y": 3,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u199",
+     "path": [
+      {
+       "x": 2,
+       "y": 1,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p208",
+     "choice": []
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p209",
+     "choice": "atlas"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c11",
+     "casterId": "u2",
+     "targets": [
+      "u204"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p210",
+     "choice": "n"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p211",
+     "choice": [
+      "u199"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c70",
+     "x": 1,
+     "y": 0
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p215",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c172",
+     "x": 1,
+     "y": 3
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u207",
+     "path": [
+      {
+       "x": 2,
+       "y": 2,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p217",
+     "choice": "atlas"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c85",
+     "x": 4,
+     "y": 0
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c42",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 1,
+      "region": "surface"
+     },
+     "targets": [
+      "u207"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p220",
+     "choice": [
+      0
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p223",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "draw"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c112",
+     "casterId": "u94",
+     "at": {
+      "x": 2,
+      "y": 2,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p225",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "draw"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c46",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 1,
+      "region": "underwater"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u219",
+     "path": [
+      {
+       "x": 2,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "unit": "u224"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u219",
+     "path": [
+      {
+       "x": 2,
+       "y": 0,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u195",
+     "path": [
+      {
+       "x": 2,
+       "y": 0,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c46",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 1,
+      "region": "underwater"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p229",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c158",
+     "x": 1,
+     "y": 1
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p231",
+     "choice": [
+      "s186"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u207",
+     "path": [
+      {
+       "x": 2,
+       "y": 0,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "unit": "u219"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c148",
+     "casterId": "u94",
+     "targets": []
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p232",
+     "choice": "s"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p233",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c65",
+     "x": 3,
+     "y": 1
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c6",
+     "casterId": "u236",
+     "targets": [
+      "u207"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c47",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 1,
+      "region": "underwater"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p238",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "draw"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c135",
+     "casterId": "u94",
+     "at": {
+      "x": 1,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p240",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c14",
+     "casterId": "u2",
+     "targets": [
+      "u239"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p241",
+     "choice": false
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "draw"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c33",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c5",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 0
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "pickUp",
+     "unitId": "u2",
+     "artifactIds": [
+      "a245"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p246",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c166",
+     "x": 0,
+     "y": 2
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c125",
+     "casterId": "u94",
+     "at": {
+      "x": 1,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p249",
+     "choice": []
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p250",
+     "choice": [
+      "u244"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p251",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c69",
+     "x": 4,
+     "y": 1
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c60",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p254",
+     "choice": "put on bottom"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p255",
+     "choice": true
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p256",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p259",
+     "choice": "atlas"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c180",
+     "x": 3,
+     "y": 2
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c151",
+     "casterId": "u94",
+     "targets": [
+      "sq:2,1,surface"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p261",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c52",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c40",
+     "casterId": "u2",
+     "at": {
+      "x": 3,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "draw"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p266",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c103",
+     "casterId": "u94",
+     "at": {
+      "x": 3,
+      "y": 2,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p268",
+     "choice": [
+      "u263"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "draw"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p269",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c71",
+     "x": 0,
+     "y": 0
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u265",
+     "path": [
+      {
+       "x": 1,
+       "y": 0,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u265",
+     "ability": "bones:c33"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u271",
+     "path": [
+      {
+       "x": 1,
+       "y": 1,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s230"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u262",
+     "path": [
+      {
+       "x": 2,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s197"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c32",
+     "casterId": "u2",
+     "at": {
+      "x": 1,
+      "y": 0,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u272",
+     "path": [
+      {
+       "x": 1,
+       "y": 1,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s230"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "a202",
+     "ability": "rummage"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p273",
+     "choice": "Lightning Bolt"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p275",
+     "choice": {
+      "x": 3,
+      "y": 2
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p278",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c117",
+     "casterId": "u94",
+     "at": {
+      "x": 1,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "activate",
+     "sourceId": "u94",
+     "ability": "imposter:mask"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p280",
+     "choice": [
+      5
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c163",
+     "x": 3,
+     "y": 3
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p282",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c30",
+     "casterId": "u2",
+     "at": {
+      "x": 3,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u262",
+     "path": [
+      {
+       "x": 2,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s197"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u271",
+     "path": [
+      {
+       "x": 1,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s206"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p286",
+     "choice": []
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c61",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u272",
+     "path": [],
+     "attack": {
+      "unit": "u279"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u271",
+     "path": [],
+     "attack": {
+      "unit": "u279"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "draw"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p289",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "avatarSite",
+     "mode": "play",
+     "cardId": "c177",
+     "x": 4,
+     "y": 2
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p291",
+     "choice": [
+      "s234"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c96",
+     "casterId": "u94",
+     "at": {
+      "x": 3,
+      "y": 3,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "activate",
+     "sourceId": "u94",
+     "ability": "imposter:mask"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p293",
+     "choice": [
+      0
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c98",
+     "casterId": "u94",
+     "at": {
+      "x": 3,
+      "y": 3,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p295",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u286",
+     "path": [
+      {
+       "x": 3,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s260"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u262",
+     "path": [
+      {
+       "x": 3,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s260"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u237",
+     "path": [
+      {
+       "x": 2,
+       "y": 1,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u277",
+     "path": [
+      {
+       "x": 2,
+       "y": 1,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u288",
+     "path": [
+      {
+       "x": 2,
+       "y": 1,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u288",
+     "ability": "bones:c33"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u277",
+     "ability": "bones:c32"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u297",
+     "path": [
+      {
+       "x": 2,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s197"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u296",
+     "path": [
+      {
+       "x": 2,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s197"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "avatarSite",
+     "mode": "draw"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p300",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c150",
+     "casterId": "u94",
+     "targets": [
+      "sq:2,1,surface"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u94",
+     "path": [
+      {
+       "x": 3,
+       "y": 3,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "pickUp",
+     "unitId": "u94",
+     "artifactIds": [
+      "a292"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c98",
+     "casterId": "u94",
+     "at": {
+      "x": 2,
+      "y": 3,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p301",
+     "choice": [
+      "u286"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p303",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c51",
+     "casterId": "u2",
+     "at": {
+      "x": 2,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "boneRaise:c33"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u2",
+     "path": [
+      {
+       "x": 2,
+       "y": 1,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p308",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c114",
+     "casterId": "u94",
+     "at": {
+      "x": 1,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "activate",
+     "sourceId": "u94",
+     "ability": "imposter:mask"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p310",
+     "choice": [
+      5
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "activate",
+     "sourceId": "u94",
+     "ability": "drawSpell"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p311",
+     "choice": []
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p312",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c50",
+     "casterId": "u2",
+     "at": {
+      "x": 4,
+      "y": 3,
+      "region": "void"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "a245",
+     "ability": "rummage"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p314",
+     "choice": "Sleep"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p316",
+     "choice": [
+      "u309"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u2",
+     "path": [
+      {
+       "x": 3,
+       "y": 1,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u307",
+     "path": [
+      {
+       "x": 3,
+       "y": 0,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u318",
+     "ability": "bones:c32"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u319",
+     "path": [
+      {
+       "x": 3,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s260"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p320",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c126",
+     "casterId": "u94",
+     "at": {
+      "x": 3,
+      "y": 2,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p321",
+     "choice": [
+      "u319"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u94",
+     "path": [
+      {
+       "x": 3,
+       "y": 2,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c139",
+     "casterId": "u94",
+     "targets": []
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p323",
+     "choice": [
+      "u2"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c98",
+     "casterId": "u94",
+     "at": {
+      "x": 2,
+      "y": 3,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p324",
+     "choice": [
+      "u2"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p326",
+     "choice": []
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p327",
+     "choice": [
+      "u2"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p328",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u313",
+     "path": [
+      {
+       "x": 4,
+       "y": 2,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s290"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u2",
+     "path": [
+      {
+       "x": 3,
+       "y": 0,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "boneRaise:c32"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p332",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c143",
+     "casterId": "u94",
+     "targets": [],
+     "extra": {
+      "direction": "s"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p333",
+     "choice": [
+      "u313"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p334",
+     "choice": [
+      "u307"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p335",
+     "choice": [
+      "u331"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u322",
+     "path": [
+      {
+       "x": 3,
+       "y": 1,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "site": "s234"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "activate",
+     "sourceId": "u94",
+     "ability": "drawSpell"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c138",
+     "casterId": "u94",
+     "targets": [
+      "u313"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p336",
+     "choice": [
+      "u313"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c98",
+     "casterId": "u94",
+     "at": {
+      "x": 2,
+      "y": 3,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p337",
+     "choice": [
+      "u322"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p339",
+     "choice": []
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p340",
+     "choice": [
+      "u2"
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "prompt",
+     "promptId": "p341",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "raise"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "activate",
+     "sourceId": "u2",
+     "ability": "boneRaise:c33"
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c34",
+     "casterId": "u2",
+     "at": {
+      "x": 3,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u2",
+     "path": [
+      {
+       "x": 2,
+       "y": 0,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u345",
+     "path": [],
+     "attack": {
+      "unit": "u322"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u344",
+     "path": [
+      {
+       "x": 3,
+       "y": 1,
+       "region": "surface"
+      }
+     ],
+     "attack": {
+      "unit": "u322"
+     }
+    }
+   },
+   {
+    "seat": 0,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p346",
+     "choice": "spellbook"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c129",
+     "casterId": "u94",
+     "at": {
+      "x": 1,
+      "y": 1,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u94",
+     "path": [
+      {
+       "x": 2,
+       "y": 2,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "castSpell",
+     "cardId": "c98",
+     "casterId": "u94",
+     "at": {
+      "x": 2,
+      "y": 3,
+      "region": "surface"
+     }
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p348",
+     "choice": [
+      "u309"
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "moveAttack",
+     "unitId": "u309",
+     "path": [
+      {
+       "x": 1,
+       "y": 0,
+       "region": "surface"
+      }
+     ]
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "endTurn"
+    }
+   },
+   {
+    "seat": 1,
+    "action": {
+     "t": "prompt",
+     "promptId": "p350",
+     "choice": []
+    }
+   }
+  ],
+  "winner": 1
+ }
+}
