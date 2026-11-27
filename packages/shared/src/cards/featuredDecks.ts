@@ -929,7 +929,7 @@ export const featuredDecks: DeckList[] = [
   // Bone Tide (26 Nov 2026): Air/Water Necromancer (54.9% over 1,638 games on Play Sorcery Online) as tempo-control.
   // Skeletons are Undead, so they cast Kiss of Death and feed Bone Spear and Gnarled Wendigo.
   // Chain Lightning and Ice Lance in place of Whirling Blades (the user has no spare Whirling Blades and one
-  // Chain Lightning; 26 Nov 2026).
+  // Chain Lightning; 26 Nov 2026), and Cloud Spirit for Headless Haunt (both of theirs are in Cold Snap).
   {
     "name": "Bone Tide",
     "avatar": "Necromancer",
@@ -949,7 +949,7 @@ export const featuredDecks: DeckList[] = [
       "Apprentice Wizard": 4,
       "Winter Nymph": 3,
       "Coy Nixie": 1,
-      "Headless Haunt": 1,
+      "Cloud Spirit": 1,
       "Stygian Archers": 1,
       "Mesmer Demon": 3,
       "Deep-Sea Mermaids": 3,
