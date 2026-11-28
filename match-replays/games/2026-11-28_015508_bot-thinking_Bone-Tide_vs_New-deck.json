@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-28T02:15:14.897Z",
+ "savedAt": "2026-11-28T02:15:36.080Z",
  "codeCommit": "af1fcfc",
  "finished": true,
  "winner": "You",
@@ -942,6 +942,7 @@
   ],
   "rejected": 0
  },
+ "review": "The game was a race between two avatars at 0 life, and you won it because the Computer left its Frost Mage exposed while you had Phase Assassin and Swap ready.\n\nKey moments:\n- Turn 8 (you erred): You cast Babbling Brook and Gnarled Wendigo, and the ice then cracked. Aria Wraith, your Apprentice Wizard and your Wendigo all drowned, so you lost two real cards for one. Bone Jumble then died to Icicle Dome on turn 9. The log doesn't show exactly what triggered the crack, but you should have checked the Thin Ice and water interaction before committing the Wendigo.\n- Turn 18 (even trade): Bone Jumble and Novice Necromancer died to Stygian Archers and Gibbous Nightgaunts. It cost you a body, and I can't say more from the log.\n- Turns 19-22 (your best stretch): Kiss of Death killed Sissi Marksmen. Wendigo, Phase Assassin and Albatross then hit Icicle Dome and the Mountain Pass, taking the Computer from 19 to 3. The Computer's first moves on turns 19, 25 and 27 match the engine's, so I can't call them errors.\n- Turns 23-28: The Computer put you at 0 life on turn 23 but did not attack on turns 25 or 27. It had spent turn 25 on Coy Nixie, and Phase Assassin took it to 0 on turn 26. On turn 28 you swapped Phase Assassin next to Frost Mage and killed it.\n\nFor you: Autumn River took 3 damage on turns 11, 15, 21 and 23, and those hits cost you 12 life in total. Put a blocker or ranged answer on the Nightgaunts and Oak routes earlier. Don't rely on the Computer being passive once you're at 0.\n\nFor the bot: it moved Frost Mage up to c3 and c4 while at 0 life, where Phase Assassin could reach it. It also didn't press its lethal attacks on turns 25 and 27, when any damage would have killed you. I see no clear rules mistakes by the simulator.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795830908728,
