@@ -1,11 +1,947 @@
 {
- "savedAt": "2026-11-28T02:15:13.066Z",
+ "savedAt": "2026-11-28T02:15:14.897Z",
  "codeCommit": "af1fcfc",
  "finished": true,
  "winner": "You",
  "turns": 28,
  "botDifficulty": "thinking",
  "flags": [],
+ "report": {
+  "version": 1,
+  "botSeat": 1,
+  "winner": 0,
+  "turns": 28,
+  "firstPlayer": 1,
+  "rows": [
+   {
+    "turn": 1,
+    "player": 1,
+    "sites": [
+     0,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     0
+    ],
+    "power": [
+     0,
+     0
+    ],
+    "score": -158
+   },
+   {
+    "turn": 2,
+    "player": 0,
+    "sites": [
+     1,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     5
+    ],
+    "units": [
+     2,
+     0
+    ],
+    "power": [
+     2,
+     0
+    ],
+    "score": -242
+   },
+   {
+    "turn": 3,
+    "player": 1,
+    "sites": [
+     1,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     5
+    ],
+    "units": [
+     2,
+     0
+    ],
+    "power": [
+     2,
+     0
+    ],
+    "score": -173
+   },
+   {
+    "turn": 4,
+    "player": 0,
+    "sites": [
+     2,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     5
+    ],
+    "units": [
+     3,
+     0
+    ],
+    "power": [
+     3,
+     0
+    ],
+    "score": -247
+   },
+   {
+    "turn": 5,
+    "player": 1,
+    "sites": [
+     2,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     3,
+     1
+    ],
+    "power": [
+     3,
+     2
+    ],
+    "score": -143
+   },
+   {
+    "turn": 6,
+    "player": 0,
+    "sites": [
+     3,
+     3
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     4,
+     1
+    ],
+    "power": [
+     4,
+     2
+    ],
+    "score": -245
+   },
+   {
+    "turn": 7,
+    "player": 1,
+    "sites": [
+     3,
+     4
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     5
+    ],
+    "units": [
+     3,
+     1
+    ],
+    "power": [
+     3,
+     2
+    ],
+    "score": -117
+   },
+   {
+    "turn": 8,
+    "player": 0,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     3,
+     5
+    ],
+    "units": [
+     2,
+     0
+    ],
+    "power": [
+     2,
+     0
+    ],
+    "score": -83
+   },
+   {
+    "turn": 9,
+    "player": 1,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     3,
+     6
+    ],
+    "units": [
+     1,
+     1
+    ],
+    "power": [
+     1,
+     3
+    ],
+    "score": 9
+   },
+   {
+    "turn": 10,
+    "player": 0,
+    "sites": [
+     4,
+     4
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     6
+    ],
+    "units": [
+     3,
+     1
+    ],
+    "power": [
+     4,
+     3
+    ],
+    "score": -116
+   },
+   {
+    "turn": 11,
+    "player": 1,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     4,
+     5
+    ],
+    "units": [
+     3,
+     2
+    ],
+    "power": [
+     4,
+     6
+    ],
+    "score": 87
+   },
+   {
+    "turn": 12,
+    "player": 0,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     3,
+     5
+    ],
+    "units": [
+     3,
+     2
+    ],
+    "power": [
+     8,
+     6
+    ],
+    "score": -3
+   },
+   {
+    "turn": 13,
+    "player": 1,
+    "sites": [
+     5,
+     5
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     3,
+     6
+    ],
+    "units": [
+     2,
+     3
+    ],
+    "power": [
+     6,
+     10
+    ],
+    "score": 177
+   },
+   {
+    "turn": 14,
+    "player": 0,
+    "sites": [
+     6,
+     5
+    ],
+    "life": [
+     17,
+     20
+    ],
+    "hand": [
+     1,
+     6
+    ],
+    "units": [
+     5,
+     2
+    ],
+    "power": [
+     9,
+     6
+    ],
+    "score": 2
+   },
+   {
+    "turn": 15,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     14,
+     20
+    ],
+    "hand": [
+     1,
+     4
+    ],
+    "units": [
+     5,
+     4
+    ],
+    "power": [
+     9,
+     11
+    ],
+    "score": 204
+   },
+   {
+    "turn": 16,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     14,
+     20
+    ],
+    "hand": [
+     2,
+     4
+    ],
+    "units": [
+     5,
+     2
+    ],
+    "power": [
+     9,
+     5
+    ],
+    "score": -15
+   },
+   {
+    "turn": 17,
+    "player": 1,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     14,
+     20
+    ],
+    "hand": [
+     2,
+     3
+    ],
+    "units": [
+     5,
+     4
+    ],
+    "power": [
+     9,
+     11
+    ],
+    "score": 100
+   },
+   {
+    "turn": 18,
+    "player": 0,
+    "sites": [
+     7,
+     6
+    ],
+    "life": [
+     14,
+     18
+    ],
+    "hand": [
+     0,
+     3
+    ],
+    "units": [
+     4,
+     4
+    ],
+    "power": [
+     10,
+     9
+    ],
+    "score": 127
+   },
+   {
+    "turn": 19,
+    "player": 1,
+    "sites": [
+     7,
+     6
+    ],
+    "life": [
+     14,
+     18
+    ],
+    "hand": [
+     0,
+     5
+    ],
+    "units": [
+     4,
+     5
+    ],
+    "power": [
+     10,
+     12
+    ],
+    "score": 165
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "sites": [
+     7,
+     6
+    ],
+    "life": [
+     14,
+     9
+    ],
+    "hand": [
+     1,
+     5
+    ],
+    "units": [
+     5,
+     4
+    ],
+    "power": [
+     11,
+     10
+    ],
+    "score": -21
+   },
+   {
+    "turn": 21,
+    "player": 1,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     8,
+     9
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     4,
+     6
+    ],
+    "power": [
+     10,
+     15
+    ],
+    "score": 236
+   },
+   {
+    "turn": 22,
+    "player": 0,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     8,
+     3
+    ],
+    "hand": [
+     3,
+     2
+    ],
+    "units": [
+     7,
+     6
+    ],
+    "power": [
+     13,
+     15
+    ],
+    "score": -111
+   },
+   {
+    "turn": 23,
+    "player": 1,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     0,
+     3
+    ],
+    "hand": [
+     3,
+     3
+    ],
+    "units": [
+     7,
+     8
+    ],
+    "power": [
+     13,
+     18
+    ],
+    "score": 372
+   },
+   {
+    "turn": 24,
+    "player": 0,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     0,
+     2
+    ],
+    "hand": [
+     2,
+     3
+    ],
+    "units": [
+     8,
+     5
+    ],
+    "power": [
+     16,
+     12
+    ],
+    "score": 234
+   },
+   {
+    "turn": 25,
+    "player": 1,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     0,
+     2
+    ],
+    "hand": [
+     2,
+     3
+    ],
+    "units": [
+     8,
+     7
+    ],
+    "power": [
+     16,
+     16
+    ],
+    "score": 315
+   },
+   {
+    "turn": 26,
+    "player": 0,
+    "sites": [
+     8,
+     7
+    ],
+    "life": [
+     0,
+     0
+    ],
+    "hand": [
+     1,
+     3
+    ],
+    "units": [
+     8,
+     4
+    ],
+    "power": [
+     20,
+     11
+    ],
+    "score": -55
+   },
+   {
+    "turn": 27,
+    "player": 1,
+    "sites": [
+     8,
+     7
+    ],
+    "life": [
+     0,
+     0
+    ],
+    "hand": [
+     1,
+     3
+    ],
+    "units": [
+     8,
+     6
+    ],
+    "power": [
+     20,
+     17
+    ],
+    "score": 78
+   },
+   {
+    "turn": 28,
+    "player": 0,
+    "sites": [
+     8,
+     7
+    ],
+    "life": [
+     0,
+     0
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     8,
+     6
+    ],
+    "power": [
+     20,
+     17
+    ],
+    "score": -1500
+   }
+  ],
+  "swings": [
+   {
+    "turn": 8,
+    "player": 0,
+    "change": 162,
+    "log": [
+     "— Turn 7: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Aria Wraith moves to c2.",
+     "Aria Wraith attacks Novice Necromancer!",
+     "Aria Wraith loses Stealth.",
+     "Novice Necromancer takes 2 damage.",
+     "Aria Wraith takes 1 damage.",
+     "Novice Necromancer dies. (killed by Aria Wraith)",
+     "Computer plays Permafrost at (4,3).",
+     "Computer casts Research.",
+     "Computer draws 2 cards from their spellbook.",
+     "— Turn 8: You —",
+     "You draws a card from their spellbook.",
+     "You plays Babbling Brook at (2,2).",
+     "The Babbling Brook lulls nearby minions into stupor.",
+     "Skeleton is sacrificed to cast Gnarled Wendigo.",
+     "Skeleton dies.",
+     "Skeleton is sacrificed to cast Gnarled Wendigo.",
+     "Skeleton dies.",
+     "You casts Gnarled Wendigo.",
+     "You casts Bone Jumble.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "CRACK — the ice gives way!"
+    ]
+   },
+   {
+    "turn": 18,
+    "player": 0,
+    "change": 142,
+    "log": [
+     "— Turn 17: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Stygian Archers.",
+     "Computer casts Gibbous Nightgaunts.",
+     "Hailstriker moves to b4.",
+     "Frost Mage moves to b4.",
+     "— Turn 18: You —",
+     "You draws a card from their spellbook.",
+     "Accursed Albatross moves to c3.",
+     "Accursed Albatross attacks Mountain Pass!",
+     "Computer loses 1 life (now 19).",
+     "Mountain Pass is struck for 1.",
+     "You casts Ice Lance with Novice Necromancer.",
+     "Stygian Archers takes 2 damage.",
+     "Frost Mage takes 1 damage (life 18).",
+     "Bone Jumble moves to b3.",
+     "Bone Jumble attacks Stygian Archers!",
+     "Gibbous Nightgaunts defends!",
+     "Gibbous Nightgaunts takes 1 damage.",
+     "Bone Jumble takes 3 damage.",
+     "Bone Jumble dies. (killed by Gibbous Nightgaunts)",
+     "Novice Necromancer moves to b3.",
+     "Novice Necromancer attacks Stygian Archers!",
+     "Stygian Archers takes 1 damage."
+    ]
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "change": -148,
+    "log": [
+     "— Turn 19: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Research.",
+     "Computer draws 2 cards from their spellbook.",
+     "Computer casts Order of the Sacred Oak.",
+     "Gibbous Nightgaunts moves to b2.",
+     "Sissi Marksmen moves to c2.",
+     "River Rapids: Push a minion along the Rivers.",
+     "Computer draws a card from their atlas.",
+     "Hailstriker moves to d4.",
+     "Skeleton moves to b4.",
+     "— Turn 20: You —",
+     "You draws a card from their spellbook.",
+     "You casts Kiss of Death with Bone Jumble.",
+     "Sissi Marksmen dies. (killed by Bone Jumble)",
+     "Gnarled Wendigo moves to b3.",
+     "Gnarled Wendigo attacks Icicle Dome!",
+     "Computer loses 5 life (now 13).",
+     "Icicle Dome is struck for 5.",
+     "Phase Assassin moves to b3.",
+     "Phase Assassin attacks Icicle Dome!",
+     "Computer loses 3 life (now 10).",
+     "Icicle Dome is struck for 3.",
+     "Accursed Albatross attacks Mountain Pass!"
+    ]
+   },
+   {
+    "turn": 24,
+    "player": 0,
+    "change": 345,
+    "log": [
+     "— Turn 23: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Order of the Sacred Oak attacks Autumn River!",
+     "You loses 3 life (now 5).",
+     "Autumn River is struck for 3.",
+     "Gyre Hippogriffs moves to d1.",
+     "Gyre Hippogriffs attacks Stinging Kelp!",
+     "You loses 3 life (now 2).",
+     "Stinging Kelp is struck for 3.",
+     "Computer casts Adept Illusionist.",
+     "Computer casts Highland Princess.",
+     "Computer reveals Ring of Morrigan and puts it into their hand.",
+     "Gibbous Nightgaunts moves to a2.",
+     "Gibbous Nightgaunts attacks Watchtower!",
+     "You loses 3 life (now 0).",
+     "Necromancer is at death's door!",
+     "Watchtower is struck for 3.",
+     "Hailstriker moves to d3.",
+     "Computer draws a card from their atlas.",
+     "— Turn 24: You —",
+     "You draws a card from their spellbook.",
+     "You casts Toolbox.",
+     "Toolbox: Sacrifice → fetch an Ordinary spell from your collection.",
+     "You casts Lightning Bolt."
+    ]
+   },
+   {
+    "turn": 26,
+    "player": 0,
+    "change": -289,
+    "log": [
+     "— Turn 25: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Coy Nixie.",
+     "Gyre Hippogriffs moves to c1.",
+     "Frost Mage moves to c4.",
+     "Adept Illusionist: Tap → Summon another Adept Illusionist nearby.",
+     "Another Adept Illusionist shimmers into being.",
+     "River Rapids: Push a minion along the Rivers.",
+     "— Turn 26: You —",
+     "You draws a card from their spellbook.",
+     "You casts Deep-Sea Mermaids.",
+     "The mermaids retrieve the bottommost spell.",
+     "Accursed Albatross attacks Skeleton!",
+     "Coy Nixie defends!",
+     "Coy Nixie takes 1 damage.",
+     "Accursed Albatross takes 2 damage.",
+     "Accursed Albatross's deathrite triggers.",
+     "The albatross's curse claims Skeleton!",
+     "Skeleton dies.",
+     "The albatross's curse claims Adept Illusionist!",
+     "Adept Illusionist dies.",
+     "Accursed Albatross dies. (killed by Coy Nixie)",
+     "Phase Assassin moves to b4.",
+     "Phase Assassin attacks River Rapids!"
+    ]
+   },
+   {
+    "turn": 28,
+    "player": 0,
+    "change": -1445,
+    "log": [
+     "— Turn 27: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Sacred Stag.",
+     "Hailstriker moves to c3.",
+     "Frost Mage moves to c3.",
+     "Adept Illusionist: Tap → Summon another Adept Illusionist nearby.",
+     "Another Adept Illusionist shimmers into being.",
+     "Order of the Sacred Oak moves to c2.",
+     "River Rapids: Push a minion along the Rivers.",
+     "— Turn 28: You —",
+     "You draws a card from their spellbook.",
+     "You casts Swap.",
+     "Hailstriker and Phase Assassin trade places in a blink.",
+     "Hailstriker pays the troll's toll.",
+     "Phase Assassin attacks Frost Mage!",
+     "Death blow! Frost Mage is defeated.",
+     "Phase Assassin takes 1 damage."
+    ]
+   }
+  ],
+  "checks": [
+   {
+    "turn": 19,
+    "played": [
+     "CAST Research",
+     "CAST Order of the Sacred Oak at b2",
+     "Gibbous Nightgaunts at d2 moves to d3",
+     "Sissi Marksmen at c2 moves to c3",
+     "ABILITY \"rapids\" of River Rapids at d1",
+     "Avatar: tap to DRAW a site from the atlas",
+     "Hailstriker at c1 moves to b1",
+     "Skeleton at d2 moves to d1",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Research",
+    "same": true
+   },
+   {
+    "turn": 25,
+    "played": [
+     "CAST Coy Nixie at c2",
+     "Gyre Hippogriffs at b4 moves to c4",
+     "Frost Mage at d1 moves to c1",
+     "ABILITY \"mirror\" of Adept Illusionist at c1",
+     "ABILITY \"rapids\" of River Rapids at d1",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Coy Nixie at c2",
+    "same": true
+   },
+   {
+    "turn": 27,
+    "played": [
+     "CAST Sacred Stag at c1",
+     "Hailstriker at b2 moves to c2",
+     "Frost Mage at c1 moves to c2",
+     "ABILITY \"mirror\" of Adept Illusionist at b1",
+     "Order of the Sacred Oak at b3 moves to c3",
+     "ABILITY \"rapids\" of River Rapids at d1",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Sacred Stag at c1",
+    "same": true
+   }
+  ],
+  "rejected": 0
+ },
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795830908728,
