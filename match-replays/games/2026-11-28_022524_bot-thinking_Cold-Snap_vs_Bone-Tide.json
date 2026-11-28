@@ -1,11 +1,767 @@
 {
- "savedAt": "2026-11-28T02:40:06.504Z",
+ "savedAt": "2026-11-28T02:40:08.341Z",
  "codeCommit": "8677c01",
  "finished": true,
  "winner": "You",
  "turns": 22,
  "botDifficulty": "thinking",
  "flags": [],
+ "report": {
+  "version": 1,
+  "botSeat": 1,
+  "winner": 0,
+  "turns": 22,
+  "firstPlayer": 1,
+  "rows": [
+   {
+    "turn": 1,
+    "player": 1,
+    "sites": [
+     0,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     6,
+     5
+    ],
+    "units": [
+     0,
+     1
+    ],
+    "power": [
+     0,
+     1
+    ],
+    "score": -143
+   },
+   {
+    "turn": 2,
+    "player": 0,
+    "sites": [
+     1,
+     1
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     5
+    ],
+    "units": [
+     1,
+     1
+    ],
+    "power": [
+     1,
+     1
+    ],
+    "score": -196
+   },
+   {
+    "turn": 3,
+    "player": 1,
+    "sites": [
+     1,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     5,
+     4
+    ],
+    "units": [
+     1,
+     3
+    ],
+    "power": [
+     1,
+     3
+    ],
+    "score": -98
+   },
+   {
+    "turn": 4,
+    "player": 0,
+    "sites": [
+     2,
+     2
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     4
+    ],
+    "units": [
+     2,
+     3
+    ],
+    "power": [
+     4,
+     3
+    ],
+    "score": -195
+   },
+   {
+    "turn": 5,
+    "player": 1,
+    "sites": [
+     2,
+     4
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     3
+    ],
+    "units": [
+     2,
+     4
+    ],
+    "power": [
+     4,
+     4
+    ],
+    "score": -76
+   },
+   {
+    "turn": 6,
+    "player": 0,
+    "sites": [
+     3,
+     4
+    ],
+    "life": [
+     20,
+     20
+    ],
+    "hand": [
+     4,
+     3
+    ],
+    "units": [
+     2,
+     4
+    ],
+    "power": [
+     4,
+     4
+    ],
+    "score": -137
+   },
+   {
+    "turn": 7,
+    "player": 1,
+    "sites": [
+     3,
+     5
+    ],
+    "life": [
+     19,
+     20
+    ],
+    "hand": [
+     4,
+     1
+    ],
+    "units": [
+     1,
+     5
+    ],
+    "power": [
+     1,
+     7
+    ],
+    "score": 66
+   },
+   {
+    "turn": 8,
+    "player": 0,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     19,
+     20
+    ],
+    "hand": [
+     3,
+     1
+    ],
+    "units": [
+     2,
+     5
+    ],
+    "power": [
+     4,
+     7
+    ],
+    "score": 10
+   },
+   {
+    "turn": 9,
+    "player": 1,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     16,
+     20
+    ],
+    "hand": [
+     3,
+     2
+    ],
+    "units": [
+     2,
+     7
+    ],
+    "power": [
+     4,
+     11
+    ],
+    "score": 166
+   },
+   {
+    "turn": 10,
+    "player": 0,
+    "sites": [
+     4,
+     5
+    ],
+    "life": [
+     16,
+     20
+    ],
+    "hand": [
+     4,
+     2
+    ],
+    "units": [
+     3,
+     6
+    ],
+    "power": [
+     5,
+     8
+    ],
+    "score": 7
+   },
+   {
+    "turn": 11,
+    "player": 1,
+    "sites": [
+     4,
+     6
+    ],
+    "life": [
+     11,
+     20
+    ],
+    "hand": [
+     4,
+     0
+    ],
+    "units": [
+     3,
+     7
+    ],
+    "power": [
+     5,
+     9
+    ],
+    "score": 147
+   },
+   {
+    "turn": 12,
+    "player": 0,
+    "sites": [
+     5,
+     6
+    ],
+    "life": [
+     12,
+     20
+    ],
+    "hand": [
+     3,
+     0
+    ],
+    "units": [
+     4,
+     6
+    ],
+    "power": [
+     9,
+     8
+    ],
+    "score": 60
+   },
+   {
+    "turn": 13,
+    "player": 1,
+    "sites": [
+     5,
+     6
+    ],
+    "life": [
+     12,
+     20
+    ],
+    "hand": [
+     3,
+     2
+    ],
+    "units": [
+     4,
+     7
+    ],
+    "power": [
+     9,
+     9
+    ],
+    "score": 54
+   },
+   {
+    "turn": 14,
+    "player": 0,
+    "sites": [
+     6,
+     6
+    ],
+    "life": [
+     13,
+     20
+    ],
+    "hand": [
+     2,
+     2
+    ],
+    "units": [
+     5,
+     6
+    ],
+    "power": [
+     13,
+     6
+    ],
+    "score": -83
+   },
+   {
+    "turn": 15,
+    "player": 1,
+    "sites": [
+     6,
+     7
+    ],
+    "life": [
+     13,
+     20
+    ],
+    "hand": [
+     2,
+     1
+    ],
+    "units": [
+     5,
+     9
+    ],
+    "power": [
+     13,
+     9
+    ],
+    "score": 8
+   },
+   {
+    "turn": 16,
+    "player": 0,
+    "sites": [
+     6,
+     7
+    ],
+    "life": [
+     14,
+     16
+    ],
+    "hand": [
+     2,
+     1
+    ],
+    "units": [
+     5,
+     4
+    ],
+    "power": [
+     13,
+     4
+    ],
+    "score": -270
+   },
+   {
+    "turn": 17,
+    "player": 1,
+    "sites": [
+     6,
+     7
+    ],
+    "life": [
+     14,
+     16
+    ],
+    "hand": [
+     2,
+     2
+    ],
+    "units": [
+     5,
+     6
+    ],
+    "power": [
+     13,
+     7
+    ],
+    "score": -121
+   },
+   {
+    "turn": 18,
+    "player": 0,
+    "sites": [
+     7,
+     7
+    ],
+    "life": [
+     14,
+     7
+    ],
+    "hand": [
+     1,
+     2
+    ],
+    "units": [
+     6,
+     4
+    ],
+    "power": [
+     18,
+     5
+    ],
+    "score": -303
+   },
+   {
+    "turn": 19,
+    "player": 1,
+    "sites": [
+     7,
+     8
+    ],
+    "life": [
+     11,
+     7
+    ],
+    "hand": [
+     1,
+     0
+    ],
+    "units": [
+     6,
+     6
+    ],
+    "power": [
+     18,
+     7
+    ],
+    "score": -307
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "sites": [
+     7,
+     8
+    ],
+    "life": [
+     12,
+     0
+    ],
+    "hand": [
+     1,
+     0
+    ],
+    "units": [
+     7,
+     4
+    ],
+    "power": [
+     20,
+     5
+    ],
+    "score": -807
+   },
+   {
+    "turn": 21,
+    "player": 1,
+    "sites": [
+     7,
+     8
+    ],
+    "life": [
+     10,
+     0
+    ],
+    "hand": [
+     1,
+     1
+    ],
+    "units": [
+     6,
+     5
+    ],
+    "power": [
+     19,
+     8
+    ],
+    "score": -680
+   },
+   {
+    "turn": 22,
+    "player": 0,
+    "sites": [
+     7,
+     8
+    ],
+    "life": [
+     12,
+     0
+    ],
+    "hand": [
+     0,
+     1
+    ],
+    "units": [
+     8,
+     4
+    ],
+    "power": [
+     23,
+     7
+    ],
+    "score": -1500
+   }
+  ],
+  "swings": [
+   {
+    "turn": 8,
+    "player": 0,
+    "change": 147,
+    "log": [
+     "— Turn 7: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer plays Accursed Tower at (4,3).",
+     "Computer casts Phase Assassin.",
+     "Phase Assassin melts into the void.",
+     "Skeleton moves to c2.",
+     "Skeleton attacks Thin Ice!",
+     "You loses 1 life (now 19).",
+     "Thin Ice is struck for 1.",
+     "Computer casts Bone Spear.",
+     "Skeleton dies.",
+     "Stygian Archers takes 3 damage.",
+     "Stygian Archers dies.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Bone Jumble moves to c3.",
+     "— Turn 8: You —",
+     "You draws a card from their spellbook.",
+     "You plays River Rapids at (4,2).",
+     "You casts Order of the Sacred Oak."
+    ]
+   },
+   {
+    "turn": 14,
+    "player": 0,
+    "change": -143,
+    "log": [
+     "— Turn 13: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer draws a card from their atlas.",
+     "Skeleton moves to b3.",
+     "Skeleton moves to b4.",
+     "Phase Assassin moves to c2.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Skeleton moves to b4.",
+     "Skeleton moves to b4.",
+     "— Turn 14: You —",
+     "You draws a card from their atlas.",
+     "You plays Spire at (4,1).",
+     "You casts Frost Elemental.",
+     "Phase Assassin takes 1 damage.",
+     "You gains 1 life (now 13).",
+     "Lugbog Cat moves to c2.",
+     "Lugbog Cat attacks Phase Assassin!",
+     "Phase Assassin takes 4 damage.",
+     "Lugbog Cat takes 3 damage.",
+     "Phase Assassin dies. (killed by Lugbog Cat)"
+    ]
+   },
+   {
+    "turn": 16,
+    "player": 0,
+    "change": -187,
+    "log": [
+     "— Turn 15: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Novice Necromancer.",
+     "A Skeleton token appears.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Skeleton moves to b3.",
+     "Computer plays Babbling Brook at (1,2).",
+     "The Babbling Brook lulls nearby minions into stupor.",
+     "— Turn 16: You —",
+     "You draws a card from their spellbook.",
+     "Frost Mage moves to c2.",
+     "You casts Whirling Blades.",
+     "Skeleton takes 1 damage.",
+     "You gains 1 life (now 14).",
+     "Skeleton dies. (killed by Frost Mage)",
+     "Novice Necromancer takes 4 damage.",
+     "Skeleton takes 4 damage.",
+     "Necromancer takes 4 damage (life 16).",
+     "Skeleton takes 4 damage.",
+     "Skeleton takes 4 damage.",
+     "Skeleton dies. (killed by Lugbog Cat)",
+     "Novice Necromancer dies. (killed by Lugbog Cat)",
+     "Skeleton dies. (killed by Lugbog Cat)"
+    ]
+   },
+   {
+    "turn": 20,
+    "player": 0,
+    "change": -504,
+    "log": [
+     "— Turn 19: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Grim Reaper.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Computer plays Lone Tower at (4,4).",
+     "Lone Tower hums with power: +① this turn.",
+     "Cloud Spirit moves to b2.",
+     "Cloud Spirit attacks Permafrost!",
+     "You loses 2 life (now 12).",
+     "Permafrost is struck for 2.",
+     "Necromancer: (1), sacrifice a Skeleton → raise this from your cemetery.",
+     "Skeleton dies.",
+     "A sacrificed Skeleton's bones reshape into Bone Jumble!",
+     "Bone Jumble moves to c3.",
+     "Skeleton moves to b2.",
+     "Skeleton attacks Permafrost!",
+     "You loses 1 life (now 11).",
+     "Permafrost is struck for 1.",
+     "Skeleton moves to a2.",
+     "Computer casts Toolbox.",
+     "Necromancer picks up Toolbox.",
+     "Skeleton moves to b3.",
+     "— Turn 20: You —"
+    ]
+   },
+   {
+    "turn": 22,
+    "player": 0,
+    "change": -693,
+    "log": [
+     "— Turn 21: Computer —",
+     "Computer draws a card from their spellbook.",
+     "Computer casts Mesmer Demon.",
+     "Skeleton moves to a2.",
+     "Skeleton attacks Highland Princess!",
+     "Highland Princess takes 1 damage.",
+     "Skeleton takes 1 damage.",
+     "Highland Princess dies. (killed by Skeleton)",
+     "Skeleton dies. (killed by Highland Princess)",
+     "Cloud Spirit moves to d1.",
+     "Cloud Spirit attacks Spire!",
+     "You loses 2 life (now 10).",
+     "Spire is struck for 2.",
+     "Necromancer: ① → Summon a Skeleton here.",
+     "A Skeleton token appears.",
+     "Computer draws a card from their atlas.",
+     "— Turn 22: You —",
+     "You draws a card from their spellbook.",
+     "You casts Coy Nixie.",
+     "Skeleton takes 1 damage.",
+     "You gains 1 life (now 11).",
+     "Skeleton dies. (killed by Frost Mage)",
+     "You casts Coy Nixie.",
+     "Death blow! Necromancer is defeated."
+    ]
+   }
+  ],
+  "checks": [
+   {
+    "turn": 15,
+    "played": [
+     "CAST Novice Necromancer at c2",
+     "ABILITY \"raise\" of Necromancer at c1",
+     "Skeleton at d1 moves to d2",
+     "Avatar: tap to PLAY Babbling Brook at e3",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Novice Necromancer at c2",
+    "same": true
+   },
+   {
+    "turn": 19,
+    "played": [
+     "CAST Grim Reaper at c1",
+     "ABILITY \"raise\" of Necromancer at c1",
+     "Avatar: tap to PLAY Lone Tower at b1",
+     "Cloud Spirit at c2 moves to d3 and ATTACKS THE SITE there {no defender in reach}",
+     "ABILITY \"boneRaise:c125\" of Necromancer at c1",
+     "Bone Jumble at c1 moves to c2",
+     "Skeleton at d2 moves to d3 and ATTACKS THE SITE there {no defender in reach}",
+     "Skeleton at e2 moves to e3",
+     "CAST Toolbox at c1",
+     "Necromancer at c1 PICKS UP Toolbox",
+     "Skeleton at d1 moves to d2",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Grim Reaper at c1",
+    "same": true
+   },
+   {
+    "turn": 21,
+    "played": [
+     "CAST Mesmer Demon at c1",
+     "Skeleton at d3 moves to e3 and ATTACKS Highland Princess (enemy) at e3 {no defender in reach}",
+     "Cloud Spirit at d3 moves to b4 and ATTACKS THE SITE there {no defender in reach}",
+     "ABILITY \"raise\" of Necromancer at c1",
+     "Avatar: tap to DRAW a site from the atlas",
+     "END YOUR TURN"
+    ],
+    "engine": "CAST Mesmer Demon at c1",
+    "same": true
+   }
+  ],
+  "rejected": 0
+ },
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795832724100,
