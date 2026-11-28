@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-11-28T02:40:08.341Z",
+ "savedAt": "2026-11-28T02:40:17.797Z",
  "codeCommit": "8677c01",
  "finished": true,
  "winner": "You",
@@ -762,6 +762,7 @@
   ],
   "rejected": 0
  },
+ "review": "The game was decided between turns 14 and 18, when you cleared the Computer's board and then stacked enough minions and Avatar-side pressure to push its life to 0 and finish it on turn 22.\n\nKey moments:\n\nTurn 7: Computer's best stretch. Phase Assassin and Bone Spear killed your Stygian Archers, and a Skeleton hit Thin Ice. The score swung about +147 to the Computer. You had sent Archers and Arctic Fox forward on turn 6 into its Skeleton range, which exposed them. Keeping them back was the safer play.\n\nTurn 14: Your Lugbog Cat attacked the Phase Assassin and killed it. Frost Elemental's trigger had already pinged it, which made the kill cheap. The score swung about -143 in your favour.\n\nTurn 16: Computer's Novice Necromancer and Skeletons walked into your Whirling Blades and Lugbog Cat, so you wiped them out and took the board for good. The Computer erred by casting the Necromancer into your range. The engine re-check agrees with its first move, so the loss was more about position than that one cast.\n\nTurn 18: You played Full-tilt Goliaths and attacked with nearly everything. Its life went from 20 to 7 and the score reached about -300. The log is too thin to say whether holding something back was better.\n\nFor you: Don't lose cheap minions to Phase Assassin and Bone Spear early. Your life fell from 20 to 11 by turn 11 mostly from stealthy Assassin hits on your sites. Keeping a defender near your sites, or killing the Assassin as soon as it appears, would have saved life.\n\nFor the bot: It sends units like Cloud Spirit and Skeletons to hit sites or Avatar-side targets while its own Necromancer was at death's door. After turn 18 it kept casting minions and attacking sites instead of defending the Avatar, even at 7 life and then 0. It also let its board get swept on turn 16 by leaving Skeletons clumped. I see no clear rules mistake in the log. The Avatar at 0 life with \"death's door\" and no immediate loss looks consistent with the rules.",
  "replay": {
   "replayVersion": 1,
   "createdAt": 1795832724100,
