@@ -997,13 +997,84 @@ export const featuredDecks: DeckList[] = [
       "Sleep": 1
     }
   },
+  // Cold Snap (27 Nov 2026): the user's paper Frost Mage deck, Cold Snap V3 in scripts/fvl/decks.ts (Cold Snap V2
+  // within the copies they have after pulling cards on 20 Nov).
+  {
+    "name": "Cold Snap",
+    "avatar": "Frost Mage",
+    "spellbook": {
+      "Freeze": 3,
+      "Shatter": 3,
+      "Frostbolt": 3,
+      "Slide": 2,
+      "Pollimorph": 1,
+      "Research": 2,
+      "Sissi Marksmen": 2,
+      "The White Death": 1,
+      "Stygian Archers": 2,
+      "Hailstriker": 2,
+      "Arctic Fox": 1,
+      "Highland Princess": 1,
+      "Adept Illusionist": 2,
+      "Coy Nixie": 3,
+      "Lugbog Cat": 3,
+      "Headless Haunt": 2,
+      "Gibbous Nightgaunts": 3,
+      "Order of the Sacred Oak": 2,
+      "Aria Wraith": 2,
+      "Frost Elemental": 3,
+      "Sacred Stag": 1,
+      "Lacuna Entity": 1,
+      "Stomping Mammoth": 2,
+      "Frozen Horror": 2,
+      "Full-tilt Goliaths": 1,
+      "Hibernal Legion": 1,
+      "Nanurluk": 1,
+      "Seirawan Hydra": 1,
+      "Draconian Bonekite": 1,
+      "Toolbox": 3,
+      "Ring of Morrigan": 1,
+      "Gyre Hippogriffs": 1,
+      "Whirling Blades": 1
+    },
+    "atlas": {
+      "Tundra": 2,
+      "Lighthouse": 2,
+      "Icicle Dome": 2,
+      "Permafrost": 2,
+      "Deep Snow": 2,
+      "Avalanche": 1,
+      "Wuthering Heights": 2,
+      "River Rapids": 1,
+      "Winter River": 4,
+      "Mountain Pass": 2,
+      "Springstem Meadow": 2,
+      "Thin Ice": 2,
+      "Deep Sea": 2,
+      "Mountain Peaks": 2,
+      "Gothic Tower": 1,
+      "Dark Tower": 1
+    },
+    "collection": {
+      "Blizzard": 1,
+      "Disenchant": 1,
+      "Displace": 1,
+      "Lightning Bolt": 1,
+      "Drown": 1,
+      "Ice Shards": 1,
+      "Ice Lance": 1,
+      "Sleep": 1,
+      "Arc Lightning": 1,
+      "Highland Clansmen": 1
+    }
+  },
   // Frost Mage vs Lavamancer (Nov 2026) — the two preconstructed decks (the printed deck lists)
   fvlPrecon('precon:fvl-frost', 'Frost Mage (FvL precon)'),
   fvlPrecon('precon:fvl-lava', 'Lavamancer (FvL precon)'),
 ]
 
 /** Decks built for the player: listed in the picker, but not part of the meta field. */
-export const OWN_BUILDS: ReadonlySet<string> = new Set(['Ashen Ossuary', 'Lava Boy', "Heretic's Brand", 'Bone Tide'])
+export const OWN_BUILDS: ReadonlySet<string> = new Set(['Ashen Ossuary', 'Lava Boy', "Heretic's Brand", 'Bone Tide', 'Cold Snap'])
 
 /** The meta field that bot tests, deck gauntlets and self-play play against: the tournament lists and the
  *  test build, without the FvL precons and without the player's own builds. */

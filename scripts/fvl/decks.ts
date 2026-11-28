@@ -273,6 +273,9 @@ DECKS['Cold Snap V3'] = {
   ...DECKS['Cold Snap V2'], name: 'Cold Snap V3',
   spellbook: { ...DECKS['Cold Snap V2'].spellbook, Research: 2, 'Order of the Sacred Oak': 2, 'Stygian Archers': 2, 'Lugbog Cat': 3, 'Gyre Hippogriffs': 1, 'Whirling Blades': 1 },
 }
+// 'Cold Snap' now names the picker deck (the paper list, = V3); the F12-based original stays as 'Cold Snap F12'.
+DECKS['Cold Snap F12'] = { ...DECKS['Cold Snap'], name: 'Cold Snap F12' }
+DECKS['Cold Snap'] = (featuredDecks as DeckList[]).find((d) => d.name === 'Cold Snap')!
 
 // ── Meta lists updated with Frost Mage vs Lavamancer cards (24 Nov, theorycraft — untested) ──
 const meta = (n: string) => (featuredDecks as DeckList[]).find((d) => d.name === n)!
